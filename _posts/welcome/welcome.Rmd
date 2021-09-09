@@ -4,12 +4,15 @@ description: |
   Writing today to amaze self in the future.
 author:
   - name: V.LC.LAKE 
-  - date: 09-09-2021
+date: 09-09-2021
 output:
   distill::distill_article:
     self_contained: false
 ---
-![Kiki's 1st official hand writing of English, 2021.](pic/to_grace.jpg)
+
+![Kiki's 1st official hand writing of English-2021](pic/to_grace.jpg)
+
+
 
 
 
