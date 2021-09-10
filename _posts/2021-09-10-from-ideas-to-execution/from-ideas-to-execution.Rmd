@@ -10,6 +10,10 @@ output:
   distill::distill_article:
     self_contained: false
 ---
+```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pic/oceanship.jpg")
+```
+
 ## 1. A Bad Experience  
 
 A few years ago, I had this exhausted experience in making changes in a small real estate development company. At the beginning as a member of senior management, the initiative to deploy new strategy for the project and company was all exciting since the plan/ vision/ ideas from board was quite appealing, not only to senior managers, but also to government and medias. Why? Because those ideas are “creative”, new technology employing, sound future-oriented and promising. But the reality is those ideas never realize. 
@@ -62,9 +66,7 @@ Imagine a ship confronting a capricious ocean, who needs the ability to be adapt
 Each water molecule in the ocean needs to perform the function no more than what a H2O molecule can do. It is the system that forms another disparate existence – the ocean.   
 
 
-```{r,out.width = "90%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("pic/oceanship.jpg")
-```
+
 
 
 
