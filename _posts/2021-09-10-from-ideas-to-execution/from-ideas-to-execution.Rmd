@@ -58,11 +58,12 @@ In a fast-pacing ever-changing business world, many believe it is paramount to h
 
 Imagine a ship confronting a capricious ocean, who needs the ability to be adaptive-to-change? The crew members on the ship? Or The captain?  Neither. It is the ship that needs to be able to change swiftly. Each staff on the contrary, needs specialize in their own task.   
 
-This is the power of system behavior (to put it simply, 1+1 > 2).   
+> This is the power of system behavior (to put it simply, 1+1 > 2).  
 Each water molecule in the ocean needs to perform the function no more than what a H2O molecule can do. It is the system that forms another disparate existence – the ocean.   
 
-```{r,out.width = "81%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("pic/oceanship.jpeg")
+
+```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pic/oceanship.jpg")
 ```
 
 
