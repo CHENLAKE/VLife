@@ -9,8 +9,10 @@ output:
   distill::distill_article:
     self_contained: false
 ---
-
-![Kiki's 1st official hand writing of English-2021](pic/to_grace.jpg)
+```{r,fig.align = "center", echo = FALSE}
+knitr::include_graphics("pic/to_grace.jpg")
+```
+> Kiki's 1st official hand-written English. 如此美，如此美好。  
 
 
 

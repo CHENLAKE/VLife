@@ -17,23 +17,6 @@
     "input_file": "from-ideas-to-execution.knit.md"
   },
   {
-    "path": "posts/welcome/",
-    "title": "IT IS More Than Memory",
-    "description": "Writing today to amaze self in the future.",
-    "author": [
-      {
-        "name": "V.LC.LAKE",
-        "url": {}
-      }
-    ],
-    "date": "2021-09-09",
-    "categories": [],
-    "contents": "\r\nKiki’s 1st official hand writing of English-2021\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2021-09-09T22:32:20+08:00",
-    "input_file": "welcome.knit.md"
-  },
-  {
     "path": "posts/2021-09-09-steps-to-create-distill-blog/",
     "title": "Steps to Create Distill Blog",
     "description": "Wrap your head around the relationships among Distill-Rmarkdown-Git-Github-Netlify. Be familiarized with the commands necessary in Rstudio to create blog and to make new posts.",
@@ -49,5 +32,22 @@
     "preview": "posts/2021-09-09-steps-to-create-distill-blog/pic/pack.jpg",
     "last_modified": "2021-09-10T22:24:45+08:00",
     "input_file": "steps-to-create-distill-blog.knit.md"
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "IT IS More Than Memory",
+    "description": "Writing today to amaze self in the future.",
+    "author": [
+      {
+        "name": "V.LC.LAKE",
+        "url": {}
+      }
+    ],
+    "date": "2021-09-09",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\nKiki’s 1st official hand-written English. 如此美，如此美好。\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/welcome/pic/to_grace.jpg",
+    "last_modified": "2021-09-10T22:43:50+08:00",
+    "input_file": "welcome.knit.md"
   }
 ]
