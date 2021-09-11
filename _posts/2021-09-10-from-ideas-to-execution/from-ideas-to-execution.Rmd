@@ -22,7 +22,7 @@ When it comes to internal execution and deliveries, that hot passion met with co
 
 In staffs’ eyes, top managers were good at pointing out the destination for a ship in the ocean but left the crews to figure out how to get there. However, there are infinite number of paths possible to lead to that destination and before an executable plan forms, the first reaction staffs would take usually is to wait and maintain the status quo ---以不变应万变 in Chinese. In managers’ eyes, this is the signature of being slow or even reluctant to change. But what are they waiting for? For things/ tasks become clearer. 
 
-### Who’s to blame?   
+### 1.1 Who’s to blame?   
 
 I can’t blame each side. Can’t blame the top managements for having too many ideas, since that is their job and value. 
 
@@ -32,7 +32,7 @@ To V, there is a gap need to be filled. A gap between manager’s innovative (bu
 
 Therefore, a middleware / middleman is needed, to have the talent and responsibility of drawing out the path, leaving the employees focusing on their own fields and tasks only. 
 
-## A surprisingly effortless but successful project experience 
+## 2. A surprisingly effortless but successful project experience 
 
 During master program, for almost each course we took, we were asked to form a team and a problem that need to be solved, then use the skill and knowledge learnt in class to form a detailed plan even model to solve it.  (Great program, thanks to Singapore Management University)
 
@@ -40,30 +40,32 @@ Those projects were not easy though, since I didn’t know  those team members  
 
 I tried to force myself to accept the notion  that teamwork won't be easy, until I finished a data analytic project with one classmate and got it accepted by *JMP Discovery Summit Americas 2021*. The most unbelievable part is that that is the most comfortable and effortless project for me till now, but it achieves the best result! (*easy* doesn’t mean the project has no intellectual value, e*ffortless *doesn’t mean we succeeded due to luck)
 
-## Why least effort but most effective?   
+### 2.1 Why least effort but most effective?   
 
-Upon completion of that project in May 2021, I couldn’t help giving gratitude to Yongkai (my teammate) since I felt that I didn’t “do” much of the work (since I didn’t have that exhaustive feeling as in other projects thus, I assumed I didn’t do much).
+Upon completion of that project in May 2021, I couldn’t help giving gratitude to Yongkai (my teammate) since I felt that I didn’t
+"**do**" the work much (e.g.,run the model or write report) but contribute ideas and discussions along the way (e.g.,frame problem statement, discuss the approach to tackle the problem, raise questions on his analysis, read the final report and give feedback )
 
-Surprisingly, Yongkai conveyed his thanks to me for all my ideas and questioning of the details in the project. He said he is the kind of person good at effective execution and enjoying finding tech solutions, but he needs clear directions (e.g., I came up with the problem that our project resided on),but he couldn’t  naturally think out of the box or raised the question I had during the project…
+Surprisingly, Yongkai conveyed his thanks to me for all my ideas and questions raised in the project. He said he is the kind of person good at effective execution  but he needs clear directions, once he knows what to do next, he could be very efficient to deliver. He said because his energy focused on finding solutions for the problems occurring during **doing**, he was not good at **thinking** out of the box or **thinking** differently. 
 
-All in all, it turns out the best outcome comes not from hard work but from the coincidence that our aptitudes fit each other’s perfectly, the fact that we only need to contribute in what we are good at made everyone’s life easy and effortless!
+All in all, it turns out the best outcome comes not from "*hard*" work but from the coincidence that our **thinking habits** fit each other’s perfectly, the fact that we only need to contribute in what we are good at made everyone's work  effortless but fruitful. 
 
-## Key takeaways from this experience   
+### 2.2 Key takeaways from this experience   
 
-* If possible, matching team with complementary skills.
+* Everyone has his/her own way of thinking formed by his or her entire life. If possible, matching team with complementary [Thinking Style](https://en-gb.emergenetics.com/apac/), for example,   
+  + **Conceptual** ：Visionary/ Intuitive about ideas/ Enjoys the unusual/ Learns by experimenting   
+  + **Procedural** : Likes guidelines/ Predictable/ Cautious of new ideas/ Learns by doing   
 
-* Each one has his own field that can generate expertise and passion, if we want a great piece of work to deliver, we need to know them well so that we can put them in their most suitable position. 
+* There is no better or worse thinking style, since any work needs both thinking and doing. The fact that in general we are comfortable and proficient at *only one* style,we need appreciate each other to be able to deliver a piece of fine work..  
 
-* Focus is important to those who need to carry out the work unless a coarse deliverable is expected. 
 
-## What about the ability to change  
+## 3. What about the ability to change  
  
 In a fast-pacing ever-changing business world, many believe it is paramount to have the ability to change. Again, sounds appealingly correct, but think deeply, who is the subject here? 
 
 Imagine a ship confronting a capricious ocean, who needs the ability to be adaptive-to-change? The crew members on the ship? Or The captain?  Neither. It is the ship that needs to be able to change swiftly. Each staff on the contrary, needs specialize in their own task.   
 
-> This is the power of system behavior (to put it simply, 1+1 > 2).  
-Each water molecule in the ocean needs to perform the function no more than what a H2O molecule can do. It is the system that forms another disparate existence – the ocean.   
+> This is the power of **system** behavior (to put it simply, 1+1 > 2).  
+Each water molecule in the ocean needs to perform the function no more than what a H2O molecule can do. It is the **system** that forms the totally disparate existence – the ocean.   
 
 
 
