@@ -1,7 +1,7 @@
 ---
 title: "Blockchain and Smart Contract"
 description: |
-  Mabybe in one day, we can realize social covenat, not only in concept but also in execution, to reach a state of unprecedented fairness in human history.
+  Mabybe in one day, we can realize social covenant, not only in concept but also in execution, to reach a state of unprecedented fairness in human history.
 author:
   - name: V.LC.LAKE
     url: {}
