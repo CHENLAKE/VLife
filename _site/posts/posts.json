@@ -17,23 +17,6 @@
     "input_file": "from-ideas-to-execution.knit.md"
   },
   {
-    "path": "posts/2021-09-09-steps-to-create-distill-blog/",
-    "title": "Steps to Create Distill Blog",
-    "description": "Wrap your head around the relationships among Distill-Rmarkdown-Git-Github-Netlify. Be familiarized with the commands necessary in Rstudio to create blog and to make new posts.",
-    "author": [
-      {
-        "name": "V.LC.LAKE",
-        "url": {}
-      }
-    ],
-    "date": "2021-09-09",
-    "categories": [],
-    "contents": "\r\n0. Clear Buzz-words first !\r\nDistill is a package in R to use R Markdown to creat professional-looking blogs. It takes care of all the html-webpage’s construction, leaving us only need to focus on how to use Rmarkdown.\r\nGit is a version control application which helps to track all the modifications of the blog posts.It is quite convenient if we directly use it in Rstudio.\r\nGithub is a cloud app of Git. Commit-in-Git, then push-to-Github are the successive steps each time we make change to the blog project.\r\nNetlify is where we can share the blogs with the rest of the world. Each blog project will be assigned a site name in its own domain and most importantly it can connect with Github therefore seamlessly work with Github. Once we deploy the blog project in Netlify for the first time, each time we make changes or creat new posts, we only need proceed Commit-Push (Git-Github), Netlify will automatically detect the change and update our web pages.\r\n0.1 Distill References\r\n1 Distill for R Markdown\r\n2. Reference Guide\r\n3. distilltools\r\n4. The disdillery–customize your sites\r\n5. Personalizing the distill template\r\n1. Getting Started\r\ninstall Git\r\nconfigure Git in Rstudio\r\n\r\nregister Github\r\nsign up Netlify and connect with your Github\r\ninstall R packages in R Studio\r\n\r\n\r\n\r\nDistill for R Markdown\r\nusethis\r\n2. Structure of Dstill Blog in Rstudio\r\n\r\n\r\n\r\nAfter creating a distill blog project(VLife), the structure of the blog is automatically created, including 1 index,1 about and a welcome page(in *_posts/welcome/welcome.Rmd*),two folders(_posts, _site) as well as 1 yaml file(_site.yml)\r\n_posts is where we create new blog posts in Rstudio\r\n_site is where Netlify look for the html pages it needs to update\r\n\r\n3. Steps & Commands\r\n参考Dan心目中的大神 Prof KAM Tin Seong 教你 Building a blog with distill for R Markdown\r\nIn Rstudio, New Project> Distill Blog\r\n\r\n\r\n\r\n注意在【New Project Wizard】,put the directory(project)in subdirectory which has the same name as Github name(e.g.,CHENLAKE).\r\nEdit and Kit blog page (e.g.,index.Rmd) to see the blog html\r\nPublish\r\n3.1. Git\r\nIn console,input command usethis::use_git()\r\nIf it is the 1st time to use Git for a newly created project, select <not now> for <commit>, <yes> for <restart Rstudio>\r\nElse, in Git pane, select all the modified files then commit\r\n\r\n3.2. Github\r\nIf it is the first time to use Github for a newly created project, in console, input command usethis::use_github()\r\nElse, in Git pane, select push\r\n\r\n3.3. Netlify\r\nIt only needs to deploy once (the first time).Point the <Publish directory> to <_site>\r\n\r\n\r\n\r\n\r\nCreat new post\r\ninput console command distill::create_post(“steps to create distill blog”)\r\na new folder will appear in <_posts> folder followed by Commit and Push in Git pane.\r\n\r\n\r\n\r\n\r\nV 说\r\n\r\nProf Kam is the one who keeps reminding us to record or document life.\r\nI agree.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-    "preview": "posts/2021-09-09-steps-to-create-distill-blog/pic/pack.jpg",
-    "last_modified": "2021-09-10T22:24:45+08:00",
-    "input_file": "steps-to-create-distill-blog.knit.md"
-  },
-  {
     "path": "posts/welcome/",
     "title": "IT IS More Than Memory",
     "description": "Writing today to amaze self in the future.",
@@ -49,5 +32,22 @@
     "preview": "posts/welcome/pic/to_grace.jpg",
     "last_modified": "2021-09-10T22:43:50+08:00",
     "input_file": "welcome.knit.md"
+  },
+  {
+    "path": "posts/2021-09-09-steps-to-create-distill-blog/",
+    "title": "Steps to Create Distill Blog",
+    "description": "Wrap your head around the relationships among Distill-Rmarkdown-Git-Github-Netlify. Be familiarized with the commands necessary in Rstudio to create blog and to make new posts.",
+    "author": [
+      {
+        "name": "V.LC.LAKE",
+        "url": {}
+      }
+    ],
+    "date": "2021-09-09",
+    "categories": [],
+    "contents": "\r\n0. Clear Buzz-words first !\r\nDistill is a package in R to use R Markdown to creat professional-looking blogs. It takes care of all the html-webpage’s construction, leaving us only need to focus on how to use Rmarkdown.\r\nGit is a version control application which helps to track all the modifications of the blog posts.It is quite convenient if we directly use it in Rstudio.\r\nGithub is a cloud app of Git. Commit-in-Git, then push-to-Github are the successive steps each time we make change to the blog project.\r\nNetlify is where we can share the blogs with the rest of the world. Each blog project will be assigned a site name in its own domain and most importantly it can connect with Github therefore seamlessly work with Github. Once we deploy the blog project in Netlify for the first time, each time we make changes or creat new posts, we only need proceed Commit-Push (Git-Github), Netlify will automatically detect the change and update our web pages.\r\n0.1 Distill References\r\n1 Distill for R Markdown\r\n2. Reference Guide\r\n3. distilltools\r\n4. The disdillery–customize your sites\r\n5. Personalizing the distill template\r\n1. Getting Started\r\ninstall Git\r\nconfigure Git in Rstudio\r\n\r\nregister Github\r\nsign up Netlify and connect with your Github\r\ninstall R packages in R Studio\r\n\r\n\r\n\r\nDistill for R Markdown\r\nusethis\r\n2. Structure of Dstill Blog in Rstudio\r\n\r\n\r\n\r\nAfter creating a distill blog project(VLife), the structure of the blog is automatically created, including a index.Rmd,a about.Rmd and a welcome.Rmd ,two folders(_posts, _site) as well as a yaml file(_site.yml)\r\n_posts is where we create new blog posts in Rstudio\r\n_site is where Netlify look for the html pages it needs to update\r\n\r\n3. Steps & Commands\r\n参考Dan心目中的大神 Prof KAM Tin Seong 教你 Building a blog with distill for R Markdown\r\nIn Rstudio, New Project> Distill Blog\r\n\r\n\r\n\r\n注意在【New Project Wizard】,put the directory(project)in subdirectory which has the same name as Github name(e.g.,CHENLAKE).\r\nEdit and Kit blog page (e.g.,index.Rmd) to see the blog html\r\nPublish\r\n3.1. Git\r\nIn console,input command usethis::use_git()\r\nIf it is the 1st time to use Git for a newly created project, select <not now> for <commit>, <yes> for <restart Rstudio>\r\nElse, in Git pane, select all the modified files then commit\r\n\r\n3.2. Github\r\nIf it is the first time to use Github for a newly created project, in console, input command usethis::use_github()\r\nElse, in Git pane, select push\r\n\r\n3.3. Netlify\r\nIt only needs to deploy once (the first time).Point the <Publish directory> to <_site>\r\n\r\n\r\n\r\n\r\nCreat new post\r\ninput console command distill::create_post(“steps to create distill blog”)\r\na new folder will appear in <_posts> folder followed by Commit and Push in Git pane.\r\n\r\n\r\n\r\n\r\nV 说\r\n\r\nProf Kam is the one who keeps reminding us to record or document life.\r\nI agree.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-09-09-steps-to-create-distill-blog/pic/pack.jpg",
+    "last_modified": "2021-10-07T10:58:55+08:00",
+    "input_file": "steps-to-create-distill-blog.knit.md"
   }
 ]

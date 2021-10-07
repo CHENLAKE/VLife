@@ -45,7 +45,7 @@ knitr::include_graphics("pic/pack.jpg")
 knitr::include_graphics("pic/distilF.jpg")
 ```
 
-* After creating a distill blog project(*VLife*), the structure of the blog is automatically created, including 1 *index*,1 *about* and a *welcome* page(in *_posts/welcome/welcome.Rmd*),two folders(_posts, _site) as well as 1 yaml file(_site.yml)
+* After creating a distill blog project(*VLife*), the structure of the blog is automatically created, including a *index.Rmd*,a *about.Rmd* and a *welcome.Rmd* ,two folders(_posts, _site) as well as a yaml file(_site.yml)
   + _posts is where we create new blog posts in Rstudio  
   + _site is where Netlify look for the html pages it needs to update 
   
@@ -80,7 +80,7 @@ knitr::include_graphics("pic/netlify.jpg")
 ```
 
 4. Creat new post   
-   + input console command **distill::create_post**("steps to create distill blog")  
+   + input console command **distill::create_post("steps to create distill blog")**  
    + a new folder will appear in <_posts> folder followed by  **Commit** and **Push** in Git pane.
    
 ```{r,out.width = "60%", fig.align = "center", echo = FALSE}
