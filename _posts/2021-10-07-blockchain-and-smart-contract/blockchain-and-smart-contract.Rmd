@@ -27,7 +27,19 @@ Once the contract is deployed, it is stored in a place (an address) on blockchai
 
 ```{r,out.width = "60%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pic/deployment.png")
+
 ```
+
+## Ethereum Turing Complete   
+First of all, it is talking about smart contract language Solidity for Ethereum. Solidity is Turing complete.    
+
+So, what dose it to do with Turing? Well because he designed the theoretical computer which can solve any computational problem, unlike the computing machines before him which were designed specifically for a certain problem, which means if you wanted to compute another set of mathematical problems, you need build another tailored machine. So such a computer which promises to solve any computational problem (though it doesn’t guarantee the time that will take: sooner or later) is regarded as Turing complete.    
+ 
+If a programing language like Solidity is called TC, it means that you can solve any computational problem using this language. Practically speaking, one feature of a TC language is loop. Bitcoin script language is not TC by its designer, but Ethereum’s is, partly because Bitcoin is solely for payment while Ethereum’s designers want it to be the platform of dApps, which needs to empower its script language more.    
+
+To avoid people using loop maliciously on blockchain, Ethereum has adopted the idea of Gas to charge for each computing operation in the smart contract. 
+
+
 ## What’s special about Blockchain
 
 For applications (codes) running on a server, all clients (the front ends) are only sending requests then the codes are run on a central location (the server). So, the codes are stored and executed centrally.    
