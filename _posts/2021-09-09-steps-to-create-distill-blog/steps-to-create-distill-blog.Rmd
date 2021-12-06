@@ -80,7 +80,7 @@ knitr::include_graphics("pic/netlify.jpg")
 ```
 
 4. Creat new post   
-   + input console command **distill::create_post("steps to create distill blog")**  
+   + input console command **distill::create_post("Post name")**  
    + a new folder will appear in <_posts> folder followed by  **Commit** and **Push** in Git pane.
    
 ```{r,out.width = "60%", fig.align = "center", echo = FALSE}
