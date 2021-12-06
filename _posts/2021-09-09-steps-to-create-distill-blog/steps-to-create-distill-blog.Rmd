@@ -66,17 +66,14 @@ knitr::include_graphics("pic/subd.jpg")
   + 3.1. Git  
     + In console,input command **usethis::use_git()**    
     + If it is the 1st time to use Git for a newly created project, select <*not now*> for <*commit*>, <*yes*> for <*restart Rstudio*>  
-    + Else, in Git pane, select all the modified files then **commit**   
-```{r,out.width = "60%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("pic/commit.jpg")
-```
-    
+    + Else, in Git pane, select all the modified files then **commit**   ![commit](pic/commit.jpg)
+
   + 3.2. Github  
     + If it is the first time to use Github for a newly created project, in console, input command **usethis::use_github()**  
     + Else, in Git pane, select **push** 
   
   + 3.3. Netlify  
-    + It only needs to deploy once (the first time).Point the <*Publish directory*> to  <_site> 
+    + It only needs to deploy once (the first time).Point the <*Publish directory*> to  <_site>    
     
 ```{r,out.width = "60%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pic/netlify.jpg")
