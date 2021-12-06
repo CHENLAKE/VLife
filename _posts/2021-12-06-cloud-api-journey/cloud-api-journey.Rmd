@@ -1,0 +1,104 @@
+---
+title: " POSTMAN & Google Cloud API"
+description: |
+  Resources of learning API& POSTMAN from basic concepts.Steps of setting up OAuth2.0 authentication for Google cloud API on POSTMAN.
+author:
+  - name: V.LC.LAKE
+    url: {}
+date: 12-06-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+### API Basics
+*[APIs for beginners](https://www.youtube.com/watch?v=GZvSYJDk-us&t=5753s)* 
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/api_basics.jpg")
+```
+
+### POSTMAN 
+*[Postman Beginner's Course - API Testing](https://www.youtube.com/watch?v=VywxIQ2ZXw4&t=3776s)*   
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/postman.jpg")
+```
+1. **Query Parameter**   
+
+> Query Parameter is used to filter what API returned, usually by pointing out the field’s value of returned json.( 
+
+```{r,out.width = "80%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/query_param.jpg")
+```   
+2. **Tests tab**   
+
+> If we want to check/test data of the returned Body, we could filter them in the **Tests** tab (won't change the returned Body, but filter in the "Tests" tab).
+
+- 2.1. We can use **Console.log ()** to see the results of Tests,also can set the result of interest as a global variable for later requests.    
+
+```{r,out.width = "80%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/Tests.jpg")
+knitr::include_graphics("pics/global_var.jpg")
+```   
+
+- 2.2. **pm.test()**   
+pm.test( “description string”, callback function-what to test ) is for postman to test the request response. 
+
+```{r,out.width = "80%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/pmtest.jpg")
+```   
+
+- 2.3. jump a request   
+
+```{r,out.width = "80%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/jump_request.jpg")
+```      
+
+- 2.4. stop   
+
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/stop.jpg")
+```       
+
+### Postman OAuth2.0 authentication to use Google API   
+> Using POSTMAN requires different authentication from using python code which uses Service Accounts and its json key, additional setups are needed to perform:   
+1. Register POSTMAN as <mark>Authorised redirect URIs</mark> (web applications)      
+2. Register postman as <mark>Authorised domains</mark>    
+3. Add <mark>scope</mark> for specific API         
+
+**Setup Steps :**       
+
+1.	Go to Google Cloud Platform and sign in your Google account, select the Project you are in.   
+2.	Go to **APIs & Services** and then to **Credentials** > **Create OAuth Client ID**
+
+3.	Select **Web application** for Application type and enter either `https://oauth.pstmn.io/v1/browser-callback`  or `https://oauth.pstmn.io/v1/callback`  for Authorized redirect URLs. This ensures the auth flow works for Postman on both desktop and web. Once you hit **Create** you will see **Client ID** and **Client Secret** - those two values are important (do NOT share with anyone) and we will need them later in Postman.    
+
+4.	Next go to **OAuth consent screen** and enter `oauth.pstmn.io` for **Authorised domains**. For **Scope**, and for **Google cloud API**, ` https://www.googleapis.com/auth/cloud-platform`    
+
+```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/scope.jpg")
+```     
+<mark>5</mark>.	Go to postman, and edit the collection for the project. In **Authorization** tab > **Type**,  choose `oAuth 2.0`, the go down to **Configure New Token**, fill in the information and click **Get New Access Token**.      
+
+- For “Auth URL”:  `https://accounts.google.com/o/oauth2/auth   `
+- For “Access Token URL”:  `https://accounts.google.com/o/oauth2/token   `
+- For “Scope”:  `https://www.googleapis.com/auth/cloud-platform    `
+ Then it will open up a web browser window asking for your authentication.
+
+```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/auth_type.jpg")    
+knitr::include_graphics("pics/configure.jpg")
+```      
+
+6.	Finally, token will be generated , as below. Those token may expire in some period, when it comes, just repeat the step **5** to get new token.      
+
+```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/token.jpg")
+```      
+
+7.	When making request, just choose / inherit the Available Tokens.  
+
+```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/choose_token.jpg")
+```      
+
+
+
