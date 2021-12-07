@@ -1,7 +1,7 @@
 ---
 title: " POSTMAN & Google Cloud API"
 description: |
-  Resources of learning API& POSTMAN from basic concepts.Steps of setting up OAuth2.0 authentication for Google cloud API on POSTMAN.
+  Resources of learning API& POSTMAN from basic concepts. Steps of setting up OAuth2.0 authentication for Google cloud API on POSTMAN.
 author:
   - name: V.LC.LAKE
     url: {}
@@ -23,7 +23,7 @@ knitr::include_graphics("pics/postman.jpg")
 ```
 1. **Query Parameter**   
 
-> Query Parameter is used to filter what API returned, usually by pointing out the field’s value of returned json.( 
+> Query Parameter is used to filter what API returned, usually by pointing out the field’s value of returned json.
 
 ```{r,out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/query_param.jpg")
@@ -38,6 +38,12 @@ knitr::include_graphics("pics/query_param.jpg")
 knitr::include_graphics("pics/Tests.jpg")
 knitr::include_graphics("pics/global_var.jpg")
 ```   
+
+>  One of the advantage of using POSTMAN `console.log()` is that the returned **Json** file can be viewed in a very clear manner, since the field and value are displayed in different colors.   
+
+```{r,out.width = "80%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/Json_body.jpg")
+``` 
 
 - 2.2. **pm.test()**   
 pm.test( “description string”, callback function-what to test ) is for postman to test the request response. 
@@ -83,7 +89,7 @@ knitr::include_graphics("pics/scope.jpg")
 - For “Scope”:  `https://www.googleapis.com/auth/cloud-platform    `
  Then it will open up a web browser window asking for your authentication.
 
-```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+```{r,out.width = "70%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/auth_type.jpg")    
 knitr::include_graphics("pics/configure.jpg")
 ```      
@@ -97,7 +103,7 @@ knitr::include_graphics("pics/token.jpg")
 7.	When making request, just choose / inherit the Available Tokens.  
 
 ```{r,out.width = "90%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("pics/choose_token.jpg")
+knitr::include_graphics("pics/req_token.jpg")
 ```      
 
 
