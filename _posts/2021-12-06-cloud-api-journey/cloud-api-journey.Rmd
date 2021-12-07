@@ -41,7 +41,7 @@ knitr::include_graphics("pics/global_var.jpg")
 
 >  One of the advantage of using POSTMAN `console.log()` is that the returned **Json** file can be viewed in a very clear manner, since the field and value are displayed in different colors.   
 
-```{r,out.width = "80%", fig.align = "center", echo = FALSE}
+```{r,out.width = "70%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/Json_body.jpg")
 ``` 
 
@@ -105,6 +105,20 @@ knitr::include_graphics("pics/token.jpg")
 ```{r,out.width = "90%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/req_token.jpg")
 ```      
+
+### Google Doc AI API References   
+[ Overview ](https://cloud.google.com/document-ai/docs)   
+[ Reference ](https://cloud.google.com/document-ai/docs/apis)
+
+```{r,out.width = "50%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/reference.jpg")
+``` 
+
+> use official reference to input **Body** in a `Post` request.      
+
+```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/post_body.jpg")
+``` 
 
 
 
