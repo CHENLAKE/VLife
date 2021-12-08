@@ -1560,19 +1560,19 @@ pm.test( “description string”, callback function-what to test ) is for postm
 <li>For “Scope”: <code>https://www.googleapis.com/auth/cloud-platform</code> Then it will open up a web browser window asking for your authentication.</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="pics/auth_type.jpg" width="70%" style="display: block; margin: auto;" /><img src="pics/configure.jpg" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="pics/auth_type.jpg" width="60%" style="display: block; margin: auto;" /><img src="pics/configure.jpg" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 <ol start="6" type="1">
 <li>Finally, token will be generated , as below. Those token may expire in some period, when it comes, just repeat the step <strong>5</strong> to get new token.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="pics/token.jpg" width="90%" style="display: block; margin: auto;" /></p>
+<p><img src="pics/token.jpg" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 <ol start="7" type="1">
 <li>When making request, just choose / inherit the Available Tokens.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="pics/req_token.jpg" width="90%" style="display: block; margin: auto;" /></p>
+<p><img src="pics/req_token.jpg" width="80%" style="display: block; margin: auto;" /></p>
 </div>
 <h3 id="google-doc-ai-api-references">Google Doc AI API References</h3>
 <p><a href="https://cloud.google.com/document-ai/docs">Overview</a><br />
@@ -1608,7 +1608,7 @@ https://LOCATION-documentai.googleapis.com/v1/projects/PROJECT_ID/locations/LOCA
 </li>
 <li><code>mimiType</code> is talking about the <strong>file formats</strong> DOC AI supports:<br />
 <code>'application/pdf'</code> <code>,'application/json'</code>, <code>'image/tiff'</code>, <code>'image/gif'</code>.</li>
-<li><code>content</code> in POSTMAN we need pass <strong>base64 encoding</strong> (ASCII string) of binary image data into JSON representations. Google also has its <a href="https://cloud.google.com/vision/docs/base64">recommended ways</a> to do it from which my code also borrowed the core.</li>
+<li>for <code>content</code> we need pass <strong>base64 encoding</strong> (ASCII string) of binary image data into JSON representations. Google also has its <a href="https://cloud.google.com/vision/docs/base64">recommended ways</a> to do it from which my code also borrowed the core.</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> base64</span>

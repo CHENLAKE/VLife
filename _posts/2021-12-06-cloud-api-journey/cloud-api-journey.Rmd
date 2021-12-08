@@ -89,20 +89,20 @@ knitr::include_graphics("pics/scope.jpg")
 - For “Scope”:  `https://www.googleapis.com/auth/cloud-platform    `
  Then it will open up a web browser window asking for your authentication.
 
-```{r,out.width = "70%", fig.align = "center", echo = FALSE}
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/auth_type.jpg")    
 knitr::include_graphics("pics/configure.jpg")
 ```      
 
 6.	Finally, token will be generated , as below. Those token may expire in some period, when it comes, just repeat the step **5** to get new token.      
 
-```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/token.jpg")
 ```      
 
 7.	When making request, just choose / inherit the Available Tokens.  
 
-```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+```{r,out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/req_token.jpg")
 ```      
 
@@ -141,7 +141,7 @@ https://LOCATION-documentai.googleapis.com/v1/projects/PROJECT_ID/locations/LOCA
   - `Human Review` means [Human In The Loop processor](https://cloud.google.com/document-ai/hitl) which *enables human verification and corrections to ensure accuracy of data extracted by Human in the Loop processors before it is used in critical business applications. It provides a workflow and UI for humans (referred to as labelers in HITL) to review, validate and correct the data extracted from documents by Human in the Loop processors.*    
   - `mimiType` is talking about the **file formats** DOC AI supports:    
     `'application/pdf'` `,'application/json'`, `'image/tiff'`, `'image/gif'`.
-  - `content` in POSTMAN we need pass **base64 encoding** (ASCII string) of binary image data into JSON representations. Google also has its [recommended ways](https://cloud.google.com/vision/docs/base64) to do it from which my code also borrowed the core.  
+  - for `content` we need pass **base64 encoding** (ASCII string) of binary image data into JSON representations. Google also has its [recommended ways](https://cloud.google.com/vision/docs/base64) to do it from which my code also borrowed the core.  
   
 ```{python, python.reticulate= FALSE,  eval=FALSE}
 import base64
