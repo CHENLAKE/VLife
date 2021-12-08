@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["cloud-api-journey_files/anchor-4.2.2/anchor.min.js","cloud-api-journey_files/bowser-1.9.3/bowser.min.js","cloud-api-journey_files/distill-2.2.21/template.v2.js","cloud-api-journey_files/header-attrs-2.8/header-attrs.js","cloud-api-journey_files/jquery-1.11.3/jquery.min.js","cloud-api-journey_files/popper-2.6.0/popper.min.js","cloud-api-journey_files/tippy-6.2.7/tippy-bundle.umd.min.js","cloud-api-journey_files/tippy-6.2.7/tippy-light-border.css","cloud-api-journey_files/tippy-6.2.7/tippy.css","cloud-api-journey_files/tippy-6.2.7/tippy.umd.min.js","cloud-api-journey_files/webcomponents-2.0.0/webcomponents.js","pics/api_basics.jpg","pics/auth_type.jpg","pics/configure.jpg","pics/global_var.jpg","pics/Json_body.jpg","pics/jump_request.jpg","pics/pmtest.jpg","pics/post_body.jpg","pics/postman.jpg","pics/query_param.jpg","pics/reference.jpg","pics/req_token.jpg","pics/scope.jpg","pics/stop.jpg","pics/Tests.jpg","pics/token.jpg"]}
+  {"type":"character","attributes":{},"value":["cloud-api-journey_files/anchor-4.2.2/anchor.min.js","cloud-api-journey_files/bowser-1.9.3/bowser.min.js","cloud-api-journey_files/distill-2.2.21/template.v2.js","cloud-api-journey_files/header-attrs-2.8/header-attrs.js","cloud-api-journey_files/jquery-1.11.3/jquery.min.js","cloud-api-journey_files/popper-2.6.0/popper.min.js","cloud-api-journey_files/tippy-6.2.7/tippy-bundle.umd.min.js","cloud-api-journey_files/tippy-6.2.7/tippy-light-border.css","cloud-api-journey_files/tippy-6.2.7/tippy.css","cloud-api-journey_files/tippy-6.2.7/tippy.umd.min.js","cloud-api-journey_files/webcomponents-2.0.0/webcomponents.js","pics/api_basics.jpg","pics/auth_type.jpg","pics/base64.jpg","pics/configure.jpg","pics/global_var.jpg","pics/Json_body.jpg","pics/jump_request.jpg","pics/pmtest.jpg","pics/post_body.jpg","pics/postman.jpg","pics/query_param.jpg","pics/reference.jpg","pics/req_token.jpg","pics/scope.jpg","pics/stop.jpg","pics/Tests.jpg","pics/token.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1576,17 +1576,66 @@ pm.test( “description string”, callback function-what to test ) is for postm
 </div>
 <h3 id="google-doc-ai-api-references">Google Doc AI API References</h3>
 <p><a href="https://cloud.google.com/document-ai/docs">Overview</a><br />
+<a href="https://cloud.google.com/document-ai/docs/how-to">How to Guides</a><br />
 <a href="https://cloud.google.com/document-ai/docs/apis">Reference</a></p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/reference.jpg" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<blockquote>
-<p>use official reference to input <strong>Body</strong> in a <code>Post</code> request.</p>
-</blockquote>
+<h3 id="send-a-google-doc-ai-processing-request-in-postman">Send a Google-DOC-AI Processing Request in POSTMAN</h3>
+<p><em>check <a href="https://cloud.google.com/document-ai/docs/send-request">official reference</a></em></p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/post_body.jpg" width="90%" style="display: block; margin: auto;" /></p>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<ol type="1">
+<li><strong>HTTP method and URL:</strong><br />
+</li>
+</ol>
+<pre><code>POST 
+https://LOCATION-documentai.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/processors/PROCESSOR_ID:process </code></pre>
+<ol start="2" type="1">
+<li><strong>Body</strong>:<br />
+</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;skipHumanReview&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;inlineDocument&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mimeType&quot;</span><span class="fu">:</span> <span class="st">&quot;application/pdf&quot;</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;content&quot;</span><span class="fu">:</span> <span class="st">&quot;{{f4}}&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<ul>
+<li><code>Human Review</code> means <a href="https://cloud.google.com/document-ai/hitl">Human In The Loop processor</a> which <em>enables human verification and corrections to ensure accuracy of data extracted by Human in the Loop processors before it is used in critical business applications. It provides a workflow and UI for humans (referred to as labelers in HITL) to review, validate and correct the data extracted from documents by Human in the Loop processors.</em><br />
+</li>
+<li><code>mimiType</code> is talking about the <strong>file formats</strong> DOC AI supports:<br />
+<code>'application/pdf'</code> <code>,'application/json'</code>, <code>'image/tiff'</code>, <code>'image/gif'</code>.</li>
+<li><code>content</code> in POSTMAN we need pass <strong>base64 encoding</strong> (ASCII string) of binary image data into JSON representations. Google also has its <a href="https://cloud.google.com/vision/docs/base64">recommended ways</a> to do it from which my code also borrowed the core.</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> base64</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Pass the image data to an encoding function.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode_image(image):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  image_content <span class="op">=</span> image.read()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> base64.b64encode(image_content)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>f4 <span class="op">=</span><span class="st">&quot;CI0000000041.pdf&quot;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>file_dir <span class="op">=</span><span class="st">&quot;C:/V/Google AI doc/invoice_parser/&quot;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>PDF_PATH <span class="op">=</span> file_dir <span class="op">+</span> f1 <span class="co"># Update to path of target document</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>text_dir <span class="op">=</span> file_dir <span class="op">+</span><span class="st">&#39;base64.txt&#39;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># encode</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(PDF_PATH, <span class="st">&quot;rb&quot;</span>) <span class="im">as</span> image:</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    content <span class="op">=</span> encode_image(image)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># get content and use it in POSTMAN</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(text_dir,<span class="st">&quot;wb&quot;</span>) <span class="im">as</span> f:</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    f.write(content)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  </span></code></pre></div>
+</div>
+<blockquote>
+<p>A good way to adduce the content(<code>{{f4}}</code>) is to save it as a <strong>global variable</strong></p>
+</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/base64.jpg" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

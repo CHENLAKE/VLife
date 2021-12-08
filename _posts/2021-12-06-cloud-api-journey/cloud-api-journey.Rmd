@@ -107,18 +107,67 @@ knitr::include_graphics("pics/req_token.jpg")
 ```      
 
 ### Google Doc AI API References   
-[ Overview ](https://cloud.google.com/document-ai/docs)   
+[ Overview ](https://cloud.google.com/document-ai/docs)  
+[ How to Guides ](https://cloud.google.com/document-ai/docs/how-to)     
 [ Reference ](https://cloud.google.com/document-ai/docs/apis)
 
 ```{r,out.width = "50%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/reference.jpg")
-``` 
+```     
 
-> use official reference to input **Body** in a `Post` request.      
+### Send a Google-DOC-AI Processing Request in POSTMAN  
+*check [ official reference ](https://cloud.google.com/document-ai/docs/send-request)*     
 
 ```{r,out.width = "90%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/post_body.jpg")
-``` 
+```    
+
+1. **HTTP method and URL:**    
+```
+POST 
+https://LOCATION-documentai.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/processors/PROCESSOR_ID:process 
+```   
+2. **Body**:      
+```json
+{
+  "skipHumanReview": true,
+  "inlineDocument": {
+    "mimeType": "application/pdf",
+    "content": "{{f4}}"
+  }
+}
+```      
+
+  - `Human Review` means [Human In The Loop processor](https://cloud.google.com/document-ai/hitl) which *enables human verification and corrections to ensure accuracy of data extracted by Human in the Loop processors before it is used in critical business applications. It provides a workflow and UI for humans (referred to as labelers in HITL) to review, validate and correct the data extracted from documents by Human in the Loop processors.*    
+  - `mimiType` is talking about the **file formats** DOC AI supports:    
+    `'application/pdf'` `,'application/json'`, `'image/tiff'`, `'image/gif'`.
+  - `content` in POSTMAN we need pass **base64 encoding** (ASCII string) of binary image data into JSON representations. Google also has its [recommended ways](https://cloud.google.com/vision/docs/base64) to do it from which my code also borrowed the core.  
+  
+```{python, python.reticulate= FALSE,  eval=FALSE}
+import base64
+# Pass the image data to an encoding function.
+def encode_image(image):
+  image_content = image.read()
+  return base64.b64encode(image_content)
+
+f4 ="CI0000000041.pdf"
+file_dir ="C:/V/Google AI doc/invoice_parser/"
+PDF_PATH = file_dir + f1 # Update to path of target document
+text_dir = file_dir +'base64.txt'
+# encode
+with open(PDF_PATH, "rb") as image:
+    content = encode_image(image)
+# get content and use it in POSTMAN
+with open(text_dir,"wb") as f:
+    f.write(content)
+  
+```             
+> A good way to adduce the content(`{{f4}}`) is to save it as a **global variable**     
+
+```{r,out.width = "90%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/base64.jpg")
+```  
+
 
 
 
