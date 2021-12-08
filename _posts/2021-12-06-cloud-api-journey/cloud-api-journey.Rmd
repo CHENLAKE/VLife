@@ -1,7 +1,7 @@
 ---
 title: " POSTMAN & Google Cloud API"
 description: |
-  Resources of learning API& POSTMAN from basic concepts. Steps of setting up OAuth2.0 authentication for Google cloud API on POSTMAN.
+  Resources of learning API& POSTMAN from basic concepts. Steps of setting up OAuth2.0 authentication for Google cloud API on POSTMAN. How to send Google-DOC-AI processing request in POSTMAN
 author:
   - name: V.LC.LAKE
     url: {}
@@ -111,7 +111,7 @@ knitr::include_graphics("pics/req_token.jpg")
 [ How to Guides ](https://cloud.google.com/document-ai/docs/how-to)     
 [ Reference ](https://cloud.google.com/document-ai/docs/apis)
 
-```{r,out.width = "50%", fig.align = "center", echo = FALSE}
+```{r,out.width = "41%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/reference.jpg")
 ```     
 
