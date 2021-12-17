@@ -9,16 +9,19 @@ date: 09-9-2021
 output:
   distill::distill_article:
     self_contained: false
+    toc: true
+    toc_depth: 2
+    toc_float: true
 ---
 
-## 0. Clear Buzz-words first !
+## Clear Buzz-words first !
 
 * **Distill** is a package in R to use **R Markdown** to creat professional-looking blogs. It takes care of all the html-webpage's construction, leaving us only need to focus on how to use Rmarkdown.  
 * **Git** is a version control application which helps to track all the modifications of the blog posts.It is quite convenient if we directly use it in Rstudio.    
 * **Github** is a cloud app of Git. *Commit*-in-Git, then *push*-to-Github are the successive steps each time we make change to the blog project.    
 * **Netlify** is where we can share the blogs with the rest of the world. Each blog project will be assigned a site name in its own domain and most importantly it can connect with Github therefore seamlessly work with Github. _Once we deploy the blog project in Netlify for the first time, each time we make changes or creat new posts, we only need proceed Commit-Push (Git-Github), Netlify will automatically detect the change and update our web pages._  
 
-### 0.1 Distill References  
+### Distill References  
 
 1 [Distill for R Markdown](https://rstudio.github.io/distill/)  
 2. [Reference Guide](https://pkgs.rstudio.com/distill/reference/index.html)  
@@ -26,7 +29,7 @@ output:
 4. [The disdillery--customize your sites](https://jhelvy.github.io/distillery/index.html)  
 5. [Personalizing the distill template](https://www.ericekholm.com/posts/2021-04-02-personalizing-the-distill-template/)  
 
-## 1. Getting Started
+## Getting Started
 + install [Git](https://git-scm.com/downloads)  
   + [configure Git in Rstudio](https://r4dsa.netlify.app/posts/2021-05-22-git-in-rstudio/)  
 + register [Github](https://github.com/)  
@@ -40,7 +43,7 @@ knitr::include_graphics("pic/pack.jpg")
   + [usethis](https://usethis.r-lib.org/)  
 
 
-## 2. Structure of Dstill Blog in Rstudio  
+## Structure of Dstill Blog in Rstudio  
 ```{r,out.width = "60%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pic/distilF.jpg")
 ```
@@ -49,7 +52,7 @@ knitr::include_graphics("pic/distilF.jpg")
   + _posts is where we create new blog posts in Rstudio  
   + _site is where Netlify look for the html pages it needs to update 
   
-## 3. Steps & Commands  
+## Steps & Commands  
 
 * _参考Dan心目中的大神 Prof [KAM Tin Seong](https://faculty.smu.edu.sg/profile/kam-tin-seong-486) 教你 [Building a blog with distill for R Markdown](https://r4dsa.netlify.app/posts/2021-05-21-building-a-blog-with-distill-for-r-markdown/)_  
 

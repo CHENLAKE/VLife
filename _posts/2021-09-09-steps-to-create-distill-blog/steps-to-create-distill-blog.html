@@ -111,7 +111,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Create Distill Blog in RStudio"]},{"type":"character","attributes":{},"value":["Wrap your head around the relationships among Distill-Rmarkdown-Git-Github-Netlify. Be familiarized with the commands necessary in Rstudio to create blog and to make new posts. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["V.LC.LAKE"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["09-9-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Create Distill Blog in RStudio"]},{"type":"character","attributes":{},"value":["Wrap your head around the relationships among Distill-Rmarkdown-Git-Github-Netlify. Be familiarized with the commands necessary in Rstudio to create blog and to make new posts. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["V.LC.LAKE"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["09-9-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1478,7 +1478,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h2 id="clear-buzz-words-first">0. Clear Buzz-words first !</h2>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#clear-buzz-words-first">Clear Buzz-words first !</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#structure-of-dstill-blog-in-rstudio">Structure of Dstill Blog in Rstudio</a></li>
+<li><a href="#steps-commands">Steps &amp; Commands</a></li>
+<li><a href="#v-说">V 说</a></li>
+</ul>
+</nav>
+</div>
+<h2 id="clear-buzz-words-first">Clear Buzz-words first !</h2>
 <ul>
 <li><strong>Distill</strong> is a package in R to use <strong>R Markdown</strong> to creat professional-looking blogs. It takes care of all the html-webpage’s construction, leaving us only need to focus on how to use Rmarkdown.<br />
 </li>
@@ -1488,13 +1500,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </li>
 <li><strong>Netlify</strong> is where we can share the blogs with the rest of the world. Each blog project will be assigned a site name in its own domain and most importantly it can connect with Github therefore seamlessly work with Github. <em>Once we deploy the blog project in Netlify for the first time, each time we make changes or creat new posts, we only need proceed Commit-Push (Git-Github), Netlify will automatically detect the change and update our web pages.</em></li>
 </ul>
-<h3 id="distill-references">0.1 Distill References</h3>
+<h3 id="distill-references">Distill References</h3>
 <p>1 <a href="https://rstudio.github.io/distill/">Distill for R Markdown</a><br />
 2. <a href="https://pkgs.rstudio.com/distill/reference/index.html">Reference Guide</a><br />
 3. <a href="https://ellakaye.github.io/distilltools/">distilltools</a><br />
 4. <a href="https://jhelvy.github.io/distillery/index.html">The disdillery–customize your sites</a><br />
 5. <a href="https://www.ericekholm.com/posts/2021-04-02-personalizing-the-distill-template/">Personalizing the distill template</a></p>
-<h2 id="getting-started">1. Getting Started</h2>
+<h2 id="getting-started">Getting Started</h2>
 <ul>
 <li>install <a href="https://git-scm.com/downloads">Git</a>
 <ul>
@@ -1514,7 +1526,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>Distill for R Markdown</li>
 <li><a href="https://usethis.r-lib.org/">usethis</a></li>
 </ul>
-<h2 id="structure-of-dstill-blog-in-rstudio">2. Structure of Dstill Blog in Rstudio</h2>
+<h2 id="structure-of-dstill-blog-in-rstudio">Structure of Dstill Blog in Rstudio</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pic/distilF.jpg" width="60%" style="display: block; margin: auto;" /></p>
 </div>
@@ -1526,7 +1538,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>_site is where Netlify look for the html pages it needs to update</li>
 </ul></li>
 </ul>
-<h2 id="steps-commands">3. Steps &amp; Commands</h2>
+<h2 id="steps-commands">Steps &amp; Commands</h2>
 <ul>
 <li><em>参考Dan心目中的大神 Prof <a href="https://faculty.smu.edu.sg/profile/kam-tin-seong-486">KAM Tin Seong</a> 教你 <a href="https://r4dsa.netlify.app/posts/2021-05-21-building-a-blog-with-distill-for-r-markdown/">Building a blog with distill for R Markdown</a></em></li>
 </ul>
