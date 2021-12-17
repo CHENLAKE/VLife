@@ -1,0 +1,202 @@
+---
+title: "Report with R Markdown"
+description: |
+  Markdown can be used in many places, such as jupyter notebook, R studio to create distill blog or creating html, word or pdf report. Some tips & resources are commonly used. 
+author:
+  - name: V.LC.LAKE
+    url: {}
+date: 12-17-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    css: style.css
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(out.width= "30%",echo = FALSE)
+```
+In a R Markdown document, there are mainly 3 elements which are YAML Header, Text Body and Code Chunk.   
+
+[online cheat sheet](https://www.markdownguide.org/cheat-sheet) 
+
+## YAML Header      
+### Add Date Manually     
+```{r,out.width = "30%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/specificDate.png")
+```
+```yaml
+---
+title: "Untitled"
+author: "V LAKE"
+date: "12/17/2021"
+output: html_document
+---
+
+```
+### Add Date Automatically
+
+```{r,out.width = "30%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/today.png")
+```
+
+```yaml
+---
+title: "Untitled"
+author: "V LAKE"
+date: "`r Sys.Date()`"
+output: html_document
+---
+```
+```{r,out.width = "60%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/timeFormat.png")
+```
+```yaml
+---
+title: "Untitled"
+author: "V LAKE"
+date: " `r format(Sys.time(),'%H:%M:%S %d %b,%Y')` "
+output: html_document
+---
+```
+
+- **Format Options**    
+
+> **Numeric:**      
+  `%H` : Hour;  `%M` : Minute;  `%S` : Second;  `%Y` or `%y` : Year; `%m` : Month; `%d` : Day     
+  **Text:**      
+  `%A` or `%a` : Weekday; `%B` or `%b` : Month(e.g., January or Jan)  
+
+### Add Table-of-Content & CSS 
+
+```{r,out.width = "31%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/toc_css.png")
+```
+```yaml
+---
+title: "Untitled"
+author: "V LAKE"
+date: " 12/17/2021 "
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+    toc_float: true
+    toc_depth: 3
+    css: style.css
+---
+```
+### Customize fonts and colors      
+
+- Create a text file and name it as `style.css` then link it in YAML header.
+- `.css` file should be in the same directory as `.Rmd` file
+    
+```css
+#TOC {
+  color: #B8860B;
+  font-family: Agency FB;
+  font-size: 16px;
+  border-color: #708090;
+}
+#header{
+  color:red;
+  opacity: 0.8;
+}
+body{
+  color:green;
+  font-size: 10px;
+}
+pre{
+  color:blue;
+  background-color: #eab676;
+}
+```
+```{r,out.width = "80%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/css.png")
+```
+
+### Add Parameters
+
+```{r,out.width = "50%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/params.png")
+knitr::include_graphics("pics/paramPage.png")
+```
+
+> Add <` name : value` > under **params:** in YAML header          
+  Invoke the parameters in YAML header's **title**, **Text** body and **Code** chunk.
+
+```{r,out.width = "70%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/invokeParam1.png")
+knitr::include_graphics("pics/invokeParam2.png")
+```
+## Plots
+
+### Figure arguments
+
+```{r,out.width = "60%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/figAlign.png")
+```
+> **Fig Size**      
+  1. `fig.width=` 5,` fig.height =`3  **OR**      
+  2. `fig.dim =` c(5,3)  **OR**      
+  3. `out.width =`' % ',`out.height =`' %'     
+  **Fig Alignment** : ` fig.align = 'left'/'center'/'right' `       
+  **Fig Caption** : ` fig.cap = 'xxx' `
+
+### Set Options Globally
+
+- `knitr::opts_chunk$set`( **setting**, echo= TURE)    
+- **setting** before `echo =`  is the global settings
+
+```{r,out.width = "60%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/globalOpt.png")
+```
+
+## Add Tables
+
+> Use **kable( dataset, args )** in r code chunk.     
+  arguments include:         
+`col.names = c("col1","col2","col3" ) `      
+`align = "ccc" `         
+`caption = " " `   
+  
+```{r,out.width = "70%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/table.png")
+knitr::include_graphics("pics/tableParams.png")
+```
+
+## Code Chunk 
+
+### Options 
+
+```{r,out.width = "60%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/chuncOpt.png")
+```
+
+> **Code & Output Result **       
+  1. `include = FALSE` :      
+  show nothing, but run in background .           
+  e.g., import library, dataset / setup global options/ exclude messages         
+  2. `echo = FALSE` : only show result ( no code ), e.g., plotting         
+  3. `eval = FALSE` : only show code ( not run, no actual impact by the code )           
+  4. `collapse = FALSE` : combine code & result together in same area (by default, they are separated )      
+  **Message,error,warning ** default :        
+  1. `warning /message = TRUE`      
+  2. `error = FALSE` ( if encounter error, stop knitting )
+
+### Load Packages
+
+```{r,out.width = "60%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/loadPack.png")
+```
+
+
+  
+  
+
+
+
+
+
+
