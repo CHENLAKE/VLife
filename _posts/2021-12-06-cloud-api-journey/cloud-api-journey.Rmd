@@ -9,6 +9,9 @@ date: 12-06-2021
 output:
   distill::distill_article:
     self_contained: false
+    toc: true
+    toc_float: true
+    css: style.css
 ---
 ### API Basics
 *[APIs for beginners](https://www.youtube.com/watch?v=GZvSYJDk-us&t=5753s)* 

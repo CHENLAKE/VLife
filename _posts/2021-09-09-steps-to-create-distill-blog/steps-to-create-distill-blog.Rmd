@@ -10,8 +10,8 @@ output:
   distill::distill_article:
     self_contained: false
     toc: true
-    toc_depth: 2
     toc_float: true
+    toc_depth: 2
 ---
 
 ## Clear Buzz-words first !
