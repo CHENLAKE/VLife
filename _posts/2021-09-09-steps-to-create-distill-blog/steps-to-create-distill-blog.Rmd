@@ -1,5 +1,5 @@
 ---
-title: "Create Distill Blog in RStudio"
+title: "Distill Blog with R Studio"
 description: |
   Wrap your head around the relationships among Distill-Rmarkdown-Git-Github-Netlify. Be familiarized with the commands necessary in Rstudio to create blog and to make new posts. 
 author:
