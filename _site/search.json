@@ -3,7 +3,7 @@
     {
       "path": "about.html",
       "title": "About this blog",
-      "description": "Record some tech thinking & tips in case I forget. \n",
+      "description": "Record some tech thinking & tips since 2021, in case I forget. \n",
       "author": [
         {
           "name": "V ( venonah_lake@hotmail.com )",
@@ -11,7 +11,7 @@
         }
       ],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-12-18T11:36:24+08:00"
+      "last_modified": "2021-12-18T11:38:30+08:00"
     },
     {
       "path": "index.html",

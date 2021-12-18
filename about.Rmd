@@ -1,7 +1,7 @@
 ---
 title: "About this blog"
 description: |
-  Record some tech thinking & tips in case I forget. 
+  Record some tech thinking & tips since 2021, in case I forget. 
 author:
   - name: V ( venonah_lake@hotmail.com ) 
     affiliation: Master of IT in Business, Singapore Management University
