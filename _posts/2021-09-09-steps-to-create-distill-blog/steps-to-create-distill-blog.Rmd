@@ -12,6 +12,14 @@ output:
     toc: true
 ---
 
+<style>
+#TOC {
+  color: #E3180D;
+  font-family: Agency FB;
+  font-size: 20px;
+}
+</style>
+
 ## Clear Buzz-words first !
 
 * **Distill** is a package in R to use **R Markdown** to creat professional-looking blogs. It takes care of all the html-webpage's construction, leaving us only need to focus on how to use Rmarkdown.  
