@@ -1,7 +1,10 @@
 ---
 title: "About this blog"
 description: |
-  Some additional details about the blog: None
+  Record some tech thinking & tips in case I forget. 
+author:
+  - name: V ( venonah_lake@hotmail.com ) 
+    affiliation: Master of IT in Business, Singapore Management University
 ---
 
 ```{r setup, include=FALSE}

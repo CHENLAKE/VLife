@@ -3,17 +3,22 @@
     {
       "path": "about.html",
       "title": "About this blog",
-      "description": "Some additional details about the blog: None",
-      "author": [],
+      "description": "Record some tech thinking & tips in case I forget. \n",
+      "author": [
+        {
+          "name": "V ( venonah_lake@hotmail.com )",
+          "url": {}
+        }
+      ],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-09-09T22:22:22+08:00"
+      "last_modified": "2021-12-18T11:36:24+08:00"
     },
     {
       "path": "index.html",
       "title": "More than Memory",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-09-09T22:19:32+08:00"
+      "last_modified": "2021-12-18T11:25:49+08:00"
     }
   ],
   "collections": ["posts/posts.json"]
