@@ -11,6 +11,14 @@ output:
     self_contained: false
     toc: true
 ---
+<style>
+#TOC {
+  color: #A23EF4;
+  font-family: Agency FB;
+  font-size: 20px;
+}
+</style>
+
 ## Blockchain v.s. Protocol v.s. Token  
 
   Blockchain is a special (cryptographical blocks, chain, immutability, decentralization…) type of data structure or database implemented by a network of nodes who run on the same set of protocols (for example, **`Ethereum` **or **`Bitcoin`** or **`Neo`** etc.,). Its data entries are produced by nodes through a set of rules including consensus.    
