@@ -1,7 +1,7 @@
 ---
 title: "Report with R Markdown"
 description: |
-  Markdown can be used in many situations, such as writing report in jupyter notebook, creating distill blog in R studio or simply creating report in html, word or pdf format. Some tips & resources are commonly used. 
+  Markdown can be used in many situations, such as writing report in jupyter notebook, creating distill blog in R studio or simply generating report in html, word or pdf format. Some tips & resources are commonly used. 
 author:
   - name: V.LC.LAKE
     url: {}
