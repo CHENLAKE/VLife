@@ -175,13 +175,12 @@ knitr::include_graphics("pics/chuncOpt.png")
 ```
 
 > **Code & Output Result **       
-  1. `include = FALSE` :      
-  show nothing, but run in background .           
+  1. **include = FALSE** : show nothing, but run in background .                  
   e.g., import library, dataset / setup global options/ exclude messages         
-  2. `echo = FALSE` : only show result ( no code ), e.g., plotting         
-  3. `eval = FALSE` : only show code ( not run, no actual impact by the code )           
-  4. `collapse = FALSE` : combine code & result together in same area (by default, they are separated )      
-  **Message,error,warning ** default :        
+  2. **echo = FALSE**  : only show result ( no code ), e.g., plotting         
+  3. **eval = FALSE** : only show code ( not run, no actual impact by the code )           
+  4. **collapse = FALSE**  : combine code & result together in same area (by default, they are separated )      
+  **Message,error,warning  Default Value**:        
   1. `warning /message = TRUE`      
   2. `error = FALSE` ( if encounter error, stop knitting )
 
