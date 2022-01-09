@@ -109,14 +109,6 @@ knitr::include_graphics("pics/token.jpg")
 knitr::include_graphics("pics/req_token.jpg")
 ```      
 
-### Google Doc AI API References   
-[ Overview ](https://cloud.google.com/document-ai/docs)  
-[ How to Guides ](https://cloud.google.com/document-ai/docs/how-to)     
-[ Reference ](https://cloud.google.com/document-ai/docs/apis)
-
-```{r,out.width = "41%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("pics/reference.jpg")
-```     
 
 ### Send a Google-DOC-AI Processing Request in POSTMAN  
 *check [ official reference ](https://cloud.google.com/document-ai/docs/send-request)*     
@@ -170,6 +162,126 @@ with open(text_dir,"wb") as f:
 ```{r,out.width = "90%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/base64.jpg")
 ```  
+
+### Test DocAI API in Python   
+
+To evaluate this API's performance on images of **commercial invoice** in customs clearance, I tested over 50 samples(`.pdf` or `.tif` files) using python code as below. The output will be in format of  `.xlsx` for the convenience of further calculation of the **confidence interval** for **population** average accuracy rate.     
+
+```{r, fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/eva.jpg")
+```  
+
+```{python, python.reticulate= FALSE,  eval=FALSE}
+
+import os
+import pandas as pd
+
+pd.set_option('max_colwidth', None)
+pd.set_option('display.max_columns', None)
+
+"""
+refer to  https://cloud.google.com/document-ai/docs/send-request#documentai_process_document-python;
+function : to extract feilds relavent to DHL business
+"""
+from google.cloud import documentai_v1 as documentai
+def process_document_sample(
+    project_id: str, location: str, processor_id: str, file_path: str
+):
+    # You must set the api_endpoint if you use a location other than 'us', e.g.:
+    opts = {}
+    if location == "eu":
+        opts = {"api_endpoint": "eu-documentai.googleapis.com"}
+
+    client = documentai.DocumentProcessorServiceClient(client_options=opts)
+
+    # The full resource name of the processor, e.g.:
+    # projects/project-id/locations/location/processor/processor-id
+    # You must create new processors in the Cloud Console first
+    name = f"projects/{project_id}/locations/{location}/processors/{processor_id}"
+
+    with open(file_path, "rb") as image:
+        image_content = image.read()
+
+    """ 
+    Read the file into memory.  
+    'mime_type' can be 'application/pdf', 'image/tiff', 'image/gif', or 'application/json'
+    document = {"content": image_content, "mime_type": "image/tiff"}
+    """
+    
+    #chose the right mime_type
+    if file_path[-3:] =="pdf" :
+        mime ='application/pdf'
+    elif file_path[-3:] =="tif":
+        mime = "image/tiff"
+    else:
+        print("mime_type not recognizable")
+    
+    # Read the file into memory.
+    document = {"content": image_content, "mime_type": mime}
+    # Configure the process request
+    request = {"name": name, "raw_document": document}
+
+    # Recognizes text entities in the PDF document
+    result = client.process_document(request=request)
+
+    document = result.document
+
+    print("Document processing complete.{}\n". format(file_path))
+    
+    # customized Fields to Commercial Invoice of logistic industry 
+    entities = document.entities
+    not_relevant_types =['line_item','vat','total_tax_amount','receiver_tax_id','supplier_tax_id',
+                         'supplier_iban','freight_amount', 'net_amount','supplier_email','supplier_website']
+    types,values,confidence = [],[],[]
+    
+    # Grab relavent fields < key/value > pair and their corresponding confidence scores.
+    for entity in entities:
+        if ( entity.type_ not in not_relevant_types ):
+            types.append(entity.type_)
+            values.append(entity.mention_text)
+            confidence.append(round(entity.confidence,4))
+        else:
+            pass 
+    # print in tabular format. 
+    df = pd.DataFrame({'Type': types, 'Value': values, 'Confidence': confidence})
+    return df
+
+# Google Cloud Platform info
+jsonkeyDirectory = "C:\\V\\Google AI doc\\xxx"   
+googleProjectId = "xx-ea-exp-dev-gcpgogleap-xxx"
+googleJsonKey = jsonkeyDirectory + "\\documentaikey.json"
+location = 'eu' # Format is 'us' or 'eu'
+processor_id = 'xx274e7ff98xx' # Create processor in Cloud Console, here is invoice parser, and HITL disabled
+
+os.environ["GOOGLE_CLOUD_PROJECT"] = googleProjectId
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = googleJsonKey 
+
+# Test all Samples in one direcotry
+samples_dir ="C:\\V\\Google AI doc\\6. Evaluation Framework\\50 CI samples\\"
+output_dir ="C:\\V\\Google AI doc\\6. Evaluation Framework\\50 CI fields output\\"
+os.chdir(samples_dir)
+
+# input each sample into processor and output a corresponding excel file. 
+for f in os.listdir():
+    file_path = samples_dir + f
+    # read in testing files names and test
+    df_fields = process_document_sample(googleProjectId, location, processor_id, file_path)
+    excel_name = output_dir + f[0:2]+'.xlsx'  # e.g:excel name will be "01.xlsx"
+    df_fields.to_excel(excel_name)
+    
+print("All Files Test & Output COMPLETED !")
+```
+
+### Google Doc AI API References   
+
+```{r,out.width = "41%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/reference.jpg")
+```     
+
+[ Overview ](https://cloud.google.com/document-ai/docs)  
+[ How to Guides ](https://cloud.google.com/document-ai/docs/how-to)     
+[ Reference ](https://cloud.google.com/document-ai/docs/apis)
+
 
 
 

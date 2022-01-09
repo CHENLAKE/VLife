@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["cloud-api-journey_files/anchor-4.2.2/anchor.min.js","cloud-api-journey_files/bowser-1.9.3/bowser.min.js","cloud-api-journey_files/distill-2.2.21/template.v2.js","cloud-api-journey_files/header-attrs-2.8/header-attrs.js","cloud-api-journey_files/jquery-1.11.3/jquery.min.js","cloud-api-journey_files/popper-2.6.0/popper.min.js","cloud-api-journey_files/tippy-6.2.7/tippy-bundle.umd.min.js","cloud-api-journey_files/tippy-6.2.7/tippy-light-border.css","cloud-api-journey_files/tippy-6.2.7/tippy.css","cloud-api-journey_files/tippy-6.2.7/tippy.umd.min.js","cloud-api-journey_files/webcomponents-2.0.0/webcomponents.js","pics/api_basics.jpg","pics/auth_type.jpg","pics/base64.jpg","pics/configure.jpg","pics/courgette.log","pics/global_var.jpg","pics/Json_body.jpg","pics/jump_request.jpg","pics/pmtest.jpg","pics/post_body.jpg","pics/postman.jpg","pics/query_param.jpg","pics/reference.jpg","pics/req_token.jpg","pics/scope.jpg","pics/stop.jpg","pics/Tests.jpg","pics/token.jpg","style.css"]}
+  {"type":"character","attributes":{},"value":["cloud-api-journey_files/anchor-4.2.2/anchor.min.js","cloud-api-journey_files/bowser-1.9.3/bowser.min.js","cloud-api-journey_files/distill-2.2.21/template.v2.js","cloud-api-journey_files/header-attrs-2.8/header-attrs.js","cloud-api-journey_files/jquery-1.11.3/jquery.min.js","cloud-api-journey_files/popper-2.6.0/popper.min.js","cloud-api-journey_files/tippy-6.2.7/tippy-bundle.umd.min.js","cloud-api-journey_files/tippy-6.2.7/tippy-light-border.css","cloud-api-journey_files/tippy-6.2.7/tippy.css","cloud-api-journey_files/tippy-6.2.7/tippy.umd.min.js","cloud-api-journey_files/webcomponents-2.0.0/webcomponents.js","pics/api_basics.jpg","pics/auth_type.jpg","pics/base64.jpg","pics/configure.jpg","pics/courgette.log","pics/eva.jpg","pics/global_var.jpg","pics/Json_body.jpg","pics/jump_request.jpg","pics/pmtest.jpg","pics/post_body.jpg","pics/postman.jpg","pics/query_param.jpg","pics/reference.jpg","pics/req_token.jpg","pics/scope.jpg","pics/stop.jpg","pics/Tests.jpg","pics/token.jpg","style.css"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2106,8 +2106,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#api-basics">API Basics</a></li>
 <li><a href="#postman">POSTMAN</a></li>
 <li><a href="#postman-oauth2.0-authentication-to-use-google-api">Postman OAuth2.0 authentication to use Google API</a></li>
-<li><a href="#google-doc-ai-api-references">Google Doc AI API References</a></li>
 <li><a href="#send-a-google-doc-ai-processing-request-in-postman">Send a Google-DOC-AI Processing Request in POSTMAN</a></li>
+<li><a href="#test-docai-api-in-python">Test DocAI API in Python</a></li>
+<li><a href="#google-doc-ai-api-references">Google Doc AI API References</a></li>
 </ul>
 </nav>
 </div>
@@ -2207,13 +2208,6 @@ pm.test( “description string”, callback function-what to test ) is for postm
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/req_token.jpg" width="80%" style="display: block; margin: auto;" /></p>
 </div>
-<h3 id="google-doc-ai-api-references">Google Doc AI API References</h3>
-<p><a href="https://cloud.google.com/document-ai/docs">Overview</a><br />
-<a href="https://cloud.google.com/document-ai/docs/how-to">How to Guides</a><br />
-<a href="https://cloud.google.com/document-ai/docs/apis">Reference</a></p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="pics/reference.jpg" width="41%" style="display: block; margin: auto;" /></p>
-</div>
 <h3 id="send-a-google-doc-ai-processing-request-in-postman">Send a Google-DOC-AI Processing Request in POSTMAN</h3>
 <p><em>check <a href="https://cloud.google.com/document-ai/docs/send-request">official reference</a></em></p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2268,7 +2262,119 @@ https://LOCATION-documentai.googleapis.com/v1/projects/PROJECT_ID/locations/LOCA
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/base64.jpg" width="90%" style="display: block; margin: auto;" /></p>
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h3 id="test-docai-api-in-python">Test DocAI API in Python</h3>
+<p>To evaluate this API’s performance on images of <strong>commercial invoice</strong> in customs clearance, I tested over 50 samples(<code>.pdf</code> or <code>.tif</code> files) using python code as below. The output will be in format of <code>.xlsx</code> for the convenience of further calculation of the <strong>confidence interval</strong> for <strong>population</strong> average accuracy rate.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/eva.jpg" width="694" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">&#39;max_colwidth&#39;</span>, <span class="va">None</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">&#39;display.max_columns&#39;</span>, <span class="va">None</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">refer to  https://cloud.google.com/document-ai/docs/send-request#documentai_process_document-python;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">function : to extract feilds relavent to DHL business</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.cloud <span class="im">import</span> documentai_v1 <span class="im">as</span> documentai</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_document_sample(</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    project_id: <span class="bu">str</span>, location: <span class="bu">str</span>, processor_id: <span class="bu">str</span>, file_path: <span class="bu">str</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>):</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># You must set the api_endpoint if you use a location other than &#39;us&#39;, e.g.:</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    opts <span class="op">=</span> {}</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> location <span class="op">==</span> <span class="st">&quot;eu&quot;</span>:</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        opts <span class="op">=</span> {<span class="st">&quot;api_endpoint&quot;</span>: <span class="st">&quot;eu-documentai.googleapis.com&quot;</span>}</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    client <span class="op">=</span> documentai.DocumentProcessorServiceClient(client_options<span class="op">=</span>opts)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The full resource name of the processor, e.g.:</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># projects/project-id/locations/location/processor/processor-id</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># You must create new processors in the Cloud Console first</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    name <span class="op">=</span> <span class="ss">f&quot;projects/</span><span class="sc">{</span>project_id<span class="sc">}</span><span class="ss">/locations/</span><span class="sc">{</span>location<span class="sc">}</span><span class="ss">/processors/</span><span class="sc">{</span>processor_id<span class="sc">}</span><span class="ss">&quot;</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(file_path, <span class="st">&quot;rb&quot;</span>) <span class="im">as</span> image:</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        image_content <span class="op">=</span> image.read()</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot; </span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co">    Read the file into memory.  </span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="co">    &#39;mime_type&#39; can be &#39;application/pdf&#39;, &#39;image/tiff&#39;, &#39;image/gif&#39;, or &#39;application/json&#39;</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co">    document = {&quot;content&quot;: image_content, &quot;mime_type&quot;: &quot;image/tiff&quot;}</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">#chose the right mime_type</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> file_path[<span class="op">-</span><span class="dv">3</span>:] <span class="op">==</span><span class="st">&quot;pdf&quot;</span> :</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        mime <span class="op">=</span><span class="st">&#39;application/pdf&#39;</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> file_path[<span class="op">-</span><span class="dv">3</span>:] <span class="op">==</span><span class="st">&quot;tif&quot;</span>:</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>        mime <span class="op">=</span> <span class="st">&quot;image/tiff&quot;</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;mime_type not recognizable&quot;</span>)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read the file into memory.</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    document <span class="op">=</span> {<span class="st">&quot;content&quot;</span>: image_content, <span class="st">&quot;mime_type&quot;</span>: mime}</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Configure the process request</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    request <span class="op">=</span> {<span class="st">&quot;name&quot;</span>: name, <span class="st">&quot;raw_document&quot;</span>: document}</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Recognizes text entities in the PDF document</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> client.process_document(request<span class="op">=</span>request)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>    document <span class="op">=</span> result.document</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Document processing complete.</span><span class="sc">{}</span><span class="ch">\n</span><span class="st">&quot;</span>. <span class="bu">format</span>(file_path))</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># customized Fields to Commercial Invoice of logistic industry </span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>    entities <span class="op">=</span> document.entities</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>    not_relevant_types <span class="op">=</span>[<span class="st">&#39;line_item&#39;</span>,<span class="st">&#39;vat&#39;</span>,<span class="st">&#39;total_tax_amount&#39;</span>,<span class="st">&#39;receiver_tax_id&#39;</span>,<span class="st">&#39;supplier_tax_id&#39;</span>,</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&#39;supplier_iban&#39;</span>,<span class="st">&#39;freight_amount&#39;</span>, <span class="st">&#39;net_amount&#39;</span>,<span class="st">&#39;supplier_email&#39;</span>,<span class="st">&#39;supplier_website&#39;</span>]</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>    types,values,confidence <span class="op">=</span> [],[],[]</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Grab relavent fields &lt; key/value &gt; pair and their corresponding confidence scores.</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> entity <span class="kw">in</span> entities:</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ( entity.type_ <span class="kw">not</span> <span class="kw">in</span> not_relevant_types ):</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>            types.append(entity.type_)</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>            values.append(entity.mention_text)</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>            confidence.append(<span class="bu">round</span>(entity.confidence,<span class="dv">4</span>))</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>            <span class="cf">pass</span> </span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print in tabular format. </span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame({<span class="st">&#39;Type&#39;</span>: types, <span class="st">&#39;Value&#39;</span>: values, <span class="st">&#39;Confidence&#39;</span>: confidence})</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="co"># Google Cloud Platform info</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>jsonkeyDirectory <span class="op">=</span> <span class="st">&quot;C:</span><span class="ch">\\</span><span class="st">V</span><span class="ch">\\</span><span class="st">Google AI doc</span><span class="ch">\\</span><span class="st">xxx&quot;</span>   </span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>googleProjectId <span class="op">=</span> <span class="st">&quot;xx-ea-exp-dev-gcpgogleap-xxx&quot;</span></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>googleJsonKey <span class="op">=</span> jsonkeyDirectory <span class="op">+</span> <span class="st">&quot;</span><span class="ch">\\</span><span class="st">documentaikey.json&quot;</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>location <span class="op">=</span> <span class="st">&#39;eu&#39;</span> <span class="co"># Format is &#39;us&#39; or &#39;eu&#39;</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>processor_id <span class="op">=</span> <span class="st">&#39;xx274e7ff98xx&#39;</span> <span class="co"># Create processor in Cloud Console, here is invoice parser, and HITL disabled</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">&quot;GOOGLE_CLOUD_PROJECT&quot;</span>] <span class="op">=</span> googleProjectId</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">&quot;GOOGLE_APPLICATION_CREDENTIALS&quot;</span>] <span class="op">=</span> googleJsonKey </span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Test all Samples in one direcotry</span></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>samples_dir <span class="op">=</span><span class="st">&quot;C:</span><span class="ch">\\</span><span class="st">V</span><span class="ch">\\</span><span class="st">Google AI doc</span><span class="ch">\\</span><span class="st">6. Evaluation Framework</span><span class="ch">\\</span><span class="st">50 CI samples</span><span class="ch">\\</span><span class="st">&quot;</span></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span><span class="st">&quot;C:</span><span class="ch">\\</span><span class="st">V</span><span class="ch">\\</span><span class="st">Google AI doc</span><span class="ch">\\</span><span class="st">6. Evaluation Framework</span><span class="ch">\\</span><span class="st">50 CI fields output</span><span class="ch">\\</span><span class="st">&quot;</span></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>os.chdir(samples_dir)</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="co"># input each sample into processor and output a corresponding excel file. </span></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> os.listdir():</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>    file_path <span class="op">=</span> samples_dir <span class="op">+</span> f</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>    <span class="co"># read in testing files names and test</span></span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>    df_fields <span class="op">=</span> process_document_sample(googleProjectId, location, processor_id, file_path)</span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>    excel_name <span class="op">=</span> output_dir <span class="op">+</span> f[<span class="dv">0</span>:<span class="dv">2</span>]<span class="op">+</span><span class="st">&#39;.xlsx&#39;</span>  <span class="co"># e.g:excel name will be &quot;01.xlsx&quot;</span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>    df_fields.to_excel(excel_name)</span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;All Files Test &amp; Output COMPLETED !&quot;</span>)</span></code></pre></div>
+</div>
+<h3 id="google-doc-ai-api-references">Google Doc AI API References</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/reference.jpg" width="41%" style="display: block; margin: auto;" /></p>
+</div>
+<p><a href="https://cloud.google.com/document-ai/docs">Overview</a><br />
+<a href="https://cloud.google.com/document-ai/docs/how-to">How to Guides</a><br />
+<a href="https://cloud.google.com/document-ai/docs/apis">Reference</a></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
