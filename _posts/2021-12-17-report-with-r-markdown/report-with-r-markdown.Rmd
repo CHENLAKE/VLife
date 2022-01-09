@@ -160,6 +160,8 @@ knitr::include_graphics("pics/css.png")
 
 ## Add Tables
 
+### input dataset already
+
 > Use **kable( dataset, args )** in r code chunk.     
   arguments include:         
 `col.names = c("col1","col2","col3" ) `      
@@ -169,6 +171,14 @@ knitr::include_graphics("pics/css.png")
 ```{r,out.width = "70%", fig.align = "left", echo = FALSE}
 knitr::include_graphics("pics/table.png")
 knitr::include_graphics("pics/tableParams.png")
+```
+
+### [Table Generator](https://www.tablesgenerator.com/markdown_tables)     
+
+using online table generator to input the data in the table, preview then copy the code to clipboard to avoid tedious insertion of hypens and pipes. 
+
+```{r,out.width = "60%", fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/table_ge.png")
 ```
 
 ## Code Chunk 

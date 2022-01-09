@@ -115,6 +115,17 @@ knitr::include_graphics("pics/ck_shortcuts.png")
 
 ## Life-easing Shortcuts
 
+| COMMAND MODE                         | press 'Esc' to enable   |
+|--------------------------------------|-------------------------|
+| insert one cell bf current cell      |           'a'           |
+| insert one cell aft current cell     |           'b'           |
+| delete current cell                  |   'dd'(hit 'd' twice)   |
+| change current cell to Markdown cell |           'm'           |
+| save notebook                        |           's'           |
+| **EDIT MODE**                            | **press 'Enter' to enable**|
+| run cell, select below               |    'shift' + 'Enter'    |
+| undo                                 |      'ctrl' + 'z'       |
+| code completion or indent            |          'tab'          |
 
 
 ## Export JN to pdf
