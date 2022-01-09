@@ -23,39 +23,99 @@ body{
 }
 </style>
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+```{r,  fig.align = "center",  echo = FALSE}
+knitr::include_graphics("pics/isaac_.png")
+```  
+## Installation
 
-## What is Jupyter Notebook ?
+
+Highly recommended to install it through [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda, since they are packed with Python so that you can skip installing python then associating it as the interpreter or kernel. 
+For instance, if go to Miniconda's page, you can directly choose the right Python version to download Miniconda. 
+
+```{r,  fig.align = "left", fig.cap ="Windows Installer for Miniconda with Specific Python Version", echo = FALSE}
+knitr::include_graphics("pics/python_wind.png")
+```  
+
+## Run JN     
+
+### through Conda 
+
+While my studying python in University, the professor skipped the tool part totally. For a long time, the way I run Jupyter Notebook is through running Anaconda's Navigator, which is restrictive in terms of the root path or how flexible you want to manage your files. 
+
+```{r,  fig.align = "left", fig.cap ="Run Jupyter Notebook through Conda's Navigator UI", echo = FALSE}
+knitr::include_graphics("pics/conda.png")
+```  
+
+> by default, Conda will be installed in **C:\\Users\\xx **. The root path of JN will be the same if you open it through Conda's Navigator. 
+
+### Change Root Path
+
+```{r,  fig.align = "center", fig.cap ="Open Conda's Shell", echo = FALSE}
+knitr::include_graphics("pics/shell.png")
+``` 
+
+- open **AnaConda Powershell Prompt**. 
+- change the directory to wherever you want to act as the root path.
+- run command: ` jupyter notebook `.
+
+```{r,  fig.align = "center", fig.cap ="Run Jupyter Notebook through Conda's Shell", echo = FALSE}
+knitr::include_graphics("pics/cmd.png")
+``` 
+
+- once the JN is open in web browser, **tree** tells it is in root now, where you can start `New` files or folders, of which any action will be shown exactly the same in the file system. 
+
+```{r,  fig.align = "center", fig.cap ="Set any Directory as Jupyter Notebook's Root path", echo = FALSE}
+knitr::include_graphics("pics/root.png")
+``` 
+
+
+## Know Jupyter Notebook
 
 *These are not official definition of JN, but some personal understandings which helped me in learning and working*
+
+### Basics    
 
 1. **web-based** computational environment for creating notebook documents (formally `ipython` notebook, that's why its extension is `.ipynb`. Btw, the name jupyter is said to refer to 3 languages: Ju = `Julia`, Pyt = `Python`, the 3rd is `R` ).    
 2. a notebook is a **JSON** document( you can see it if you use any other python editor such as Spyder to open `.ipynb` file).   
 3. Jupyter **Kernel** is the program handling the relevant requests and response.     
 
-```{r,out.width = "60%", fig.align = "left", fig.cap ="Kernel -Python 3 ", echo = FALSE}
+```{r,  fig.align = "left", fig.cap ="Kernel -Python 3 ", echo = FALSE}
 knitr::include_graphics("pics/kernel.png")
 ```       
 4. codes or texts are written inside **Cell** of which there are 2 types: `Code`, `Markdown`. If you click any cell, the type will be shown here.   
 
-```{r, fig.align = "left", fig.cap ="Cell Type ", echo = FALSE}
+```{r,  fig.align = "left", fig.cap ="Cell Type ", echo = FALSE}
 knitr::include_graphics("pics/cell_type.png")
 ```    
+### dir()
 
-5. by Python kernel, a notebook is run together with a python instance, which maintains all the variables and functions ever executed in code cells within a notebook, **even after the cell is deleted**.     
+by Python kernel, a notebook is run together with a python instance, which maintains all the variables and functions ever executed in code cells within a notebook, **even after the cell is deleted**. Those variables will stay there until they are explicitly deleted or shutdown the notebook (kernel).     
 
-```{python, python.reticulate =FALSE,echo=TRUE,  eval=FALSE}
-dir()
+> use `dir()` in code cell can check what variables and methods are available in the current python instance.  
+use '`del` var' to explicitly delete a variable from current python instance.
+
+notebook will only care about the **sequence of execution** rather than the sequence a cell is positioned ( e.g.,insertion ).    
+
+### shutdown the notebook   
+closing the tab dose not equate shutting it down, as python will still run at the backend, tracking all variables and methods in the memory, when you reopen it and run a code cell, the execution order continues.      
+
+> so , the notebook continues running until you explicitly shut it down.  
+
+```{r,  fig.align = "left", fig.cap ="Shutdown Jupyter Notebook ", echo = FALSE}
+knitr::include_graphics("pics/shut.png")
 ``` 
-6. notebook will only care about the **sequence of execution** rather than the sequence a cell is positioned ( e.g.,insertion ). 
+
+### Check Keyboard Shortcuts    
+in a `.ipynb` file, you can check all the shortcuts key under tab " **Help** ".
+
+```{r,  fig.align = "left", fig.cap ="check shortcuts ", echo = FALSE}
+knitr::include_graphics("pics/ck_shortcuts.png")
+``` 
 
 
+## Life-easing Shortcuts
 
-## Life-easying commands
 
-## Change root path for JN
 
 ## Export JN to pdf
 

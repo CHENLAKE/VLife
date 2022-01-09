@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["pics/cell_type.png","pics/kernel.png","sharpen-jupyter-notebook_files/anchor-4.2.2/anchor.min.js","sharpen-jupyter-notebook_files/bowser-1.9.3/bowser.min.js","sharpen-jupyter-notebook_files/distill-2.2.21/template.v2.js","sharpen-jupyter-notebook_files/header-attrs-2.8/header-attrs.js","sharpen-jupyter-notebook_files/jquery-1.11.3/jquery.min.js","sharpen-jupyter-notebook_files/popper-2.6.0/popper.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-bundle.umd.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-light-border.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.umd.min.js","sharpen-jupyter-notebook_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["pics/cell_type.png","pics/ck_shortcuts.png","pics/cmd.png","pics/conda.png","pics/isaac_.png","pics/kernel.png","pics/python_wind.png","pics/root.png","pics/shell.png","pics/shut.png","sharpen-jupyter-notebook_files/anchor-4.2.2/anchor.min.js","sharpen-jupyter-notebook_files/bowser-1.9.3/bowser.min.js","sharpen-jupyter-notebook_files/distill-2.2.21/template.v2.js","sharpen-jupyter-notebook_files/header-attrs-2.8/header-attrs.js","sharpen-jupyter-notebook_files/jquery-1.11.3/jquery.min.js","sharpen-jupyter-notebook_files/popper-2.6.0/popper.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-bundle.umd.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-light-border.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.umd.min.js","sharpen-jupyter-notebook_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1482,9 +1482,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#what-is-jupyter-notebook">What is Jupyter Notebook ?</a></li>
-<li><a href="#life-easying-commands">Life-easying commands</a></li>
-<li><a href="#change-root-path-for-jn">Change root path for JN</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#run-jn">Run JN</a>
+<ul>
+<li><a href="#through-conda">through Conda</a></li>
+<li><a href="#change-root-path">Change Root Path</a></li>
+</ul></li>
+<li><a href="#know-jupyter-notebook">Know Jupyter Notebook</a>
+<ul>
+<li><a href="#basics">Basics</a></li>
+<li><a href="#dir">dir()</a></li>
+<li><a href="#shutdown-the-notebook">shutdown the notebook</a></li>
+<li><a href="#check-keyboard-shortcuts">Check Keyboard Shortcuts</a></li>
+</ul></li>
+<li><a href="#life-easing-shortcuts">Life-easing Shortcuts</a></li>
 <li><a href="#export-jn-to-pdf">Export JN to pdf</a></li>
 <li><a href="#make-jn-a-code-free-document">Make JN a code-free document</a></li>
 <li><a href="#why-need-a-cloud-jn">Why need a Cloud JN ?</a></li>
@@ -1501,8 +1512,69 @@ body{
   color: #7B1FA2;
 }
 </style>
-<h2 id="what-is-jupyter-notebook">What is Jupyter Notebook ?</h2>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/isaac_.png" width="446" style="display: block; margin: auto;" /></p>
+</div>
+<h2 id="installation">Installation</h2>
+<p>Highly recommended to install it through <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> or Anaconda, since they are packed with Python so that you can skip installing python then associating it as the interpreter or kernel. For instance, if go to Miniconda’s page, you can directly choose the right Python version to download Miniconda.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-2"></span>
+<img src="pics/python_wind.png" alt="Windows Installer for Miniconda with Specific Python Version" width="660" />
+<p class="caption">
+Figure 1: Windows Installer for Miniconda with Specific Python Version
+</p>
+</div>
+</div>
+<h2 id="run-jn">Run JN</h2>
+<h3 id="through-conda">through Conda</h3>
+<p>While my studying python in University, the professor skipped the tool part totally. For a long time, the way I run Jupyter Notebook is through running Anaconda’s Navigator, which is restrictive in terms of the root path or how flexible you want to manage your files.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-3"></span>
+<img src="pics/conda.png" alt="Run Jupyter Notebook through Conda's Navigator UI" width="946" />
+<p class="caption">
+Figure 2: Run Jupyter Notebook through Conda’s Navigator UI
+</p>
+</div>
+</div>
+<blockquote>
+<p>by default, Conda will be installed in <strong>C:\Users\xx </strong>. The root path of JN will be the same if you open it through Conda’s Navigator.</p>
+</blockquote>
+<h3 id="change-root-path">Change Root Path</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="pics/shell.png" alt="Open Conda's Shell" width="315" />
+<p class="caption">
+Figure 3: Open Conda’s Shell
+</p>
+</div>
+</div>
+<ul>
+<li>open <strong>AnaConda Powershell Prompt</strong>.</li>
+<li>change the directory to wherever you want to act as the root path.</li>
+<li>run command: <code>jupyter notebook</code>.</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="pics/cmd.png" alt="Run Jupyter Notebook through Conda's Shell" width="705" />
+<p class="caption">
+Figure 4: Run Jupyter Notebook through Conda’s Shell
+</p>
+</div>
+</div>
+<ul>
+<li>once the JN is open in web browser, <strong>tree</strong> tells it is in root now, where you can start <code>New</code> files or folders, of which any action will be shown exactly the same in the file system.</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="pics/root.png" alt="Set any Directory as Jupyter Notebook's Root path" width="700" />
+<p class="caption">
+Figure 5: Set any Directory as Jupyter Notebook’s Root path
+</p>
+</div>
+</div>
+<h2 id="know-jupyter-notebook">Know Jupyter Notebook</h2>
 <p><em>These are not official definition of JN, but some personal understandings which helped me in learning and working</em></p>
+<h3 id="basics">Basics</h3>
 <ol type="1">
 <li><strong>web-based</strong> computational environment for creating notebook documents (formally <code>ipython</code> notebook, that’s why its extension is <code>.ipynb</code>. Btw, the name jupyter is said to refer to 3 languages: Ju = <code>Julia</code>, Pyt = <code>Python</code>, the 3rd is <code>R</code> ).<br />
 </li>
@@ -1511,10 +1583,10 @@ body{
 <li>Jupyter <strong>Kernel</strong> is the program handling the relevant requests and response.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-1"></span>
-<img src="pics/kernel.png" alt="Kernel -Python 3 " width="60%" />
+<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-7"></span>
+<img src="pics/kernel.png" alt="Kernel -Python 3 " width="789" />
 <p class="caption">
-Figure 1: Kernel -Python 3
+Figure 6: Kernel -Python 3
 </p>
 </div>
 </div>
@@ -1522,28 +1594,48 @@ Figure 1: Kernel -Python 3
 <li>codes or texts are written inside <strong>Cell</strong> of which there are 2 types: <code>Code</code>, <code>Markdown</code>. If you click any cell, the type will be shown here.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-8"></span>
 <img src="pics/cell_type.png" alt="Cell Type " width="454" />
 <p class="caption">
-Figure 2: Cell Type
+Figure 7: Cell Type
 </p>
 </div>
 </div>
-<ol start="5" type="1">
-<li>by Python kernel, a notebook is run together with a python instance, which maintains all the variables and functions ever executed in code cells within a notebook, <strong>even after the cell is deleted</strong>.</li>
-</ol>
+<h3 id="dir">dir()</h3>
+<p>by Python kernel, a notebook is run together with a python instance, which maintains all the variables and functions ever executed in code cells within a notebook, <strong>even after the cell is deleted</strong>. Those variables will stay there until they are explicitly deleted or shutdown the notebook (kernel).</p>
+<blockquote>
+<p>use <code>dir()</code> in code cell can check what variables and methods are available in the current python instance.<br />
+use ‘<code>del</code> var’ to explicitly delete a variable from current python instance.</p>
+</blockquote>
+<p>notebook will only care about the <strong>sequence of execution</strong> rather than the sequence a cell is positioned ( e.g.,insertion ).</p>
+<h3 id="shutdown-the-notebook">shutdown the notebook</h3>
+<p>closing the tab dose not equate shutting it down, as python will still run at the backend, tracking all variables and methods in the memory, when you reopen it and run a code cell, the execution order continues.</p>
+<blockquote>
+<p>so , the notebook continues running until you explicitly shut it down.</p>
+</blockquote>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>()</span></code></pre></div>
+<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-9"></span>
+<img src="pics/shut.png" alt="Shutdown Jupyter Notebook " width="526" />
+<p class="caption">
+Figure 8: Shutdown Jupyter Notebook
+</p>
 </div>
-<ol start="6" type="1">
-<li>notebook will only care about the <strong>sequence of execution</strong> rather than the sequence a cell is positioned ( e.g.,insertion ).</li>
-</ol>
-<h2 id="life-easying-commands">Life-easying commands</h2>
-<h2 id="change-root-path-for-jn">Change root path for JN</h2>
+</div>
+<h3 id="check-keyboard-shortcuts">Check Keyboard Shortcuts</h3>
+<p>in a <code>.ipynb</code> file, you can check all the shortcuts key under tab " <strong>Help</strong> ".</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-10"></span>
+<img src="pics/ck_shortcuts.png" alt="check shortcuts " width="604" />
+<p class="caption">
+Figure 9: check shortcuts
+</p>
+</div>
+</div>
+<h2 id="life-easing-shortcuts">Life-easing Shortcuts</h2>
 <h2 id="export-jn-to-pdf">Export JN to pdf</h2>
 <h2 id="make-jn-a-code-free-document">Make JN a code-free document</h2>
 <h2 id="why-need-a-cloud-jn">Why need a Cloud JN ?</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
