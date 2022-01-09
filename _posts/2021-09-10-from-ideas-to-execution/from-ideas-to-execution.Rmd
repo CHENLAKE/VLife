@@ -38,7 +38,7 @@ During master program, for almost each course we took, we were asked to form a t
 
 Those projects were not easy though, since I didn’t know  those team members  before ,unaware of their mindsets and capabilities. Most of the time, I felt I was trying my best but still couldn’t get a great result/ project performance.  
 
-I tried to force myself to accept the notion  that teamwork won't be easy, until I finished a data analytic project with one classmate and got it accepted by *JMP Discovery Summit Americas 2021*. The most unbelievable part is that that is the most comfortable and effortless project for me till now, but it achieves the best result! (*easy* doesn’t mean the project has no intellectual value, e*ffortless *doesn’t mean we succeeded due to luck)
+I tried to force myself to accept the notion  that teamwork won't be easy, until I finished a data analytic project with one classmate and got it accepted by [*JMP Discovery Summit Americas 2021*](https://community.jmp.com/t5/Discovery-Summit-Americas-2021/An-Analysis-of-ETFs-in-China-s-Stock-Market-Using-Dynamic-Time/ta-p/398749). The most unbelievable part is that that is the most comfortable and effortless project for me till now, but it achieves the best result! (*easy* doesn’t mean the project has no intellectual value, e*ffortless *doesn’t mean we succeeded due to luck)
 
 ### 2.1 Why least effort but most effective?   
 
