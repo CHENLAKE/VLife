@@ -153,6 +153,15 @@ knitr::include_graphics("pics/figAlign.png")
 knitr::include_graphics("pics/globalOpt.png")
 ```
 
+### Keep the Current Format    
+If using this piece of command inside R code chunk to insert picture,do **insert a space line** between the text and code chunk, otherwise it will reset the format of later text to normal body, even you tried to format it as header or index.    
+
+```{r,out.width = "80%", fig.align = "left", echo=TRUE, eval= FALSE}
+knitr::include_graphics("pics/css.png")
+```   
+> Frankly speaking, whenever your format doesn't work as you expected, try insert a space line between different formats. 
+
+
 ## Add Tables
 
 > Use **kable( dataset, args )** in r code chunk.     

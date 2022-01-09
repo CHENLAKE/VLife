@@ -1,0 +1,60 @@
+---
+title: "Sharpen Jupyter Notebook"
+description: |
+  An artisan must sharpen her tools before she is to do the work not only well but also blissfully. Jupyter notebook is a powerful tool to learn python coding(local machine) as well as data science, AI(colab on cloud). Python course I took from university only covered python per se which was a bit of pity. 
+author:
+  - name: V.LC.LAKE
+    url: {}
+date: 01-09-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+<style>
+#TOC {
+  color: #7B1FA2;
+  font-family: Agency FB;
+  font-size: 20px;
+}
+body{
+  color: #7B1FA2;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## What is Jupyter Notebook ?
+
+*These are not official definition of JN, but some personal understandings which helped me in learning and working*
+
+1. **web-based** computational environment for creating notebook documents (formally `ipython` notebook, that's why its extension is `.ipynb`).    
+2. a notebook is a **JSON** document( you can see it if you use any other python editor such as Spyder to open `.ipynb` file).   
+3. Jupyter **Kernel** is the program handling the relevant requests and response.     
+
+```{r,out.width = "60%", fig.align = "left", fig.cap ="Kernel -Python 3 ", echo = FALSE}
+knitr::include_graphics("pics/kernel.png")
+```       
+4. codes or texts are written inside **Cell** of which there are 2 types: Code,Markdown. If you click any cell, the type will be shown here.   
+```{r,out.width = "60%", fig.align = "left", fig.cap ="Cell Type ", echo = FALSE}
+knitr::include_graphics("pics/cell_type.png")
+```
+
+
+## Life-easying commands
+
+## Change root path for JN
+
+## Export JN to pdf
+
+## Make JN a code-free document
+
+## Why need a Cloud JN ?  
+
+
+
+
+
