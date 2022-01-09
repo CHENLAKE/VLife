@@ -202,6 +202,14 @@ Normally, **wkhtmltopdf** needs to be installed and `Environment Variable` may a
 `jupyter nbextension enable --py hide_code`
 `jupyter serverextension enable --py hide_code`
 
+## Resources
+
+1. [*built-in magic commands*](https://ipython.readthedocs.io/en/stable/interactive/magics.html)   
+2. [*nbconvert: Convert Notebooks to other formats*](https://nbconvert.readthedocs.io/en/latest/)   
+3. [*nbformat: Python API for working with notebook files*](https://nbformat.readthedocs.io/en/latest/api.html)   
+4. [*papermill: parameterizing and executing Jupyter Notebooks*](https://papermill.readthedocs.io/en/latest/)    
+5. [*nbextentions*](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)    
+6. [*nbviewer: a way to share Jupyter notebooks via the browser*](https://nbviewer.org/)
 
 
 
