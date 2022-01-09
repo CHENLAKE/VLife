@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["pics/cell_type.png","pics/ck_shortcuts.png","pics/cmd.png","pics/conda.png","pics/isaac_.png","pics/kernel.png","pics/python_wind.png","pics/root.png","pics/shell.png","pics/shut.png","sharpen-jupyter-notebook_files/anchor-4.2.2/anchor.min.js","sharpen-jupyter-notebook_files/bowser-1.9.3/bowser.min.js","sharpen-jupyter-notebook_files/distill-2.2.21/template.v2.js","sharpen-jupyter-notebook_files/header-attrs-2.8/header-attrs.js","sharpen-jupyter-notebook_files/jquery-1.11.3/jquery.min.js","sharpen-jupyter-notebook_files/popper-2.6.0/popper.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-bundle.umd.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-light-border.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.umd.min.js","sharpen-jupyter-notebook_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["pics/cell_type.png","pics/ck_shortcuts.png","pics/cmd.png","pics/conda.png","pics/env_var.png","pics/error.png","pics/isaac_.png","pics/kernel.png","pics/ls.png","pics/paks.png","pics/pdf.png","pics/python_wind.png","pics/root.png","pics/shell.png","pics/shut.png","sharpen-jupyter-notebook_files/anchor-4.2.2/anchor.min.js","sharpen-jupyter-notebook_files/bowser-1.9.3/bowser.min.js","sharpen-jupyter-notebook_files/distill-2.2.21/template.v2.js","sharpen-jupyter-notebook_files/header-attrs-2.8/header-attrs.js","sharpen-jupyter-notebook_files/jquery-1.11.3/jquery.min.js","sharpen-jupyter-notebook_files/popper-2.6.0/popper.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-bundle.umd.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-light-border.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.umd.min.js","sharpen-jupyter-notebook_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2112,13 +2112,20 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><a href="#basics">Basics</a></li>
 <li><a href="#dir">dir()</a></li>
-<li><a href="#shutdown-the-notebook">shutdown the notebook</a></li>
+<li><a href="#shutdown-jn">Shutdown JN</a></li>
 <li><a href="#check-keyboard-shortcuts">Check Keyboard Shortcuts</a></li>
 </ul></li>
-<li><a href="#life-easing-shortcuts">Life-easing Shortcuts</a></li>
-<li><a href="#export-jn-to-pdf">Export JN to pdf</a></li>
+<li><a href="#life-easing-shortcuts">Life-easing Shortcuts</a>
+<ul>
+<li><a href="#and-commands">and Commands</a></li>
+</ul></li>
+<li><a href="#export-jn-to-pdf">Export JN to PDF</a>
+<ul>
+<li><a href="#packages-to-install">Packages to Install</a></li>
+<li><a href="#unexpeted-error">Unexpeted Error</a></li>
+<li><a href="#solutions">Solutions</a></li>
+</ul></li>
 <li><a href="#make-jn-a-code-free-document">Make JN a code-free document</a></li>
-<li><a href="#why-need-a-cloud-jn">Why need a Cloud JN ?</a></li>
 </ul>
 </nav>
 </div>
@@ -2193,7 +2200,9 @@ Figure 5: Set any Directory as Jupyter Notebook’s Root path
 </div>
 </div>
 <h2 id="know-jupyter-notebook">Know Jupyter Notebook</h2>
-<p><em>These are not official definition of JN, but some personal understandings which helped me in learning and working</em></p>
+<blockquote>
+<p>These are not official definition of JN, but some personal understandings which helped me in learning and working</p>
+</blockquote>
 <h3 id="basics">Basics</h3>
 <ol type="1">
 <li><strong>web-based</strong> computational environment for creating notebook documents (formally <code>ipython</code> notebook, that’s why its extension is <code>.ipynb</code>. Btw, the name jupyter is said to refer to 3 languages: Ju = <code>Julia</code>, Pyt = <code>Python</code>, the 3rd is <code>R</code> ).<br />
@@ -2228,7 +2237,7 @@ Figure 7: Cell Type
 use ‘<code>del</code> var’ to explicitly delete a variable from current python instance.</p>
 </blockquote>
 <p>notebook will only care about the <strong>sequence of execution</strong> rather than the sequence a cell is positioned ( e.g.,insertion ).</p>
-<h3 id="shutdown-the-notebook">shutdown the notebook</h3>
+<h3 id="shutdown-jn">Shutdown JN</h3>
 <p>closing the tab dose not equate shutting it down, as python will still run at the backend, tracking all variables and methods in the memory, when you reopen it and run a code cell, the execution order continues.</p>
 <blockquote>
 <p>so , the notebook continues running until you explicitly shut it down.</p>
@@ -2298,10 +2307,131 @@ Figure 9: check shortcuts
 </tr>
 </tbody>
 </table>
-<h2 id="export-jn-to-pdf">Export JN to pdf</h2>
+<h3 id="and-commands">and Commands</h3>
+<ol type="1">
+<li>to check the directory of current notebook: <code>ls</code></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<img src="pics/ls.png" alt="List contents of directory of current Jupyter Notebook " width="392" />
+<p class="caption">
+Figure 10: List contents of directory of current Jupyter Notebook
+</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>to run bash/terminal commands in code cell: <strong>by starting with <code>!</code></strong> , for example,</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span> pip install seaborn</span></code></pre></div>
+</div>
+<h2 id="export-jn-to-pdf">Export JN to PDF</h2>
+<p>A Jupyter Notebook can be converted to a number of open standard output formats (HTML, LaTeX, PDF, Markdown, Python) through <strong>“Download as”</strong> in the web interface.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<img src="pics/pdf.png" alt="Convert Jupyter Notebook to other formats " width="330" />
+<p class="caption">
+Figure 11: Convert Jupyter Notebook to other formats
+</p>
+</div>
+</div>
+<h3 id="packages-to-install">Packages to Install</h3>
+<p>To make it work, <strong>nbcovert</strong> library and its underlying packages need to be installed. <a href="https://nbconvert.readthedocs.io/en/latest/install.html"><em>read detail</em></a></p>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 29%" />
+<col style="width: 39%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>step</th>
+<th>library</th>
+<th>method</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>nbconvert</td>
+<td>pip install nbconvert</td>
+<td>shell cmd</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Pandoc</td>
+<td><a href="https://pandoc.org/installing.html" class="uri">https://pandoc.org/installing.html</a></td>
+<td>windows installation</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Tex ( MikTex for windows)</td>
+<td><a href="https://miktex.org/download" class="uri">https://miktex.org/download</a></td>
+<td>windows installation</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Pyppeteer Chromium</td>
+<td>pip install nbconvert[webpdf]</td>
+<td>shell cmd</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unexpeted-error">Unexpeted Error</h3>
+<p>after going through the 4 steps above and we happily trying to convert a notebook to pdf, we may unexpectedly see this message:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
+<img src="pics/error.png" alt=" Error Msg " width="762" />
+<p class="caption">
+Figure 12:  Error Msg
+</p>
+</div>
+</div>
+<h3 id="solutions">Solutions</h3>
+<ol type="1">
+<li>go to <strong>This PC</strong> &gt; <strong>Advanced system settings</strong> &gt; <strong>Environment Variables</strong>, add in the path of MikTex executable.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<img src="pics/env_var.png" alt="Add MikTex into Environment Variable " width="526" />
+<p class="caption">
+Figure 13: Add MikTex into Environment Variable
+</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>restart computer, relaunch JN, retry to “Download as .pdf”, then several <strong>‘Package Installation’</strong> windows will pop out, all clicking <code>Install</code>.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
+<img src="pics/paks.png" alt="a Series of Package Installation" width="488" />
+<p class="caption">
+Figure 14: a Series of Package Installation
+</p>
+</div>
+</div>
 <h2 id="make-jn-a-code-free-document">Make JN a code-free document</h2>
-<h2 id="why-need-a-cloud-jn">Why need a Cloud JN ?</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>There might be times that you want to share the data analyzing results to your boss who does not need to know all the codes you use. You need <strong>hide the code</strong>.<br />
+There exists this <strong>hide_code extension for JN</strong> to selectively hide code, prompts and output with PDF and HTML exporting support, making a notebook a code free document for exporting or presenting.<br />
+Follow two steps to make this extension work :</p>
+<ol type="1">
+<li>go to this <a href="https://github.com/kirbs-/hide_code"><em>hide_code extension </em></a> to see the demo and make sure you already meet the last <strong>Requirements</strong> part.<br />
+Normally, <strong>pdfkit</strong> is already installed, you can try <code>pip</code> command in an open <code>.ipynb</code> file to check out.</li>
+</ol>
+<blockquote>
+<p><code>! pip install pdfkit</code></p>
+</blockquote>
+<p>Normally, <strong>wkhtmltopdf</strong> needs to be installed and <code>Environment Variable</code> may also need to be added after installation. Check <a href="https://wkhtmltopdf.org/downloads.html"><em>wkhtmltopdf download</em></a></p>
+<ol start="2" type="1">
+<li>run 4 shell commands which are stated also in this <a href="https://github.com/kirbs-/hide_code"><em>hide_code extension </em></a> under “Jupyter Notebook Installation” section.</li>
+</ol>
+<blockquote>
+<p><code>pip install hide_code</code><br />
+<code>jupyter nbextension install --py hide_code</code> <code>jupyter nbextension enable --py hide_code</code> <code>jupyter serverextension enable --py hide_code</code></p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

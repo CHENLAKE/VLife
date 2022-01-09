@@ -71,7 +71,7 @@ knitr::include_graphics("pics/root.png")
 
 ## Know Jupyter Notebook
 
-*These are not official definition of JN, but some personal understandings which helped me in learning and working*
+> These are not official definition of JN, but some personal understandings which helped me in learning and working
 
 ### Basics    
 
@@ -96,7 +96,7 @@ use '`del` var' to explicitly delete a variable from current python instance.
 
 notebook will only care about the **sequence of execution** rather than the sequence a cell is positioned ( e.g.,insertion ).    
 
-### shutdown the notebook   
+### Shutdown JN  
 closing the tab dose not equate shutting it down, as python will still run at the backend, tracking all variables and methods in the memory, when you reopen it and run a code cell, the execution order continues.      
 
 > so , the notebook continues running until you explicitly shut it down.  
@@ -127,12 +127,82 @@ knitr::include_graphics("pics/ck_shortcuts.png")
 | undo                                 |      'ctrl' + 'z'       |
 | code completion or indent            |          'tab'          |
 
+### and Commands
 
-## Export JN to pdf
+1. to check the directory of current notebook: `ls`    
+
+```{r,  fig.align = "center", fig.cap ="List contents of directory of current Jupyter Notebook ", echo = FALSE}
+knitr::include_graphics("pics/ls.png")
+``` 
+
+2. to run bash/terminal commands in code cell:  **by starting with  ` ! `** , for example, 
+
+```{python, python.reticulate= FALSE,  eval=FALSE }
+! pip install seaborn
+```
+
+## Export JN to PDF
+
+A Jupyter Notebook can be converted to a number of open standard output formats (HTML, LaTeX, PDF, Markdown, Python) through **"Download as"** in the web interface.
+
+```{r,  fig.align = "center", fig.cap ="Convert Jupyter Notebook to other formats ", echo = FALSE}
+knitr::include_graphics("pics/pdf.png")
+``` 
+
+### Packages to Install     
+
+To make it work, **nbcovert** library and its underlying packages need to be installed. [*read detail*](https://nbconvert.readthedocs.io/en/latest/install.html)    
+
+| step | library                   | method                             | comment              |
+|------|---------------------------|------------------------------------|----------------------|
+| 1    | nbconvert                 | pip install nbconvert              | shell cmd            |
+| 2    | Pandoc                    | https://pandoc.org/installing.html | windows installation |
+| 3    | Tex ( MikTex for windows) | https://miktex.org/download        | windows installation |
+| 4    | Pyppeteer Chromium        | pip install nbconvert[webpdf]      | shell cmd            |
+
+### Unexpeted Error
+
+after going through the 4 steps above and we happily trying to convert a notebook to pdf, we may unexpectedly see this message:
+
+```{r,  fig.align = "center", fig.cap =" Error Msg ", echo = FALSE}
+knitr::include_graphics("pics/error.png")
+``` 
+
+### Solutions   
+
+1. go to **This PC** > **Advanced system settings** > **Environment Variables**, add in the path of  MikTex executable.
+
+```{r,  fig.align = "center", fig.cap ="Add MikTex into Environment Variable ", echo = FALSE}
+knitr::include_graphics("pics/env_var.png")
+``` 
+
+2. restart computer, relaunch JN, retry to "Download as .pdf", then several **'Package Installation'** windows will pop out, all clicking `Install`.     
+
+```{r,fig.align = "center", fig.cap ="a Series of Package Installation", echo = FALSE}
+knitr::include_graphics("pics/paks.png")
+``` 
 
 ## Make JN a code-free document
 
-## Why need a Cloud JN ?  
+There might be times that you want to share the data analyzing results to your boss who does not need to know all the codes you use. You need **hide the code**.       
+There exists this **hide_code extension for JN**  to selectively hide code, prompts and output with PDF and HTML exporting support, making a notebook a code free document for exporting or presenting.     
+Follow two steps to make this extension work :     
+
+1. go to this [*hide_code extension *](https://github.com/kirbs-/hide_code) to see the demo and make sure you already meet the last **Requirements** part.    
+Normally, **pdfkit** is already installed, you can try `pip` command in an open `.ipynb` file to check out. 
+
+> `! pip install pdfkit`  
+
+Normally, **wkhtmltopdf** needs to be installed and `Environment Variable` may also need to be added after installation. Check [*wkhtmltopdf download*](https://wkhtmltopdf.org/downloads.html)    
+
+2.  run 4 shell commands which are stated also in this [*hide_code extension *](https://github.com/kirbs-/hide_code) under "Jupyter Notebook Installation" section.  
+
+> `pip install hide_code`   
+`jupyter nbextension install --py hide_code`
+`jupyter nbextension enable --py hide_code`
+`jupyter serverextension enable --py hide_code`
+
+
 
 
 
