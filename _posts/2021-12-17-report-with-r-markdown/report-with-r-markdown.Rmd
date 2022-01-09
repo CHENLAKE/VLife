@@ -13,10 +13,6 @@ output:
     css: style.css
 ---
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(out.width= "30%",echo = FALSE)
-```
 In a R Markdown document, there are mainly 3 elements which are YAML Header, Text Body and Code Chunk.   
 
 [online cheat sheet](https://www.markdownguide.org/cheat-sheet) 
@@ -199,9 +195,18 @@ knitr::include_graphics("pics/chuncOpt.png")
 knitr::include_graphics("pics/loadPack.png")
 ```
 
+### Interact with Python       
+Let's  make it super clear: R Markdown and knitr do support Python.The Python support in R Markdown and knitr is based on the `reticulate` package which allows two-way communication between Python and R.   
 
-  
-  
+> unfortunately, I prefer to use them separately. However, more info can be found [here](https://rstudio.github.io/reticulate/). 
+
+If only for report purpose for which we only want to show the python codes in an R Markdown document, we can add chunk header like this:
+
+```{r, out.width = "80%",fig.align = "left", echo = FALSE}
+knitr::include_graphics("pics/python.png")
+```
+
+ 
 
 
 

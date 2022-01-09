@@ -31,17 +31,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 *These are not official definition of JN, but some personal understandings which helped me in learning and working*
 
-1. **web-based** computational environment for creating notebook documents (formally `ipython` notebook, that's why its extension is `.ipynb`).    
+1. **web-based** computational environment for creating notebook documents (formally `ipython` notebook, that's why its extension is `.ipynb`. Btw, the name jupyter is said to refer to 3 languages: Ju = `Julia`, Pyt = `Python`, the 3rd is `R` ).    
 2. a notebook is a **JSON** document( you can see it if you use any other python editor such as Spyder to open `.ipynb` file).   
 3. Jupyter **Kernel** is the program handling the relevant requests and response.     
 
 ```{r,out.width = "60%", fig.align = "left", fig.cap ="Kernel -Python 3 ", echo = FALSE}
 knitr::include_graphics("pics/kernel.png")
 ```       
-4. codes or texts are written inside **Cell** of which there are 2 types: Code,Markdown. If you click any cell, the type will be shown here.   
-```{r,out.width = "60%", fig.align = "left", fig.cap ="Cell Type ", echo = FALSE}
+4. codes or texts are written inside **Cell** of which there are 2 types: `Code`, `Markdown`. If you click any cell, the type will be shown here.   
+
+```{r, fig.align = "left", fig.cap ="Cell Type ", echo = FALSE}
 knitr::include_graphics("pics/cell_type.png")
-```
+```    
+
+5. by Python kernel, a notebook is run together with a python instance, which maintains all the variables and functions ever executed in code cells within a notebook, **even after the cell is deleted**.     
+
+```{python, python.reticulate =FALSE,echo=TRUE,  eval=FALSE}
+dir()
+``` 
+6. notebook will only care about the **sequence of execution** rather than the sequence a cell is positioned ( e.g.,insertion ). 
+
 
 
 ## Life-easying commands

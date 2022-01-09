@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["pics/chuncOpt.png","pics/css.png","pics/dateManu.png","pics/figAlign.png","pics/globalOpt.png","pics/invokeParam1.png","pics/invokeParam2.png","pics/loadPack.png","pics/paramPage.png","pics/params.png","pics/specificDate.png","pics/table.png","pics/tableParams.png","pics/timeFormat.png","pics/toc_css.png","pics/today.png","report-with-r-markdown_files/anchor-4.2.2/anchor.min.js","report-with-r-markdown_files/bowser-1.9.3/bowser.min.js","report-with-r-markdown_files/distill-2.2.21/template.v2.js","report-with-r-markdown_files/header-attrs-2.8/header-attrs.js","report-with-r-markdown_files/jquery-1.11.3/jquery.min.js","report-with-r-markdown_files/popper-2.6.0/popper.min.js","report-with-r-markdown_files/tippy-6.2.7/tippy-bundle.umd.min.js","report-with-r-markdown_files/tippy-6.2.7/tippy-light-border.css","report-with-r-markdown_files/tippy-6.2.7/tippy.css","report-with-r-markdown_files/tippy-6.2.7/tippy.umd.min.js","report-with-r-markdown_files/webcomponents-2.0.0/webcomponents.js","style.css"]}
+  {"type":"character","attributes":{},"value":["pics/chuncOpt.png","pics/css.png","pics/dateManu.png","pics/figAlign.png","pics/globalOpt.png","pics/invokeParam1.png","pics/invokeParam2.png","pics/loadPack.png","pics/paramPage.png","pics/params.png","pics/python.png","pics/specificDate.png","pics/table.png","pics/tableParams.png","pics/timeFormat.png","pics/toc_css.png","pics/today.png","report-with-r-markdown_files/anchor-4.2.2/anchor.min.js","report-with-r-markdown_files/bowser-1.9.3/bowser.min.js","report-with-r-markdown_files/distill-2.2.21/template.v2.js","report-with-r-markdown_files/header-attrs-2.8/header-attrs.js","report-with-r-markdown_files/jquery-1.11.3/jquery.min.js","report-with-r-markdown_files/popper-2.6.0/popper.min.js","report-with-r-markdown_files/tippy-6.2.7/tippy-bundle.umd.min.js","report-with-r-markdown_files/tippy-6.2.7/tippy-light-border.css","report-with-r-markdown_files/tippy-6.2.7/tippy.css","report-with-r-markdown_files/tippy-6.2.7/tippy.umd.min.js","report-with-r-markdown_files/webcomponents-2.0.0/webcomponents.js","style.css"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2122,6 +2122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><a href="#options">Options</a></li>
 <li><a href="#load-packages">Load Packages</a></li>
+<li><a href="#interact-with-python">Interact with Python</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2155,7 +2156,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;V LAKE&quot;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot; 13:34:17 09 Jan,2022 &quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot; 14:45:36 09 Jan,2022 &quot;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <ul>
@@ -2283,6 +2284,15 @@ e.g., import library, dataset / setup global options/ exclude messages<br />
 <h3 id="load-packages">Load Packages</h3>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/loadPack.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<h3 id="interact-with-python">Interact with Python</h3>
+<p>Let’s make it super clear: R Markdown and knitr do support Python.The Python support in R Markdown and knitr is based on the <code>reticulate</code> package which allows two-way communication between Python and R.</p>
+<blockquote>
+<p>unfortunately, I prefer to use them separately. However, more info can be found <a href="https://rstudio.github.io/reticulate/">here</a>.</p>
+</blockquote>
+<p>If only for report purpose for which we only want to show the python codes in an R Markdown document, we can add chunk header like this:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/python.png" width="80%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

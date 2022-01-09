@@ -2124,7 +2124,7 @@ body{
 <h2 id="what-is-jupyter-notebook">What is Jupyter Notebook ?</h2>
 <p><em>These are not official definition of JN, but some personal understandings which helped me in learning and working</em></p>
 <ol type="1">
-<li><strong>web-based</strong> computational environment for creating notebook documents (formally <code>ipython</code> notebook, that’s why its extension is <code>.ipynb</code>).<br />
+<li><strong>web-based</strong> computational environment for creating notebook documents (formally <code>ipython</code> notebook, that’s why its extension is <code>.ipynb</code>. Btw, the name jupyter is said to refer to 3 languages: Ju = <code>Julia</code>, Pyt = <code>Python</code>, the 3rd is <code>R</code> ).<br />
 </li>
 <li>a notebook is a <strong>JSON</strong> document( you can see it if you use any other python editor such as Spyder to open <code>.ipynb</code> file).<br />
 </li>
@@ -2139,23 +2139,31 @@ Figure 1: Kernel -Python 3
 </div>
 </div>
 <ol start="4" type="1">
-<li>codes or texts are written inside <strong>Cell</strong> of which there are 2 types: Code,Markdown. If you click any cell, the type will be shown here.<br />
-
+<li>codes or texts are written inside <strong>Cell</strong> of which there are 2 types: <code>Code</code>, <code>Markdown</code>. If you click any cell, the type will be shown here.</li>
+</ol>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: left"><span id="fig:unnamed-chunk-2"></span>
-<img src="pics/cell_type.png" alt="Cell Type " width="60%" />
+<img src="pics/cell_type.png" alt="Cell Type " width="454" />
 <p class="caption">
 Figure 2: Cell Type
 </p>
-</div></li>
-</ol>
 </div>
+</div>
+<ol start="5" type="1">
+<li>by Python kernel, a notebook is run together with a python instance, which maintains all the variables and functions ever executed in code cells within a notebook, <strong>even after the cell is deleted</strong>.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>()</span></code></pre></div>
+</div>
+<ol start="6" type="1">
+<li>notebook will only care about the <strong>sequence of execution</strong> rather than the sequence a cell is positioned ( e.g.,insertion ).</li>
+</ol>
 <h2 id="life-easying-commands">Life-easying commands</h2>
 <h2 id="change-root-path-for-jn">Change root path for JN</h2>
 <h2 id="export-jn-to-pdf">Export JN to pdf</h2>
 <h2 id="make-jn-a-code-free-document">Make JN a code-free document</h2>
 <h2 id="why-need-a-cloud-jn">Why need a Cloud JN ?</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
