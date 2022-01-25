@@ -1,0 +1,79 @@
+---
+title: "Pandas Essence"
+description: |
+  Pandas is one of the most popular liabrary for python programming langauge to deal with data transformation and preparation. It is impossible to remember all methods available, but definitely useful and wise to know the essence. 
+author:
+  - name: V.LC.LAKE
+    url: {}
+date: 01-10-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+<style>
+#TOC {
+  color: #3483eb;
+  font-family: Agency FB;
+  font-size: 20px;
+}
+body{
+  color: #3483eb;
+}
+</style>
+
+```{r, fig.align = "center",fig.cap="Python ANd Data AnalysiS ?", echo = FALSE}
+knitr::include_graphics("pics/pandas.jpg")
+```
+
+## Data Structure Attributes
+
+```{python, python.reticulate =FALSE,eval =FALSE}
+import numpy as np
+import pandas as pd
+```
+
+| np<br>(np.array) | pd<br>(pd.Series) | pd<br>(pd.DataFrame) |
+|:----------------:|:-----------------:|:--------------------:|
+| .dim             | .index            | .index               |
+| .shape           | .values           | .columns             |
+
+For **df** `= pd.DataFrame`,    
+
+- `df.index` represents row-index, `df.columns` for column-index, both are **index object**.
+
+- `df.index` is element immutable, but can be replaced entirely.
+
+- if want to set one column's value as row-index : **df.set_index**( col_name, inplace = True  )
+
+## Methods
+
+### pd.Series   
+
+#### Create
+
+> pd.Series(val, index = )
+
+- val can be: 
+list, ndarray, dictionary( keys to be index), scalar (replicate to match index size )    
+- Index can be duplicates, non-numbers    
+
+### Remove Item(s)
+
+> pd.Series.drop( index/[indices])   
+E.g., df['gender'].drop( [3, 4] )
+
+### Replace items   
+
+> pd.Series.map( mapping )     
+  pd.Series.replace( mapping )
+
+- **mapping** is in form of dictionary, 'key' is replaced by 'value'.   
+- if any 'key' of mapping **not in** Series.values :    
+ - 
+
+### pd.DataFrame
+
+
+### Series.apply() VS DF.apply()
+

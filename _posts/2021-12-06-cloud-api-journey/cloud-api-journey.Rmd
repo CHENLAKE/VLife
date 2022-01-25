@@ -183,7 +183,7 @@ pd.set_option('display.max_columns', None)
 
 """
 refer to  https://cloud.google.com/document-ai/docs/send-request#documentai_process_document-python;
-function : to extract feilds relavent to DHL business
+function : to extract feilds relavent to logistic business
 """
 from google.cloud import documentai_v1 as documentai
 def process_document_sample(
