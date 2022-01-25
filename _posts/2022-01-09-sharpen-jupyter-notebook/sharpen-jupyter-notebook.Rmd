@@ -147,7 +147,7 @@ knitr::include_graphics("pics/ls.png")
 
 One of my favorite extension of JN is "Hinterland" which will display all the possible commands when you are typing and allow you to read the detailed document of the commands.
 
-#### installation
+#### Installation
 
 1. run two commands one by one in cmd terminal or in JN (with **!** )   
 
@@ -162,7 +162,9 @@ jupyter contrib nbextension install --user
 knitr::include_graphics("pics/hint_enable.png")
 ``` 
 
-3. read documentation of the commands when type code in JN.
+#### Usage
+
+- read documentation of the commands when type code in JN.
 
 ```{r,  out.width = "60%", fig.align = "center", fig.cap ="Check Doc of Command", echo = FALSE}
 knitr::include_graphics("pics/check_doc.png")
