@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["pandas-essence_files/anchor-4.2.2/anchor.min.js","pandas-essence_files/bowser-1.9.3/bowser.min.js","pandas-essence_files/distill-2.2.21/template.v2.js","pandas-essence_files/header-attrs-2.8/header-attrs.js","pandas-essence_files/jquery-1.11.3/jquery.min.js","pandas-essence_files/popper-2.6.0/popper.min.js","pandas-essence_files/tippy-6.2.7/tippy-bundle.umd.min.js","pandas-essence_files/tippy-6.2.7/tippy-light-border.css","pandas-essence_files/tippy-6.2.7/tippy.css","pandas-essence_files/tippy-6.2.7/tippy.umd.min.js","pandas-essence_files/webcomponents-2.0.0/webcomponents.js","pics/pandas.jpg"]}
+  {"type":"character","attributes":{},"value":["pandas-essence_files/anchor-4.2.2/anchor.min.js","pandas-essence_files/bowser-1.9.3/bowser.min.js","pandas-essence_files/distill-2.2.21/template.v2.js","pandas-essence_files/header-attrs-2.8/header-attrs.js","pandas-essence_files/jquery-1.11.3/jquery.min.js","pandas-essence_files/popper-2.6.0/popper.min.js","pandas-essence_files/tippy-6.2.7/tippy-bundle.umd.min.js","pandas-essence_files/tippy-6.2.7/tippy-light-border.css","pandas-essence_files/tippy-6.2.7/tippy.css","pandas-essence_files/tippy-6.2.7/tippy.umd.min.js","pandas-essence_files/webcomponents-2.0.0/webcomponents.js","pics/drop_column.png","pics/drop_row.png","pics/ds_all.png","pics/ds_spe.png","pics/fil_mask.png","pics/pandas.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1485,11 +1485,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#data-structure-attributes">Data Structure Attributes</a></li>
 <li><a href="#methods">Methods</a>
 <ul>
-<li><a href="#pd.series">pd.Series</a></li>
+<li><a href="#pd.series">pd.Series</a>
+<ul>
+<li><a href="#create">Create</a></li>
 <li><a href="#remove-items">Remove Item(s)</a></li>
 <li><a href="#replace-items">Replace items</a></li>
-<li><a href="#pd.dataframe">pd.DataFrame</a></li>
-<li><a href="#series.apply-vs-df.apply">Series.apply() VS DF.apply()</a></li>
+<li><a href="#operate-on-items">Operate on Items</a></li>
+</ul></li>
+<li><a href="#pd.dataframe">pd.DataFrame</a>
+<ul>
+<li><a href="#access-by-either-col-or-row">Access by either Col-or-Row</a></li>
+<li><a href="#access-by-both-col-and-row">Access by both Col-and-Row</a></li>
+<li><a href="#data-selection-with-filtering">Data Selection with Filtering</a></li>
+<li><a href="#sort">Sort</a></li>
+<li><a href="#drop-rowcolumn">Drop Row/Column</a></li>
+</ul></li>
+<li><a href="#series.apply-v.s-df.apply">Series.apply() V.S DF.apply()</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1512,7 +1523,7 @@ Figure 1: Python ANd Data AnalysiS ?
 </p>
 </div>
 </div>
-<h2 id="data-structure-attributes">Data Structure Attributes</h2>
+<h1 id="data-structure-attributes">Data Structure Attributes</h1>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div>
@@ -1544,30 +1555,141 @@ Figure 1: Python ANd Data AnalysiS ?
 <li><p><code>df.index</code> is element immutable, but can be replaced entirely.</p></li>
 <li><p>if want to set one column’s value as row-index : <strong>df.set_index</strong>( col_name, inplace = True )</p></li>
 </ul>
-<h2 id="methods">Methods</h2>
-<h3 id="pd.series">pd.Series</h3>
-<h4 id="create">Create</h4>
+<h1 id="methods">Methods</h1>
+<h2 id="pd.series">pd.Series</h2>
+<h3 id="create">Create</h3>
 <blockquote>
 <p>pd.Series(val, index = )</p>
 </blockquote>
 <ul>
 <li>val can be: list, ndarray, dictionary( keys to be index), scalar (replicate to match index size )<br />
 </li>
-<li>Index can be duplicates, non-numbers<br />
-Below, <code>Series</code> be an <code>pd.Series</code> instance.</li>
+<li>Index can be duplicates, non-numbers</li>
 </ul>
 <h3 id="remove-items">Remove Item(s)</h3>
 <blockquote>
-<p>Series.drop( index/[indices])<br />
-E.g., df[‘gender’].drop( [3, 4] )</p>
+<p>pd.Series.drop( index/ <strong>[ indices ]</strong> )<br />
+E.g., df[‘gender’].drop( <strong>[3, 4]</strong> )</p>
 </blockquote>
 <h3 id="replace-items">Replace items</h3>
 <blockquote>
-<p>Series.map( <em>mapping</em> )<br />
-Series.replace( <em>mapping</em> )</p>
+<p>pd.Series.map( mapping )<br />
+pd.Series.replace( mapping )</p>
 </blockquote>
-<h3 id="pd.dataframe">pd.DataFrame</h3>
-<h3 id="series.apply-vs-df.apply">Series.apply() VS DF.apply()</h3>
+<ul>
+<li><strong>mapping</strong> is in form of dictionary, ‘key’ is replaced by ‘value’.<br />
+</li>
+<li>if item in series <strong>not found</strong> in the mapping ( key ):
+<ul>
+<li><code>series.map()</code> turn item (<em>in original Series</em>) into <strong>NaN</strong>;<br />
+</li>
+<li><code>series.replace()</code> leaves the item unchanged</li>
+</ul></li>
+</ul>
+<h3 id="operate-on-items">Operate on Items</h3>
+<blockquote>
+<p>Series.apply( func_name )</p>
+</blockquote>
+<h2 id="pd.dataframe">pd.DataFrame</h2>
+<h3 id="access-by-either-col-or-row">Access by either Col-or-Row</h3>
+<ul>
+<li>Column View</li>
+</ul>
+<blockquote>
+<p>single column : <strong>df.col</strong> or <strong>df[ col ]</strong><br />
+multi-columns: <strong>df[ [col1, col2, col3…] ]</strong></p>
+</blockquote>
+<ul>
+<li>Row View</li>
+</ul>
+<blockquote>
+<p>by row_number :<br />
+single-row : <strong>df.iloc[ row_num ]</strong><br />
+multi-rows:<br />
+using list: <strong>df.iloc[ [ r_#1, r_#2…] ]</strong> or using slicing: <strong>df.iloc[ slicing ]</strong></p>
+</blockquote>
+<p>notice: slicing refers to <strong>start_row_num: end_row_num</strong>, end row_num excluded</p>
+<blockquote>
+<p>by row_name: <strong>df.loc[ row_name ]</strong><br />
+where row_name could be : single row_name, list of row names, or slicing</p>
+</blockquote>
+<p>notice : slicing refers to <strong>start_row_name : end_row_name</strong>, where end_row_name is <strong>included</strong></p>
+<h3 id="access-by-both-col-and-row">Access by both Col-and-Row</h3>
+<ol type="1">
+<li>by both Col_num AND Row_num</li>
+</ol>
+<blockquote>
+<p><strong>df.iloc[ col_num, row_num ]</strong><br />
+where clo_num, row_num can be: single number/ list/ slicing</p>
+</blockquote>
+<ol start="2" type="1">
+<li>by both Col_name AND Row_name</li>
+</ol>
+<blockquote>
+<p><strong>df.loc[ col_name, row_name ]</strong><br />
+where clo_num, row_num can be: single number/ list/ slicing</p>
+</blockquote>
+<h3 id="data-selection-with-filtering">Data Selection with Filtering</h3>
+<h4 id="filter_mask-similar-to-boolean-masking">filter_mask: similar to Boolean masking</h4>
+<ul>
+<li><strong>df[ col ]</strong> 的Logic operation, 可多个: and " <strong>&amp;</strong> “，or” <strong>|</strong> “，not” <strong>~</strong> " .</li>
+</ul>
+<blockquote>
+<p>ft = ( df[‘age’] &gt;= 10) <strong>&amp;</strong> (df[‘height’] &lt; 158)</p>
+</blockquote>
+<ul>
+<li>this filter_mask returns a <strong>Boolean Series</strong> whose <code>index</code> are the same as <strong>df.index</strong></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/fil_mask.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<h4 id="syntax-of-data-selection">Syntax of data selection</h4>
+<ol type="1">
+<li>do <strong>not</strong> specify Columns (filtered index for <strong>all</strong> columns ):<br />
+<strong>df[ filter_mask ]</strong> or <strong>df.loc[ filter_mask ]</strong></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/ds_all.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<ol start="2" type="1">
+<li>specify columns ( filtered index with selected columns ):<br />
+<strong>df.loc[ filter_mask, [ cols ] ]</strong></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/ds_spe.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<h3 id="sort">Sort</h3>
+<ol type="1">
+<li>Sort Index</li>
+</ol>
+<blockquote>
+<p><strong>df.sort_index</strong>( inplace = True )</p>
+</blockquote>
+<ol start="2" type="1">
+<li>Sort Value</li>
+</ol>
+<blockquote>
+<p>df.sort_value( <strong>by =</strong> [col_x, col_y, col_n ], <strong>ascending =</strong> [ True, False, True], <strong>inplace = </strong>True )</p>
+</blockquote>
+<h3 id="drop-rowcolumn">Drop Row/Column</h3>
+<ol type="1">
+<li>remove rows: <strong>df.drop</strong>( index /[ indices ] )</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/drop_row.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<ol start="2" type="1">
+<li>remove columns: <strong>df.drop</strong>( col_, <strong>aixs</strong> = 1 )<br />
+or <strong>aixs = ‘columns’</strong></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/drop_column.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<p>notice: <strong>inplace</strong> parameter can be used to change the original Series/DataFrame</p>
+<h2 id="series.apply-v.s-df.apply">Series.apply() V.S DF.apply()</h2>
+<ul>
+<li>S.apply(<strong>function_name</strong> ),df.apply(<strong>function_name</strong>) : where <strong>func_name</strong> can be : built-in name / self defefined function name / lambda</li>
+</ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

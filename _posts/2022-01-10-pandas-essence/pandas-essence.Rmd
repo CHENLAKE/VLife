@@ -26,7 +26,7 @@ body{
 knitr::include_graphics("pics/pandas.jpg")
 ```
 
-## Data Structure Attributes
+# Data Structure Attributes
 
 ```{python, python.reticulate =FALSE,eval =FALSE}
 import numpy as np
@@ -46,11 +46,11 @@ For **df** `= pd.DataFrame`,
 
 - if want to set one column's value as row-index : **df.set_index**( col_name, inplace = True  )
 
-## Methods
+# Methods
 
-### pd.Series   
+## pd.Series   
 
-#### Create
+### Create
 
 > pd.Series(val, index = )
 
@@ -60,8 +60,8 @@ list, ndarray, dictionary( keys to be index), scalar (replicate to match index s
 
 ### Remove Item(s)
 
-> pd.Series.drop( index/[indices])   
-E.g., df['gender'].drop( [3, 4] )
+> pd.Series.drop( index/ **[ indices ]** )   
+E.g., df['gender'].drop( **[3, 4]** )
 
 ### Replace items   
 
@@ -69,11 +69,112 @@ E.g., df['gender'].drop( [3, 4] )
   pd.Series.replace( mapping )
 
 - **mapping** is in form of dictionary, 'key' is replaced by 'value'.   
-- if any 'key' of mapping **not in** Series.values :    
- - 
+- if item in series **not found** in the mapping ( key ):       
+    - `series.map()` turn item (*in original Series*) into **NaN**;    
+    - `series.replace()` leaves the item unchanged
 
-### pd.DataFrame
+### Operate on Items
+
+> Series.apply( func_name )
 
 
-### Series.apply() VS DF.apply()
+## pd.DataFrame
+
+### Access by either Col-or-Row
+
+- Column View
+
+> single column :   **df.col**  or  **df[ col ]**   
+multi-columns:    **df[ [col1, col2, col3...] ]**
+
+
+- Row View
+
+> by row_number :   
+  single-row : **df.iloc[ row_num ]**   
+  multi-rows:   
+  using list: **df.iloc[ [ r_#1, r_#2...] ]**   or using slicing:  **df.iloc[ slicing ]**   
+  
+notice: slicing refers to **start_row_num: end_row_num**, end row_num excluded
+               
+> by row_name:  **df.loc[ row_name ]**   
+  where row_name could be : single row_name, list of row names, or slicing  
+  
+notice : slicing refers to **start_row_name : end_row_name**, where end_row_name is **included** 
+
+### Access by both Col-and-Row
+
+1. by both Col_num AND Row_num       
+
+> **df.iloc[ col_num, row_num ]**         
+where clo_num, row_num can be: single number/ list/ slicing   
+
+2. by both Col_name AND Row_name
+
+> **df.loc[ col_name, row_name ]**      
+where clo_num, row_num can be: single number/ list/ slicing 
+
+
+### Data Selection with Filtering
+
+#### filter_mask: similar to Boolean masking
+
+- **df[ col ]** 的Logic operation, 可多个: and " **&** "，or " **|** "，not " **~** " .    
+
+> ft = ( df['age'] >= 10) **&** (df['height'] < 158)
+
+- this filter_mask returns a **Boolean Series** whose `index` are the same as **df.index**
+
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/fil_mask.png")
+``` 
+
+#### Syntax of data selection
+
+1. do **not** specify Columns (filtered index for **all** columns ):      
+   **df[ filter_mask ]**   or    **df.loc[ filter_mask ]**    
+   
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/ds_all.png")
+``` 
+
+2. specify columns ( filtered index with selected columns ):  
+   **df.loc[ filter_mask, [ cols ] ]**    
+
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/ds_spe.png")
+``` 
+
+### Sort    
+
+1. Sort Index
+
+> **df.sort_index**( inplace = True )
+
+2. Sort Value
+
+> df.sort_value( **by =** [col_x, col_y, col_n ], **ascending =** [ True, False, True], **inplace = **True )
+
+
+### Drop Row/Column
+
+1. remove rows:  **df.drop**( index /[ indices ] )
+
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/drop_row.png")
+``` 
+
+2. remove columns: **df.drop**( col_, **aixs** = 1 )        
+   or **aixs = 'columns'**
+
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/drop_column.png")
+``` 
+notice: **inplace** parameter can be used to change the original Series/DataFrame
+
+
+## Series.apply() V.S DF.apply()
+
+- S.apply(**function_name** ),df.apply(**function_name**) :
+  where **func_name** can be : built-in name / self defefined function name / lambda
 
