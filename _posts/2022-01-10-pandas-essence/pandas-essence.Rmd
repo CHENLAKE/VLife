@@ -1,7 +1,7 @@
 ---
 title: "Pandas Essence"
 description: |
-  Pandas is one of the most popular liabrary for python programming langauge to deal with data transformation and preparation. It is impossible to remember all methods available, but definitely useful and wise to know the essence. 
+  Pandas is one of the most popular liabrary for python programming langauge to deal with data transformation and preparation as well as machine learning. It is impossible to remember all methods available, but definitely useful and wise to know the essence. 
 author:
   - name: V.LC.LAKE
     url: {}
