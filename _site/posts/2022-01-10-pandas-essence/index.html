@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["pandas-essence_files/anchor-4.2.2/anchor.min.js","pandas-essence_files/bowser-1.9.3/bowser.min.js","pandas-essence_files/distill-2.2.21/template.v2.js","pandas-essence_files/header-attrs-2.8/header-attrs.js","pandas-essence_files/jquery-1.11.3/jquery.min.js","pandas-essence_files/popper-2.6.0/popper.min.js","pandas-essence_files/tippy-6.2.7/tippy-bundle.umd.min.js","pandas-essence_files/tippy-6.2.7/tippy-light-border.css","pandas-essence_files/tippy-6.2.7/tippy.css","pandas-essence_files/tippy-6.2.7/tippy.umd.min.js","pandas-essence_files/webcomponents-2.0.0/webcomponents.js","pics/drop_column.png","pics/drop_row.png","pics/ds_all.png","pics/ds_spe.png","pics/fil_mask.png","pics/pandas.jpg"]}
+  {"type":"character","attributes":{},"value":["pandas-essence_files/anchor-4.2.2/anchor.min.js","pandas-essence_files/bowser-1.9.3/bowser.min.js","pandas-essence_files/distill-2.2.21/template.v2.js","pandas-essence_files/header-attrs-2.8/header-attrs.js","pandas-essence_files/jquery-1.11.3/jquery.min.js","pandas-essence_files/popper-2.6.0/popper.min.js","pandas-essence_files/tippy-6.2.7/tippy-bundle.umd.min.js","pandas-essence_files/tippy-6.2.7/tippy-light-border.css","pandas-essence_files/tippy-6.2.7/tippy.css","pandas-essence_files/tippy-6.2.7/tippy.umd.min.js","pandas-essence_files/webcomponents-2.0.0/webcomponents.js","pics/app_series.png","pics/app_series2.png","pics/appmap.png","pics/drop_column.png","pics/drop_row.png","pics/ds_all.png","pics/ds_spe.png","pics/fil_mask.png","pics/pandas.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2120,7 +2120,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#sort">Sort</a></li>
 <li><a href="#drop-rowcolumn">Drop Row/Column</a></li>
 </ul></li>
-<li><a href="#series.apply-v.s-df.apply">Series.apply() V.S DF.apply()</a></li>
+<li><a href="#series.apply-v.s-df.apply">Series.apply() V.S DF.apply()</a>
+<ul>
+<li><a href="#dataframe.apply">DataFrame.apply( )</a></li>
+<li><a href="#dataframe.applymap">DataFrame.applymap( )</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -2307,9 +2311,59 @@ or <strong>aixs = ‘columns’</strong></li>
 </div>
 <p>notice: <strong>inplace</strong> parameter can be used to change the original Series/DataFrame</p>
 <h2 id="series.apply-v.s-df.apply">Series.apply() V.S DF.apply()</h2>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 72%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>s.apply( <strong>func_name</strong> )</td>
+<td>apply function to <strong>each element</strong> in the Series</td>
+</tr>
+<tr class="even">
+<td>df.apply( <strong>func_name</strong> )</td>
+<td>function applies on <strong>each column or each row</strong> of the DataFrame</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>S.apply(<strong>function_name</strong> ),df.apply(<strong>function_name</strong>) : where <strong>func_name</strong> can be : built-in name / self defefined function name / lambda</li>
+<li>where <strong>func_name</strong> can be : built-in name / self defefined function name / lambda</li>
 </ul>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/app_series.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/app_series2.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<ul>
+<li>result returns a <strong>Series</strong> for both <code>s.apply()</code> or <code>df.apply()</code></li>
+</ul>
+<h3 id="dataframe.apply">DataFrame.apply( )</h3>
+<table>
+<tbody>
+<tr class="odd">
+<td>df.apply( func )</td>
+<td>apply function <strong>column by column</strong></td>
+</tr>
+<tr class="even">
+<td>df.apply(func, axis =1)</td>
+<td><strong>row by row</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>result returns a <strong>Series</strong></li>
+</ul>
+<h3 id="dataframe.applymap">DataFrame.applymap( )</h3>
+<ul>
+<li>function applies to each element in the DataFrame<br />
+</li>
+<li>result is still a <strong>DataFrame</strong></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/appmap.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

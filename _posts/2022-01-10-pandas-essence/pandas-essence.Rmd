@@ -175,6 +175,37 @@ notice: **inplace** parameter can be used to change the original Series/DataFram
 
 ## Series.apply() V.S DF.apply()
 
-- S.apply(**function_name** ),df.apply(**function_name**) :
-  where **func_name** can be : built-in name / self defefined function name / lambda
+|                     |                                                       |
+|---------------------|-------------------------------------------------------|
+| s.apply( **func_name** )  |  apply function to **each element** in the Series         |
+| df.apply( **func_name** ) |  function applies on **each column or each row** of the DataFrame |
 
+- where **func_name** can be : built-in name / self defefined function name / lambda    
+
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/app_series.png")
+``` 
+
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/app_series2.png")
+``` 
+
+- result returns a **Series** for both `s.apply()` or `df.apply()`
+
+### DataFrame.apply( )
+
+|                         |                                     |
+|-------------------------|-------------------------------------|
+|     df.apply( func )    | apply function **column by column** |
+| df.apply(func, axis =1) | **row by row**                      |
+
+- result returns a **Series** 
+
+### DataFrame.applymap( )   
+
+- function applies to each element in the DataFrame   
+- result is still a **DataFrame**
+
+```{r,out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/appmap.png")
+```
