@@ -113,7 +113,9 @@ knitr::include_graphics("pics/ck_shortcuts.png")
 ``` 
 
 
-## Life-easing Shortcuts
+## Life-easing Things
+
+### Shortcuts 
 
 | COMMAND MODE                         | press 'Esc' to enable   |
 |--------------------------------------|-------------------------|
@@ -127,7 +129,7 @@ knitr::include_graphics("pics/ck_shortcuts.png")
 | undo                                 |      'ctrl' + 'z'       |
 | code completion or indent            |          'tab'          |
 
-### and Commands
+### Commands
 
 1. to check the directory of current notebook: `ls`    
 
@@ -141,6 +143,34 @@ knitr::include_graphics("pics/ls.png")
 ! pip install seaborn
 ```
 
+### Extension: Hinterland
+
+One of my favorite extension of JN is "Hinterland" which will display all the possible commands when you are typing and allow you to read the detailed document of the commands.
+
+#### installation
+
+1. run two commands one by one in cmd terminal or in JN (with **!** )   
+
+```{python, python.reticulate= FALSE,  eval=FALSE}
+pip install jupyter_contrib_nbextensions    
+jupyter contrib nbextension install --user   
+```
+
+2. restart JN,enable the extensions desired (` Hinterland` )        
+
+```{r,out.width = "80%",  fig.align = "center", fig.cap ="Nbextensions ", echo = FALSE}
+knitr::include_graphics("pics/hint_enable.png")
+``` 
+
+3. read documentation of the commands when type code in JN.
+
+```{r,  out.width = "60%", fig.align = "center", fig.cap ="Check Doc of Command", echo = FALSE}
+knitr::include_graphics("pics/check_doc.png")
+``` 
+
+> when the curser is in the bracket of the command, key in **Shift + Tab**.     
+  click the **' +' ** on the upper-right corner to expand the pane. 
+  
 ## Export JN to PDF
 
 A Jupyter Notebook can be converted to a number of open standard output formats (HTML, LaTeX, PDF, Markdown, Python) through **"Download as"** in the web interface.

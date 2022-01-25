@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["pics/cell_type.png","pics/ck_shortcuts.png","pics/cmd.png","pics/conda.png","pics/env_var.png","pics/error.png","pics/isaac_.png","pics/kernel.png","pics/ls.png","pics/paks.png","pics/pdf.png","pics/python_wind.png","pics/root.png","pics/shell.png","pics/shut.png","sharpen-jupyter-notebook_files/anchor-4.2.2/anchor.min.js","sharpen-jupyter-notebook_files/bowser-1.9.3/bowser.min.js","sharpen-jupyter-notebook_files/distill-2.2.21/template.v2.js","sharpen-jupyter-notebook_files/header-attrs-2.8/header-attrs.js","sharpen-jupyter-notebook_files/jquery-1.11.3/jquery.min.js","sharpen-jupyter-notebook_files/popper-2.6.0/popper.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-bundle.umd.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-light-border.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.umd.min.js","sharpen-jupyter-notebook_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["pics/cell_type.png","pics/check_doc.png","pics/ck_shortcuts.png","pics/cmd.png","pics/conda.png","pics/env_var.png","pics/error.png","pics/hint_enable.png","pics/isaac_.png","pics/kernel.png","pics/ls.png","pics/paks.png","pics/pdf.png","pics/python_wind.png","pics/root.png","pics/shell.png","pics/shut.png","sharpen-jupyter-notebook_files/anchor-4.2.2/anchor.min.js","sharpen-jupyter-notebook_files/bowser-1.9.3/bowser.min.js","sharpen-jupyter-notebook_files/distill-2.2.21/template.v2.js","sharpen-jupyter-notebook_files/header-attrs-2.8/header-attrs.js","sharpen-jupyter-notebook_files/jquery-1.11.3/jquery.min.js","sharpen-jupyter-notebook_files/popper-2.6.0/popper.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-bundle.umd.min.js","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy-light-border.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.css","sharpen-jupyter-notebook_files/tippy-6.2.7/tippy.umd.min.js","sharpen-jupyter-notebook_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2115,9 +2115,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#shutdown-jn">Shutdown JN</a></li>
 <li><a href="#check-keyboard-shortcuts">Check Keyboard Shortcuts</a></li>
 </ul></li>
-<li><a href="#life-easing-shortcuts">Life-easing Shortcuts</a>
+<li><a href="#life-easing-things">Life-easing Things</a>
 <ul>
-<li><a href="#and-commands">and Commands</a></li>
+<li><a href="#shortcuts">Shortcuts</a></li>
+<li><a href="#commands">Commands</a></li>
+<li><a href="#extension-hinterland">Extension: Hinterland</a></li>
 </ul></li>
 <li><a href="#export-jn-to-pdf">Export JN to PDF</a>
 <ul>
@@ -2261,7 +2263,8 @@ Figure 9: check shortcuts
 </p>
 </div>
 </div>
-<h2 id="life-easing-shortcuts">Life-easing Shortcuts</h2>
+<h2 id="life-easing-things">Life-easing Things</h2>
+<h3 id="shortcuts">Shortcuts</h3>
 <table>
 <thead>
 <tr class="header">
@@ -2308,7 +2311,7 @@ Figure 9: check shortcuts
 </tr>
 </tbody>
 </table>
-<h3 id="and-commands">and Commands</h3>
+<h3 id="commands">Commands</h3>
 <ol type="1">
 <li>to check the directory of current notebook: <code>ls</code></li>
 </ol>
@@ -2326,13 +2329,49 @@ Figure 10: List contents of directory of current Jupyter Notebook
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span> pip install seaborn</span></code></pre></div>
 </div>
+<h3 id="extension-hinterland">Extension: Hinterland</h3>
+<p>One of my favorite extension of JN is “Hinterland” which will display all the possible commands when you are typing and allow you to read the detailed document of the commands.</p>
+<h4 id="installation-1">installation</h4>
+<ol type="1">
+<li>run two commands one by one in cmd terminal or in JN (with <strong>!</strong> )</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip install jupyter_contrib_nbextensions    </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>jupyter contrib nbextension install <span class="op">--</span>user   </span></code></pre></div>
+</div>
+<ol start="2" type="1">
+<li>restart JN,enable the extensions desired (<code>Hinterland</code> )</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
+<img src="pics/hint_enable.png" alt="Nbextensions " width="80%" />
+<p class="caption">
+Figure 11: Nbextensions
+</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li>read documentation of the commands when type code in JN.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<img src="pics/check_doc.png" alt="Check Doc of Command" width="60%" />
+<p class="caption">
+Figure 12: Check Doc of Command
+</p>
+</div>
+</div>
+<blockquote>
+<p>when the curser is in the bracket of the command, key in <strong>Shift + Tab</strong>.<br />
+click the <strong>’ +’ </strong> on the upper-right corner to expand the pane.</p>
+</blockquote>
 <h2 id="export-jn-to-pdf">Export JN to PDF</h2>
 <p>A Jupyter Notebook can be converted to a number of open standard output formats (HTML, LaTeX, PDF, Markdown, Python) through <strong>“Download as”</strong> in the web interface.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
 <img src="pics/pdf.png" alt="Convert Jupyter Notebook to other formats " width="330" />
 <p class="caption">
-Figure 11: Convert Jupyter Notebook to other formats
+Figure 13: Convert Jupyter Notebook to other formats
 </p>
 </div>
 </div>
@@ -2383,10 +2422,10 @@ Figure 11: Convert Jupyter Notebook to other formats
 <h3 id="unexpeted-error">Unexpeted Error</h3>
 <p>after going through the 4 steps above and we happily trying to convert a notebook to pdf, we may unexpectedly see this message:</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
 <img src="pics/error.png" alt=" Error Msg " width="762" />
 <p class="caption">
-Figure 12:  Error Msg
+Figure 14:  Error Msg
 </p>
 </div>
 </div>
@@ -2395,10 +2434,10 @@ Figure 12:  Error Msg
 <li>go to <strong>This PC</strong> &gt; <strong>Advanced system settings</strong> &gt; <strong>Environment Variables</strong>, add in the path of MikTex executable.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
 <img src="pics/env_var.png" alt="Add MikTex into Environment Variable " width="526" />
 <p class="caption">
-Figure 13: Add MikTex into Environment Variable
+Figure 15: Add MikTex into Environment Variable
 </p>
 </div>
 </div>
@@ -2406,10 +2445,10 @@ Figure 13: Add MikTex into Environment Variable
 <li>restart computer, relaunch JN, retry to “Download as .pdf”, then several <strong>‘Package Installation’</strong> windows will pop out, all clicking <code>Install</code>.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-19"></span>
 <img src="pics/paks.png" alt="a Series of Package Installation" width="488" />
 <p class="caption">
-Figure 14: a Series of Package Installation
+Figure 16: a Series of Package Installation
 </p>
 </div>
 </div>
@@ -2446,7 +2485,7 @@ Normally, <strong>pdfkit</strong> is already installed, you can try <code>pip</c
 </li>
 <li><a href="https://nbviewer.org/"><em>nbviewer: a way to share Jupyter notebooks via the browser</em></a></li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
