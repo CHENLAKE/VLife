@@ -250,10 +250,10 @@ def process_document_sample(
 
 # Google Cloud Platform info
 jsonkeyDirectory = "C:\\V\\Google AI doc\\xxx"   
-googleProjectId = "xx-ea-exp-dev-gcpgogleap-xxx"
+googleProjectId = "xx-ea-XXX-XXX-gcpgogleap-xxx"
 googleJsonKey = jsonkeyDirectory + "\\documentaikey.json"
 location = 'eu' # Format is 'us' or 'eu'
-processor_id = 'xx274e7ff98xx' # Create processor in Cloud Console, here is invoice parser, and HITL disabled
+processor_id = 'xxxxxxxxxxxxx' # Create processor in Cloud Console, here is invoice parser, and HITL disabled
 
 os.environ["GOOGLE_CLOUD_PROJECT"] = googleProjectId
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = googleJsonKey 
