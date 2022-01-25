@@ -145,11 +145,12 @@ knitr::include_graphics("pics/ls.png")
 
 ### Extension: Hinterland
 
-One of my favorite extension of JN is "Hinterland" which will display all the possible commands when you are typing and allow you to read the detailed document of the commands.
+One of my favorite extension of JN is "Hinterland" which will display all the possible commands when you are typing and allow you to read the detailed document of the commands.        
+*[Other interesting extensions](https://medium.com/@maxtingle/10-jupyter-notebook-extensions-making-my-lyfe-easier-f40139a334ce#:~:text=Nbextensions%20are%20notebook%20extensions%2C%20or%20plug-ins%2C%20that%20will,can%20check%20and%20uncheck%20which%20extensions%20to%20enable.)*
 
 #### Installation
 
-1. run two commands one by one in cmd terminal or in JN (with **!** )   
+1. run two commands one by one in cmd terminal or in JN (with **!** ), detailed doc check *[Nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions).*        
 
 ```{python, python.reticulate= FALSE,  eval=FALSE}
 pip install jupyter_contrib_nbextensions    
