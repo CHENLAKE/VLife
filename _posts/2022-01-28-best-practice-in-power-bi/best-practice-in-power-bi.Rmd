@@ -1,0 +1,37 @@
+---
+title: "For Beginners in Power BI"
+description: |
+  There are 3 scopes of knowledge involved in delivering a piece of  Data Visualization task :1.	Data Analytical knowledge --- understand the power of data ( statistics, data transformation, machine learning models etc); 2.	Data Visualization knowledge --- use apt charts /graphs to tell the story you want.3.	Tools related knowledge --- choose a media to formalize the work ( pencil & paper, excel, Power BI, Tableau etc. ).Today, I am discussing the 3rd scope, more specifically, Power BI. 
+author:
+  - name: V.LC.LAKE
+    url: {}
+date: 01-28-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+<style>
+#TOC {
+  color: #873e23;
+  font-family: Agency FB;
+  font-size: 20px;
+}
+body{
+  color: #873e23;
+}
+</style>
+
+```{r, out.width = "60%",fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/cover.png")
+```
+
+## ETL :Power Query Editor 
+
+## Modelling 
+
+## DAX Measures
+
+
+

@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2022-01-28-best-practice-in-power-bi/",
+    "title": "For Beginners in Power BI",
+    "description": "There are 3 scopes of knowledge involved in delivering a piece of  Data Visualization task :1.\tData Analytical knowledge --- understand the power of data ( statistics, data transformation, machine learning models etc); 2.\tData Visualization knowledge --- use apt charts /graphs to tell the story you want.3.\tTools related knowledge --- choose a media to formalize the work ( pencil & paper, excel, Power BI, Tableau etc. ).Today, I am discussing the 3rd scope, more specifically, Power BI.",
+    "author": [
+      {
+        "name": "V.LC.LAKE",
+        "url": {}
+      }
+    ],
+    "date": "2022-01-28",
+    "categories": [],
+    "contents": "\r\n\r\nContents\r\nETL :Power Query Editor\r\nModelling\r\nDAX Measures\r\n\r\n\r\n#TOC {\r\n  color: #873e23;\r\n  font-family: Agency FB;\r\n  font-size: 20px;\r\n}\r\nbody{\r\n  color: #873e23;\r\n}\r\n\r\n\r\n\r\nETL :Power Query Editor\r\nModelling\r\nDAX Measures\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-01-28-best-practice-in-power-bi/pics/cover.png",
+    "last_modified": "2022-01-28T20:39:02+08:00",
+    "input_file": "best-practice-in-power-bi.knit.md"
+  },
+  {
     "path": "posts/2022-01-10-pandas-essence/",
     "title": "Pandas Essence",
     "description": "Pandas is one of the most popular liabrary for python programming langauge to deal with data transformation and preparation as well as machine learning. It is impossible to remember all methods available, but definitely useful and wise to know the essence.",
