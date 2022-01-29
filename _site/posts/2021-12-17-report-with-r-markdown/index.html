@@ -2111,15 +2111,17 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#customize-fonts-and-colors">Customize fonts and colors</a></li>
 <li><a href="#add-parameters">Add Parameters</a></li>
 </ul></li>
-<li><a href="#plots">Plots</a>
+<li><a href="#plots-vedios">Plots &amp; Vedios</a>
 <ul>
+<li><a href="#insert-pics">Insert pics</a></li>
+<li><a href="#insert-pic-with-r-code-chunk">Insert pic with R code chunk</a></li>
 <li><a href="#figure-arguments">Figure arguments</a></li>
 <li><a href="#set-options-globally">Set Options Globally</a></li>
-<li><a href="#keep-the-current-format">Keep the Current Format</a></li>
+<li><a href="#insert-vedio">Insert Vedio</a></li>
 </ul></li>
 <li><a href="#add-tables">Add Tables</a>
 <ul>
-<li><a href="#input-dataset-already">input dataset already</a></li>
+<li><a href="#by-r-code-chunk">by R code chunk</a></li>
 <li><a href="#table-generator"><span>Table Generator</span></a></li>
 </ul></li>
 <li><a href="#code-chunk">Code Chunk</a>
@@ -2151,7 +2153,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;V LAKE&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2022-01-09&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2022-01-29&quot;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <div class="layout-chunk" data-layout="l-body">
@@ -2160,7 +2162,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;V LAKE&quot;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot; 20:29:54 09 Jan,2022 &quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot; 18:46:40 29 Jan,2022 &quot;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <ul>
@@ -2225,7 +2227,21 @@ Invoke the parameters in YAML header’s <strong>title</strong>, <strong>Text</s
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/invokeParam1.png" width="70%" style="display: block; margin: auto auto auto 0;" /><img src="pics/invokeParam2.png" width="70%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<h2 id="plots">Plots</h2>
+<h2 id="plots-vedios">Plots &amp; Vedios</h2>
+<h3 id="insert-pics">Insert pics</h3>
+<pre><code>&lt;img src=&quot;pics/css.png&quot; /&gt;</code></pre>
+<pre><code>![text](image.jpg)</code></pre>
+<h3 id="insert-pic-with-r-code-chunk">Insert pic with R code chunk</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='st'>"pics/css.png"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<blockquote>
+<p>If using this piece of command inside R code chunk to insert picture,do <strong>insert a space line</strong> between the text and code chunk, otherwise it will reset the format of later text to normal body, even you tried to format it as header or index.<br />
+Frankly speaking, whenever your format doesn’t work as you expected, try insert a space line between different formats.</p>
+</blockquote>
 <h3 id="figure-arguments">Figure arguments</h3>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/figAlign.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
@@ -2247,19 +2263,11 @@ Invoke the parameters in YAML header’s <strong>title</strong>, <strong>Text</s
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/globalOpt.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<h3 id="keep-the-current-format">Keep the Current Format</h3>
-<p>If using this piece of command inside R code chunk to insert picture,do <strong>insert a space line</strong> between the text and code chunk, otherwise it will reset the format of later text to normal body, even you tried to format it as header or index.</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='st'>"pics/css.png"</span><span class='op'>)</span>
-</code></pre>
-</div>
-</div>
-<blockquote>
-<p>Frankly speaking, whenever your format doesn’t work as you expected, try insert a space line between different formats.</p>
-</blockquote>
+<h3 id="insert-vedio">Insert Vedio</h3>
+<p>using HTML5 video tag to insert local files.</p>
+<pre><code>&lt;video controls src=&quot;../images/animation.m4v&quot;&gt; animation &lt;/video&gt;</code></pre>
 <h2 id="add-tables">Add Tables</h2>
-<h3 id="input-dataset-already">input dataset already</h3>
+<h3 id="by-r-code-chunk">by R code chunk</h3>
 <blockquote>
 <p>Use <strong>kable( dataset, args )</strong> in r code chunk.<br />
 arguments include:<br />
@@ -2304,7 +2312,7 @@ e.g., import library, dataset / setup global options/ exclude messages<br />
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/python.png" width="80%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

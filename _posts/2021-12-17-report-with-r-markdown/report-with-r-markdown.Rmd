@@ -126,7 +126,25 @@ knitr::include_graphics("pics/paramPage.png")
 knitr::include_graphics("pics/invokeParam1.png")
 knitr::include_graphics("pics/invokeParam2.png")
 ```
-## Plots
+## Plots & Vedios
+
+### Insert pics
+
+```
+<img src="pics/css.png" />
+```
+
+```
+![text](image.jpg)
+```
+### Insert pic with R code chunk
+
+```{r,out.width = "80%", fig.align = "left", echo=TRUE, eval= FALSE}
+knitr::include_graphics("pics/css.png")
+```   
+
+> If using this piece of command inside R code chunk to insert picture,do **insert a space line** between the text and code chunk, otherwise it will reset the format of later text to normal body, even you tried to format it as header or index.  
+Frankly speaking, whenever your format doesn't work as you expected, try insert a space line between different formats. 
 
 ### Figure arguments
 
@@ -149,18 +167,15 @@ knitr::include_graphics("pics/figAlign.png")
 knitr::include_graphics("pics/globalOpt.png")
 ```
 
-### Keep the Current Format    
-If using this piece of command inside R code chunk to insert picture,do **insert a space line** between the text and code chunk, otherwise it will reset the format of later text to normal body, even you tried to format it as header or index.    
+### Insert Vedio
 
-```{r,out.width = "80%", fig.align = "left", echo=TRUE, eval= FALSE}
-knitr::include_graphics("pics/css.png")
-```   
-> Frankly speaking, whenever your format doesn't work as you expected, try insert a space line between different formats. 
-
-
+using HTML5 video tag to insert local files. 
+```
+<video controls src="../images/animation.m4v"> animation </video>
+```
 ## Add Tables
 
-### input dataset already
+### by R code chunk
 
 > Use **kable( dataset, args )** in r code chunk.     
   arguments include:         
