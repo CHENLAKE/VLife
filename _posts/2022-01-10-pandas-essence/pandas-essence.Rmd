@@ -28,6 +28,8 @@ knitr::include_graphics("pics/pandas.jpg")
 
 # Data Structure Attributes
 
+Basically, numpy vector/ matrix provides the data to which pandas Series/ DataFrame adds the index and columns(names). 
+
 ```{python, python.reticulate =FALSE,eval =FALSE}
 import numpy as np
 import pandas as pd
