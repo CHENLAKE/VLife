@@ -148,20 +148,6 @@ knitr::include_graphics("pics/ls.png")
 One of my favorite extension of JN is "Hinterland" which will display all the possible commands when you are typing and allow you to read the detailed document of the commands.        
 *[Other interesting extensions](https://medium.com/@maxtingle/10-jupyter-notebook-extensions-making-my-lyfe-easier-f40139a334ce#:~:text=Nbextensions%20are%20notebook%20extensions%2C%20or%20plug-ins%2C%20that%20will,can%20check%20and%20uncheck%20which%20extensions%20to%20enable.)*
 
-### Extension: Python Markdown    
-
-Allows embedding Python-code in markdown cells, e.g, display a variable's value produced by code cell. 
-
-```{r,  fig.align = "center", fig.cap ="Example of Extension: Python Markdown", echo = FALSE}
-knitr::include_graphics("pics/ext_python.png")
-``` 
-
-> The installation method is the same as shown in " Extension: Hinterland".    
-If already installed, just need select then enable this `Python Markdown`. 
-
-```{r,  fig.align = "center", fig.cap ="Extension: Python Markdown", echo = FALSE}
-knitr::include_graphics("pics/enable_ext_python.png")
-``` 
 
 #### Installation
 
@@ -188,7 +174,23 @@ knitr::include_graphics("pics/check_doc.png")
 
 > when the curser is in the bracket of the command, key in **Shift + Tab**.     
   click the **' +' ** on the upper-right corner to expand the pane. 
-  
+
+### Extension: Python Markdown    
+
+Allows embedding Python-code in markdown cells, e.g, display a variable's value produced by code cell. 
+
+```{r,  fig.align = "center", fig.cap ="Example of Extension: Python Markdown", echo = FALSE}
+knitr::include_graphics("pics/ext_python.png")
+``` 
+
+> The installation method is the same as shown in " Extension: Hinterland".    
+If already installed, just need select then enable this `Python Markdown`. 
+
+```{r,  fig.align = "center", fig.cap ="Extension: Python Markdown", echo = FALSE}
+knitr::include_graphics("pics/enable_ext_python.png")
+``` 
+
+
 ## Export JN to PDF
 
 A Jupyter Notebook can be converted to a number of open standard output formats (HTML, LaTeX, PDF, Markdown, Python) through **"Download as"** in the web interface.
