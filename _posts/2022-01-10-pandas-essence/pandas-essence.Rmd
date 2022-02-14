@@ -60,6 +60,10 @@ For **df** `= pd.DataFrame`,
 list, ndarray, dictionary( keys to be index), scalar (replicate to match index size )    
 - Index can be duplicates, non-numbers    
 
+### Sort
+
+> pd.Series.sort_values( ascending = , inplace = )
+
 ### Remove Item(s)
 
 > pd.Series.drop( index/ **[ indices ]** )   
