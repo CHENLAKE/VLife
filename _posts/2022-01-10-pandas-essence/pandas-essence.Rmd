@@ -215,3 +215,8 @@ knitr::include_graphics("pics/app_series2.png")
 ```{r,out.width = "60%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("pics/appmap.png")
 ```
+
+
+# Documentation
+
+<https://pandas.pydata.org/pandas-docs/stable/reference/index.html>
