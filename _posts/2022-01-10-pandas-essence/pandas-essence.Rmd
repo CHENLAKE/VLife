@@ -56,7 +56,9 @@ For **df** `= pd.DataFrame`,
 
 ### Create
 
-> pd.Series(val, index = )
+```{python, python.reticulate =FALSE, eval =FALSE}
+pd.Series(val, index = )
+```
 
 - val can be: 
 list, ndarray, dictionary( keys to be index), scalar (replicate to match index size )    
@@ -64,17 +66,24 @@ list, ndarray, dictionary( keys to be index), scalar (replicate to match index s
 
 ### Sort
 
-> pd.Series.sort_values( ascending = , inplace = )
+```{python, python.reticulate =FALSE, eval =FALSE}
+ pd.Series.sort_values( ascending = , inplace = )
+```
 
 ### Remove Item(s)
 
 > pd.Series.drop( index/ **[ indices ]** )   
-E.g., df['gender'].drop( **[3, 4]** )
+
+```{python, python.reticulate =FALSE, eval =FALSE}
+df['gender'].drop( [3, 4] )
+```
 
 ### Replace items   
 
-> pd.Series.map( mapping )     
-  pd.Series.replace( mapping )
+```{python, python.reticulate =FALSE, eval =FALSE}
+pd.Series.map( mapping )     
+pd.Series.replace( mapping )
+```
 
 - **mapping** is in form of dictionary, 'key' is replaced by 'value'.   
 - if item in series **not found** in the mapping ( key ):       
@@ -83,7 +92,9 @@ E.g., df['gender'].drop( **[3, 4]** )
 
 ### Operate on Items
 
-> Series.apply( func_name )
+```{python, python.reticulate =FALSE, eval =FALSE}
+Series.apply( func_name )
+```
 
 
 ## pd.DataFrame
@@ -129,7 +140,9 @@ where clo_num, row_num can be: single number/ list/ slicing
 
 - **df[ col ]** 的Logic operation, 可多个: and " **&** "，or " **|** "，not " **~** " .    
 
-> ft = ( df['age'] >= 10) **&** (df['height'] < 158)
+```{python, python.reticulate =FALSE, eval =FALSE }
+ft = ( df['age'] >= 10) & (df['height'] < 158)
+```
 
 - this filter_mask returns a **Boolean Series** whose `index` are the same as **df.index**
 
@@ -157,12 +170,16 @@ knitr::include_graphics("pics/ds_spe.png")
 
 1. Sort Index
 
-> **df.sort_index**( inplace = True )
+
+```{python, python.reticulate= FALSE,  eval=FALSE}
+df.sort_index( inplace = True )
+```  
 
 2. Sort Value
 
-> df.sort_value( **by =** [col_x, col_y, col_n ], **ascending =** [ True, False, True], **inplace = **True )
-
+```{python, python.reticulate= FALSE,  eval=FALSE}
+df.sort_value( by =['col_x', 'col_y', 'col_n' ], ascending =[ True, False, True], inplace =True )
+```  
 
 ### Drop Row/Column
 
@@ -179,6 +196,14 @@ knitr::include_graphics("pics/drop_row.png")
 knitr::include_graphics("pics/drop_column.png")
 ``` 
 notice: **inplace** parameter can be used to change the original Series/DataFrame
+
+### Groupby then do something
+
+**df.groupby( by =[ col1, col2, ..])**.`function`()
+
+```{python, python.reticulate= FALSE,  eval=FALSE}
+df.groupby(by =['gender']).mean()
+```             
 
 
 ## Series.apply() V.S DF.apply()

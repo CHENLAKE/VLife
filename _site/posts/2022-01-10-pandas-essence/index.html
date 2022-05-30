@@ -2120,6 +2120,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#data-selection-with-filtering">Data Selection with Filtering</a></li>
 <li><a href="#sort-1">Sort</a></li>
 <li><a href="#drop-rowcolumn">Drop Row/Column</a></li>
+<li><a href="#groupby-then-do-something">Groupby then do something</a></li>
 </ul></li>
 <li><a href="#series.apply-v.s-df.apply">Series.apply() V.S DF.apply()</a>
 <ul>
@@ -2186,28 +2187,30 @@ Figure 1: Python ANd Data AnalysiS ?
 <h1 id="methods">Methods</h1>
 <h2 id="pd.series">pd.Series</h2>
 <h3 id="create">Create</h3>
-<blockquote>
-<p>pd.Series(val, index = )</p>
-</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pd.Series(val, index <span class="op">=</span> )</span></code></pre></div>
+</div>
 <ul>
 <li>val can be: list, ndarray, dictionary( keys to be index), scalar (replicate to match index size )<br />
 </li>
 <li>Index can be duplicates, non-numbers</li>
 </ul>
 <h3 id="sort">Sort</h3>
-<blockquote>
-<p>pd.Series.sort_values( ascending = , inplace = )</p>
-</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> pd.Series.sort_values( ascending <span class="op">=</span> , inplace <span class="op">=</span> )</span></code></pre></div>
+</div>
 <h3 id="remove-items">Remove Item(s)</h3>
 <blockquote>
-<p>pd.Series.drop( index/ <strong>[ indices ]</strong> )<br />
-E.g., df[‘gender’].drop( <strong>[3, 4]</strong> )</p>
+<p>pd.Series.drop( index/ <strong>[ indices ]</strong> )</p>
 </blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;gender&#39;</span>].drop( [<span class="dv">3</span>, <span class="dv">4</span>] )</span></code></pre></div>
+</div>
 <h3 id="replace-items">Replace items</h3>
-<blockquote>
-<p>pd.Series.map( mapping )<br />
-pd.Series.replace( mapping )</p>
-</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pd.Series.<span class="bu">map</span>( mapping )     </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>pd.Series.replace( mapping )</span></code></pre></div>
+</div>
 <ul>
 <li><strong>mapping</strong> is in form of dictionary, ‘key’ is replaced by ‘value’.<br />
 </li>
@@ -2219,9 +2222,9 @@ pd.Series.replace( mapping )</p>
 </ul></li>
 </ul>
 <h3 id="operate-on-items">Operate on Items</h3>
-<blockquote>
-<p>Series.apply( func_name )</p>
-</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Series.<span class="bu">apply</span>( func_name )</span></code></pre></div>
+</div>
 <h2 id="pd.dataframe">pd.DataFrame</h2>
 <h3 id="access-by-either-col-or-row">Access by either Col-or-Row</h3>
 <ul>
@@ -2266,9 +2269,9 @@ where clo_num, row_num can be: single number/ list/ slicing</p>
 <ul>
 <li><strong>df[ col ]</strong> 的Logic operation, 可多个: and " <strong>&amp;</strong> “，or” <strong>|</strong> “，not” <strong>~</strong> " .</li>
 </ul>
-<blockquote>
-<p>ft = ( df[‘age’] &gt;= 10) <strong>&amp;</strong> (df[‘height’] &lt; 158)</p>
-</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ft <span class="op">=</span> ( df[<span class="st">&#39;age&#39;</span>] <span class="op">&gt;=</span> <span class="dv">10</span>) <span class="op">&amp;</span> (df[<span class="st">&#39;height&#39;</span>] <span class="op">&lt;</span> <span class="dv">158</span>)</span></code></pre></div>
+</div>
 <ul>
 <li>this filter_mask returns a <strong>Boolean Series</strong> whose <code>index</code> are the same as <strong>df.index</strong></li>
 </ul>
@@ -2294,15 +2297,15 @@ where clo_num, row_num can be: single number/ list/ slicing</p>
 <ol type="1">
 <li>Sort Index</li>
 </ol>
-<blockquote>
-<p><strong>df.sort_index</strong>( inplace = True )</p>
-</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df.sort_index( inplace <span class="op">=</span> <span class="va">True</span> )</span></code></pre></div>
+</div>
 <ol start="2" type="1">
 <li>Sort Value</li>
 </ol>
-<blockquote>
-<p>df.sort_value( <strong>by =</strong> [col_x, col_y, col_n ], <strong>ascending =</strong> [ True, False, True], <strong>inplace = </strong>True )</p>
-</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.sort_value( by <span class="op">=</span>[<span class="st">&#39;col_x&#39;</span>, <span class="st">&#39;col_y&#39;</span>, <span class="st">&#39;col_n&#39;</span> ], ascending <span class="op">=</span>[ <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>], inplace <span class="op">=</span><span class="va">True</span> )</span></code></pre></div>
+</div>
 <h3 id="drop-rowcolumn">Drop Row/Column</h3>
 <ol type="1">
 <li>remove rows: <strong>df.drop</strong>( index /[ indices ] )</li>
@@ -2318,6 +2321,11 @@ or <strong>aixs = ‘columns’</strong></li>
 <p><img src="pics/drop_column.png" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 <p>notice: <strong>inplace</strong> parameter can be used to change the original Series/DataFrame</p>
+<h3 id="groupby-then-do-something">Groupby then do something</h3>
+<p><strong>df.groupby( by =[ col1, col2, ..])</strong>.<code>function</code>()</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.groupby(by <span class="op">=</span>[<span class="st">&#39;gender&#39;</span>]).mean()</span></code></pre></div>
+</div>
 <h2 id="series.apply-v.s-df.apply">Series.apply() V.S DF.apply()</h2>
 <table>
 <colgroup>
@@ -2374,7 +2382,7 @@ or <strong>aixs = ‘columns’</strong></li>
 </div>
 <h1 id="documentation">Documentation</h1>
 <p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/index.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/index.html</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
