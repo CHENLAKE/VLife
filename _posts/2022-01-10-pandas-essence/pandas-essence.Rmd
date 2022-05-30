@@ -48,6 +48,8 @@ For **df** `= pd.DataFrame`,
 
 - if want to set one column's value as row-index : **df.set_index**( col_name, inplace = True  )
 
+- if want to rename columns : **df.rename(columns =**{mapping `'old'`: `'new'`} **)**
+
 # Methods
 
 ## pd.Series   

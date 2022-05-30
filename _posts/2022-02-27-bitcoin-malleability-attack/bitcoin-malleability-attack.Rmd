@@ -1,0 +1,58 @@
+---
+title: "Bitcoin Malleability Attack"
+description: |
+  Malleability is the property of some cryptographic algorithms which generate different but valid digital signatures for the same message. Under normal situation, it does no harm to it's objective of verifying that the message signed is not tampered with by anyone else. However, it caused some trouble in Bitcoin. 
+author:
+  - name: V.LC.LAKE
+    url: {}
+date: 02-27-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+<style>
+#TOC {
+  color: #00b2ca;
+  font-family: Agency FB;
+  font-size: 20px;
+}
+body{
+  color: #00b2ca;
+}
+</style>
+
+```{r, out.width = "60%",fig.align = "center", echo = FALSE}
+knitr::include_graphics("pic/sig.png")
+```
+ 
+## Digital Signature 
+
+### RSA
+
+### Elliptic Curve Signatures
+
+### Resources
+
+1. [Practical Cryptography for Developers, Svetlin Nakov](https://cryptobook.nakov.com/) 
+
+## Bitcoin 3rd Party Malleability
+
+### Transactions in Block Header
+
+### What get signed in a Transaction
+
+### What's the Harm
+
+### Solution 
+
+### Resources
+
+1.[MIT MAS.S62 Transactions and UTXO Model](https://www.youtube.com/watch?v=VT2o4KCEbes&list=PLUl4u3cNGP61KHzhg3JIJdK08JLSlcLId&index=4)
+
+2.[MIT MAS.S62 Transaction Malleability and Segregated Witness](https://www.youtube.com/watch?v=7o5shPC0R2k&list=PLUl4u3cNGP61KHzhg3JIJdK08JLSlcLId&index=11)
+
+3.[Details of ECDSA Signatures](http://coders-errand.com/details-of-ecdsa-signatures/)
+
+
