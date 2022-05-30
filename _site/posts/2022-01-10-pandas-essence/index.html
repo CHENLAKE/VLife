@@ -2129,6 +2129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul></li>
 <li><a href="#correlation-of-data">Correlation of data</a></li>
 <li><a href="#missing-value">Missing value</a></li>
+<li><a href="#plotting">Plotting</a></li>
 </ul></li>
 <li><a href="#documentation">Documentation</a></li>
 </ul>
@@ -2418,6 +2419,35 @@ or <strong>aixs = ‘columns’</strong></li>
 <tr class="odd">
 <td><strong>df[‘col’].fillna</strong>( val, inplace = )</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="plotting">Plotting</h2>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><em>plot histogram of specific column/attribute</em></td>
+<td><strong>df[‘col’].plot</strong>( kind =‘hist’, bins = , figsize =(, ), title= ’ ’)</td>
+</tr>
+<tr class="even">
+<td><em>line plot of specific column</em></td>
+<td><strong>df[‘col’].plot()</strong></td>
+</tr>
+<tr class="odd">
+<td><em>smoothing line plot of specific column</em></td>
+<td><strong>df[‘Manual’].rolling(3).mean().plot()</strong></td>
+</tr>
+<tr class="even">
+<td><em>scatter plot X-Y</em></td>
+<td><strong>df.plot</strong>( kind=‘scatter’, x=‘X’, y=‘Y’, title=’ ’)</td>
+</tr>
+<tr class="odd">
+<td><em>boxplot of numeric column by cat_column K</em></td>
+<td><strong>df.boxplot</strong>( column = ‘col’, by =‘K’ )</td>
 </tr>
 </tbody>
 </table>
