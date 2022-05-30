@@ -114,12 +114,12 @@ notice : slicing refers to **start_row_name : end_row_name**, where end_row_name
 
 1. by both Col_num AND Row_num       
 
-> **df.iloc[ col_num, row_num ]**         
+> **df.iloc[ row_num, col_num ]**         
 where clo_num, row_num can be: single number/ list/ slicing   
 
 2. by both Col_name AND Row_name
 
-> **df.loc[ col_name, row_name ]**      
+> **df.loc[ row_name, col_name ]**      
 where clo_num, row_num can be: single number/ list/ slicing 
 
 
