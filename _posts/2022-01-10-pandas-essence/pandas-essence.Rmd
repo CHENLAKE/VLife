@@ -37,8 +37,8 @@ import pandas as pd
 
 | np<br>(np.array) | pd<br>(pd.Series) | pd<br>(pd.DataFrame) |
 |:----------------:|:-----------------:|:--------------------:|
-| .dim             | .index            | .index               |
-| .shape           | .values           | .columns             |
+| .dim             | .index            | .index / columns     |
+| .shape           | .values           | .dtypes              |
 
 For **df** `= pd.DataFrame`,    
 
