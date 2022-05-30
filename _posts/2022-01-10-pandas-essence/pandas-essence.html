@@ -1507,6 +1507,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#dataframe.apply">DataFrame.apply( )</a></li>
 <li><a href="#dataframe.applymap">DataFrame.applymap( )</a></li>
 </ul></li>
+<li><a href="#correlation-of-data">Correlation of data</a>
+<ul>
+<li><a href="#corr-matrix-btw-all-columns">corr matrix btw all columns</a></li>
+<li><a href="#specific-columns">specific columns</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#documentation">Documentation</a></li>
 </ul>
@@ -1760,9 +1765,18 @@ or <strong>aixs = ‘columns’</strong></li>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/appmap.png" width="60%" style="display: block; margin: auto;" /></p>
 </div>
+<h2 id="correlation-of-data">Correlation of data</h2>
+<h3 id="corr-matrix-btw-all-columns">corr matrix btw all columns</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df.corr()</span></code></pre></div>
+</div>
+<h3 id="specific-columns">specific columns</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;col1&#39;</span>].corr( df[<span class="st">&#39;col2&#39;</span>])</span></code></pre></div>
+</div>
 <h1 id="documentation">Documentation</h1>
 <p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/index.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/index.html</a></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

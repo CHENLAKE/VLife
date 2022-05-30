@@ -243,7 +243,19 @@ knitr::include_graphics("pics/app_series2.png")
 knitr::include_graphics("pics/appmap.png")
 ```
 
+## Correlation of data
 
+### corr matrix btw all columns
+
+```{python, python.reticulate =FALSE, eval =FALSE}
+df.corr()
+```
+
+### specific columns 
+
+```{python, python.reticulate =FALSE, eval =FALSE}
+df['col1'].corr( df['col2'])
+```
 # Documentation
 
 <https://pandas.pydata.org/pandas-docs/stable/reference/index.html>
