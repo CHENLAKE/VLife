@@ -2127,11 +2127,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#dataframe.apply">DataFrame.apply( )</a></li>
 <li><a href="#dataframe.applymap">DataFrame.applymap( )</a></li>
 </ul></li>
-<li><a href="#correlation-of-data">Correlation of data</a>
-<ul>
-<li><a href="#corr-matrix-btw-all-columns">corr matrix btw all columns</a></li>
-<li><a href="#specific-columns">specific columns</a></li>
-</ul></li>
+<li><a href="#correlation-of-data">Correlation of data</a></li>
+<li><a href="#missing-value">Missing value</a></li>
 </ul></li>
 <li><a href="#documentation">Documentation</a></li>
 </ul>
@@ -2376,6 +2373,13 @@ or <strong>aixs = ‘columns’</strong></li>
 <ul>
 <li>result returns a <strong>Series</strong></li>
 </ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># row by row, if col0&#39;s value is NULL, reassign value as Expression,</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#             otherwise,  stay the same</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;col0&#39;</span>] <span class="op">=</span> df.<span class="bu">apply</span>( <span class="kw">lambda</span> row: Expression  </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                                   <span class="cf">if</span> np.isnan(row[<span class="st">&#39;col0&#39;</span>]) <span class="cf">else</span> row[<span class="st">&#39;col0&#39;</span>],</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                       axis <span class="op">=</span><span class="dv">1</span>)</span></code></pre></div>
+</div>
 <h3 id="dataframe.applymap">DataFrame.applymap( )</h3>
 <ul>
 <li>function applies to each element in the DataFrame<br />
@@ -2386,17 +2390,40 @@ or <strong>aixs = ‘columns’</strong></li>
 <p><img src="pics/appmap.png" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 <h2 id="correlation-of-data">Correlation of data</h2>
-<h3 id="corr-matrix-btw-all-columns">corr matrix btw all columns</h3>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df.corr()</span></code></pre></div>
-</div>
-<h3 id="specific-columns">specific columns</h3>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;col1&#39;</span>].corr( df[<span class="st">&#39;col2&#39;</span>])</span></code></pre></div>
-</div>
+<table>
+<thead>
+<tr class="header">
+<th><em>corr matrix btw all columns</em></th>
+<th><em>specific columns</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>df.corr()</td>
+<td><em>df[‘col1’].<strong>corr</strong>( df[‘col2’])</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="missing-value">Missing value</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>df.isnull().sum()</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>df.dropna()</strong></td>
+<td><em>remove rows with missing value </em></td>
+</tr>
+<tr class="odd">
+<td><strong>df[‘col’].fillna</strong>( val, inplace = )</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h1 id="documentation">Documentation</h1>
 <p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/index.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/index.html</a></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

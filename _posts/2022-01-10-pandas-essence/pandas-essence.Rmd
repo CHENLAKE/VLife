@@ -234,6 +234,15 @@ knitr::include_graphics("pics/app_series2.png")
 
 - result returns a **Series** 
 
+```{python, python.reticulate = FALSE, eval =FALSE}
+# row by row, if col0's value is NULL, reassign value as Expression,
+#             otherwise,  stay the same
+df['col0'] = df.apply( lambda row: Expression  
+                                   if np.isnan(row['col0']) else row['col0'],
+                       axis =1)
+
+```
+
 ### DataFrame.applymap( )   
 
 - function applies to each element in the DataFrame   
@@ -245,17 +254,18 @@ knitr::include_graphics("pics/appmap.png")
 
 ## Correlation of data
 
-### corr matrix btw all columns
+| _corr matrix btw all columns_ | _specific columns_                 |
+|-------------------------------|------------------------------------|
+| df.corr()                     | _df['col1'].**corr**( df['col2'])_ |
 
-```{python, python.reticulate =FALSE, eval =FALSE}
-df.corr()
-```
+## Missing value
 
-### specific columns 
+|                                        |                                   |
+|----------------------------------------|-----------------------------------|
+| **df.isnull().sum()**                  |                                   |
+| **df.dropna()**                        | _remove rows with missing value _ |
+| **df['col'].fillna**( val, inplace = ) |                                   |
 
-```{python, python.reticulate =FALSE, eval =FALSE}
-df['col1'].corr( df['col2'])
-```
 # Documentation
 
 <https://pandas.pydata.org/pandas-docs/stable/reference/index.html>
