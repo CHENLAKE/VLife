@@ -28,6 +28,8 @@ knitr::include_graphics("pics/1st.png")
 
 ## Pyplot
 
+*[matplotlib.pyplot   documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html)*
+
 ```{python, python.reticulate =FALSE,eval =FALSE}
 from matplotlib import pyplot as plt
 ```
@@ -62,7 +64,7 @@ plt.setp( obj, color='r', linewidth=4.0)
 
 ## Seaborn
 
-[seaborn documentation](https://seaborn.pydata.org/index.html)
+*[seaborn documentation](https://seaborn.pydata.org/index.html)*
 
 > (similar to pyplot), sequential `sns.xx` plot upon each other.    
    use pyplot to set up figure, layout . 
@@ -102,6 +104,8 @@ import seaborn as sns
 | _lower left grids_      |     fig.**map_lower**( plot )      |
 
 ## Pandas
+
+*[pandas.DataFrame.plot   documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html)*
 
 ```{python, python.reticulate =FALSE,eval =FALSE}
 import pandas as pd
