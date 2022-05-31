@@ -270,9 +270,9 @@ knitr::include_graphics("pics/appmap.png")
 
 |                                               |                                                                       |
 |-----------------------------------------------|-----------------------------------------------------------------------|
-| _plot histogram of specific column/attribute_ | **df['col'].plot**( kind ='hist', bins = , figsize =(, ), title= ' ') |
+| _histogram of specific column/attribute_ | **df['col'].plot**( kind ='hist', bins = , figsize =(, ), title= ' ') |
 | _line plot of specific column_                | **df['col'].plot()**                                                  |
-| _smoothing line plot of specific column_      | **df['Manual'].rolling(3).mean().plot()**                             |
+| _smoothing line plot of specific column_      | **df['col'].rolling(n).mean().plot()**                             |
 | _scatter plot X-Y_                            | **df.plot**( kind='scatter', x='X', y='Y', title=' ')                  |
 | _boxplot of numeric column by cat_column K_  | **df.boxplot**( column = 'col', by ='K' )                             |
 
