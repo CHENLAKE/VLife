@@ -1,0 +1,119 @@
+---
+title: "Plotting in python"
+description: |
+  Commonly used packages like "matplibplot.pyplot", "seaborn" as well as "pandas" all proffer plotting functions. A cheatsheet is needed to avoid confusion. 
+author:
+  - name: V.LC.LAKE
+    url: {}
+date: 05-31-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+<style>
+#TOC {
+  color: #00b2ca;
+  font-family: Agency FB;
+  font-size: 20px;
+}
+body{
+  color: #3483eb;
+}
+</style>
+
+```{r, out.width = "100%",fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/1st.png")
+```
+
+## Pyplot
+
+```{python, python.reticulate =FALSE,eval =FALSE}
+from matplotlib import pyplot as plt
+```
+
+### plots
+|                  | **single/ axis**   |
+|------------------|--------------------|
+| _Histogram_      | plt/ax.**hist**( )     |
+| _Line_           | plt/ax.**plot**( )     |
+| _Bar plot_       | plt/ax.**bar**( )      |
+| _Box plot_       | plt/ax.**boxplot**( )  |
+| _Scatter plot_   | plt/ax.**scatter**( )  |
+| _Contour_        | plt/ax.**contour**( )  |
+| _Filled contour_ | plt/ax.**contourf**( ) |
+### layouts
+
+|                                                          | **single axis**                                                                           | **subplots**                                                                         |
+|----------------------------------------------------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| _Set X/Y axis range_                                     |     plt.**xlim**( )     plt.**ylim**( )                                                           |     ax.**xlim**( ) ,  ax.**ylim**( )                                                        |
+| _show legend_                                            |     plt.**legend**( )                                                                          |     ax.**lengend**()                                                                     |
+| _properties_                                             |     plt.**title**(''), plt.**xlabel**(), plt.**ylabel**(),   plt.**yscale**(‘log’)     plt.**grid**(True) |     ax.**set**( title='', xlabel='', ylabel='')     plt.**suptitle**('') _---overall   title_ |
+| _customize ticks (change x to labels)_                   |                                                                                           | (plt/ax).**set**( xticks= x , xticklabels= labels )                                      |
+
+### set plot-object property
+
+> **plt.setp**( )
+
+```{python, python.reticulate =FALSE,eval =FALSE}
+obj = plt.plot(a, b, linewidth=5.0)
+plt.setp( obj, color='r', linewidth=4.0)
+```
+
+## Seaborn
+
+[seaborn documentation](https://seaborn.pydata.org/index.html)
+
+> (similar to pyplot), sequential `sns.xx` plot upon each other.    
+   use pyplot to set up figure, layout . 
+
+
+```{python, python.reticulate =FALSE,eval =FALSE}
+import seaborn as sns
+```
+### plots
+
+|                                                                               | **single/ axis**                                                                                                                                     |
+|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| _scatter with linear regression line, and individual variable’s distribution_ |   sns.**jointplot**( x =’’, y = '', kind = 'reg', data= )                                                                                       |
+| _linear regression plot_                                                      |     sns.**regplot**( x =’’, y = '', data=, color=' ' )                                                                                                   |
+| _scatter with regression line ( order =)_                                     |     sns.**lmplot**( x =’’, y = '', data=, order=   )                                                                                                     |
+| _histogram ( frequency of numeric variable)_                                  |     sns.**histplot**( x = '', data =, kde = True, bins = )                                                                                               |
+| _count plot ( count of categorical variable)_                                 |     sns.**countplot**( x =’’, data= ,   palette = ‘’ )                                                                                                   |
+| _kde_                                                                         |     sns.**kdeplot**(  ,  shade = True )                                                                                                                  |
+| _line plot_                                                                   |     sns.**lineplot**(  x =’’, y = '', =, data= , hue = )                                                                                                 |
+| _boxplot_                                                                     |     sns.**boxplot**(  x =  , y =   )                                                                                                                     |
+| _swarm plot_                                                                  |     sns.**swarmplot**( x =’’, y = '', =, data= , hue =, dodge=True)                                                                                      |
+| _pari plot (all numeric variable /column)_                                    |     sns.**pairplot**( df, hue=’ ’, dropna=True)                                                                                                          |
+| _pari plot( specific pairs )_                                                 |     sns.**pairplot**( df, x_vars=["col1 ",   " col2"..],  y_vars=" ", hue=’ ’,                                                      size= , aspect= )    |
+| _heatmap ( matrix e.g., correlation matrix )_                                 |     sns.**heatmap**(corr, xticklabels=corr.columns,                                     yticklabels=corr.columns)                                        |
+
+### PairGrid
+
+- more customized pair plots     
+- `"plot"` can be `plt.xx`*`, or `*`sns.xx`   
+
+|                         |`fig` = **sns.PairGrid**`( data = , hue =,  palette = )`          | 
+|-----------------------------------------------------------|--------------------------------|
+| _all grids_             |     fig.**map**( plot )            |
+| _diagonal grids_        |     fig.**map_diag**( plot )       |
+| _non-diagonal grids_    |     fig.**map_offdiag**( plot )    |
+| _upper right grids_     |     fig.**map_upper**( plot )      |
+| _lower left grids_      |     fig.**map_lower**( plot )      |
+
+## Pandas
+
+```{python, python.reticulate =FALSE,eval =FALSE}
+import pandas as pd
+```
+
+|                                               |                                                                       |
+|-----------------------------------------------|-----------------------------------------------------------------------|
+| _histogram of specific column/attribute_      | **df['col'].plot**( kind ='hist', bins = , figsize =(, ), title= ' ') |
+| _line plot of specific column_                | **df['col'].plot()**                                                  |
+| _smoothing line plot of specific column_      | **df['col'].rolling(n).mean().plot()**                             |
+| _scatter plot X-Y_                            | **df.plot**( kind='scatter', x='X', y='Y', title=' ')                  |
+| _boxplot of numeric column by cat_column K_  | **df.boxplot**( column = 'col', by ='K' )                             |
+
+
+
