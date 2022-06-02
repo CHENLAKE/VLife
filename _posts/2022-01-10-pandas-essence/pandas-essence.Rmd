@@ -205,6 +205,15 @@ notice: **inplace** parameter can be used to change the original Series/DataFram
 df.groupby(by =['gender']).mean()
 ```             
 
+### append, concat
+
+```{python, python.reticulate= FALSE,  eval=FALSE}
+# concatenate columns/ DataFrames, columnwise
+pd.concat( [df1, df2], axis =1 )
+
+# append rows/ DataFrames, rowwise
+df1.append( df2 )
+```    
 
 ## Series.apply() V.S DF.apply()
 
