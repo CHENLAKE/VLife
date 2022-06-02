@@ -64,6 +64,15 @@ pd.Series(val, index = )
 list, ndarray, dictionary( keys to be index), scalar (replicate to match index size )    
 - Index can be duplicates, non-numbers    
 
+### unique value
+
+```{python, python.reticulate =FALSE, eval =FALSE}
+import numpy as np
+
+np.unique( Series )
+Series.unique()
+```
+
 ### Sort
 
 ```{python, python.reticulate =FALSE, eval =FALSE}
@@ -170,7 +179,6 @@ knitr::include_graphics("pics/ds_spe.png")
 
 1. Sort Index
 
-
 ```{python, python.reticulate= FALSE,  eval=FALSE}
 df.sort_index( inplace = True )
 ```  
@@ -178,7 +186,7 @@ df.sort_index( inplace = True )
 2. Sort Value
 
 ```{python, python.reticulate= FALSE,  eval=FALSE}
-df.sort_value( by =['col_x', 'col_y', 'col_n' ], ascending =[ True, False, True], inplace =True )
+df.sort_values( by =['col_x', 'col_y', 'col_n' ], ascending =[ True, False, True], inplace =True )
 ```  
 
 ### Drop Row/Column
