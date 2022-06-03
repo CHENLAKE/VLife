@@ -69,8 +69,12 @@ list, ndarray, dictionary( keys to be index), scalar (replicate to match index s
 ```{python, python.reticulate =FALSE, eval =FALSE}
 import numpy as np
 
+# return a list of unique value
 np.unique( Series )
 Series.unique()
+
+# return two lists for both the value and respective counts
+(unique_val,counts ) = np.unique( Series, return_counts = True)
 ```
 
 ### Sort
