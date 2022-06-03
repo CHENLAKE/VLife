@@ -77,7 +77,7 @@ import seaborn as sns
 ```
 ### plots
 
-|                                                                               | **single/ axis**                                                                                                                                     |
+|                                                                               | **single**                                                                                                                                     |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | _scatter with linear regression line, and individual variable’s distribution_ |   sns.**jointplot**( x =’’, y = '', kind = 'reg', data= )                                                                                       |
 | _linear regression plot_                                                      |     sns.**regplot**( x =’’, y = '', data=, color=' ' )                                                                                                   |
