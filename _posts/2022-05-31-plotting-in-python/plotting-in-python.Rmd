@@ -93,7 +93,7 @@ import seaborn as sns
 ### PairGrid
 
 - more customized pair plots     
-- `"plot"` can be `plt.xx`*`, or `*`sns.xx`   
+- `"plot"` can be `plt.xx`*`, or `* `sns.xx`   
 
 |                         |`fig` = **sns.PairGrid**`( data = , hue =,  palette = )`          | 
 |-----------------------------------------------------------|--------------------------------|
