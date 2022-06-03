@@ -22,9 +22,7 @@ body{
 }
 </style>
 
-```{r, out.width = "100%",fig.align = "center", echo = FALSE}
-knitr::include_graphics("pics/1st.png")
-```
+
 
 ## Pyplot
 
@@ -32,6 +30,10 @@ knitr::include_graphics("pics/1st.png")
 
 ```{python, python.reticulate =FALSE,eval =FALSE}
 from matplotlib import pyplot as plt
+```
+
+```{r, out.width = "100%",fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/1st.png")
 ```
 
 ### plots
