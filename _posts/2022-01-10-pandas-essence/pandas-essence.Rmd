@@ -73,8 +73,9 @@ import numpy as np
 np.unique( Series )
 Series.unique()
 
-# return two lists for both the value and respective counts
+# return both the value and respective counts
 (unique_val,counts ) = np.unique( Series, return_counts = True)
+Series.value_counts()
 ```
 
 ### Sort

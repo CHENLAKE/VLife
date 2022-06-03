@@ -1588,8 +1588,9 @@ Figure 1: Python ANd Data AnalysiS ?
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>np.unique( Series )</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Series.unique()</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># return two lists for both the value and respective counts</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>(unique_val,counts ) <span class="op">=</span> np.unique( Series, return_counts <span class="op">=</span> <span class="va">True</span>)</span></code></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># return both the value and respective counts</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>(unique_val,counts ) <span class="op">=</span> np.unique( Series, return_counts <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>Series.value_counts()</span></code></pre></div>
 </div>
 <h3 id="sort">Sort</h3>
 <div class="layout-chunk" data-layout="l-body">
