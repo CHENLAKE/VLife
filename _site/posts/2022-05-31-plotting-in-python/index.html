@@ -2112,6 +2112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><a href="#plots-1">plots</a></li>
 <li><a href="#pairgrid">PairGrid</a></li>
+<li><a href="#subplots">Subplots</a></li>
 </ul></li>
 <li><a href="#pandas">Pandas</a></li>
 </ul>
@@ -2327,10 +2328,21 @@ use pyplot to set up figure, layout .</p>
 </tr>
 </tbody>
 </table>
+<h3 id="subplots">Subplots</h3>
+<p><strong><code>sns.</code></strong> basically is a brush which can also be used in subplots flexibly.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.figure()                 <span class="co"># fig = plt.figure()         </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>plt.subplot( row, col, <span class="dv">1</span>)    <span class="co"># fig.add_subplot( row, col, 1 )</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>sns.whatever_plot()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.subplot( row, col, <span class="dv">2</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>sns.whatever_plot()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+</div>
 <h2 id="pandas">Pandas</h2>
 <p><em><a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">pandas.DataFrame.plot documentation</a></em></p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div>
 </div>
 <table>
 <colgroup>
@@ -2360,7 +2372,7 @@ use pyplot to set up figure, layout .</p>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

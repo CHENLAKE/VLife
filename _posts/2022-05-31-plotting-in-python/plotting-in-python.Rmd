@@ -105,6 +105,21 @@ import seaborn as sns
 | _upper right grids_     |     fig.**map_upper**( plot )      |
 | _lower left grids_      |     fig.**map_lower**( plot )      |
 
+### Subplots
+
+**`sns.`** basically is a brush which can also be used in subplots flexibly.
+
+```{python, python.reticulate =FALSE,eval =FALSE}
+plt.figure()                 # fig = plt.figure()         
+plt.subplot( row, col, 1)    # fig.add_subplot( row, col, 1 )
+sns.whatever_plot()
+plt.subplot( row, col, 2)
+sns.whatever_plot()
+...
+plt.show()
+```
+
+
 ## Pandas
 
 *[pandas.DataFrame.plot   documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html)*
