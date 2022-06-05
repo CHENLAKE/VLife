@@ -107,7 +107,7 @@ import seaborn as sns
 
 ### Subplots
 
-**`sns.`** basically is a brush which can also be used in subplots flexibly.
+- **`sns.`** basically is a brush which can also be used in subplots flexibly.
 
 ```{python, eval =FALSE}
 plt.figure()                 # fig = plt.figure()         
@@ -119,6 +119,15 @@ sns.whatever_plot()
 plt.show()
 ```
 
+- method2
+
+```{python, eval =FALSE}
+fig, axes = plt.subplots( row, col, figsize =() )
+sns.whatever_plot( args, ax= axes[0] )
+sns.whatever_plot( args, ax= axes[1] )
+...
+fig.show()
+```
 
 ## Pandas
 
