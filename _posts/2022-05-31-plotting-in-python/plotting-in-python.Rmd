@@ -138,15 +138,12 @@ import pandas as pd
 
 ## some Cmaps
 
-each 'color' has  'color_r' 
+each 'color' has **'color_r'**
 
 ```{python}
 import seaborn as sns
 sns.color_palette("Accent")
 ```
-
-
-
 
 ```{python}
 sns.color_palette("Accent_r")
