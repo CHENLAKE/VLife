@@ -28,7 +28,7 @@ body{
 
 *[matplotlib.pyplot   documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html)*
 
-```{python, python.reticulate =FALSE,eval =FALSE}
+```{python, eval =FALSE}
 from matplotlib import pyplot as plt
 ```
 
@@ -59,7 +59,7 @@ knitr::include_graphics("pics/1st.png")
 
 > **plt.setp**( )
 
-```{python, python.reticulate =FALSE,eval =FALSE}
+```{python, eval =FALSE}
 obj = plt.plot(a, b, linewidth=5.0)
 plt.setp( obj, color='r', linewidth=4.0)
 ```
@@ -72,7 +72,7 @@ plt.setp( obj, color='r', linewidth=4.0)
    use pyplot to set up figure, layout . 
 
 
-```{python, python.reticulate =FALSE,eval =FALSE}
+```{python,eval =FALSE}
 import seaborn as sns
 ```
 ### plots
@@ -109,7 +109,7 @@ import seaborn as sns
 
 **`sns.`** basically is a brush which can also be used in subplots flexibly.
 
-```{python, python.reticulate =FALSE,eval =FALSE}
+```{python, eval =FALSE}
 plt.figure()                 # fig = plt.figure()         
 plt.subplot( row, col, 1)    # fig.add_subplot( row, col, 1 )
 sns.whatever_plot()
@@ -124,7 +124,7 @@ plt.show()
 
 *[pandas.DataFrame.plot   documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html)*
 
-```{python, python.reticulate =FALSE,eval =FALSE}
+```{python, eval =FALSE}
 import pandas as pd
 ```
 
@@ -136,5 +136,64 @@ import pandas as pd
 | _scatter plot X-Y_                            | **df.plot**( kind='scatter', x='X', y='Y', title=' ')                  |
 | _boxplot of numeric column by cat_column K_  | **df.boxplot**( column = 'col', by ='K' )                             |
 
+## some Cmaps
 
+each 'color' has  'color_r' 
+
+```{python}
+import seaborn as sns
+sns.color_palette("Accent")
+```
+
+
+
+
+```{python}
+sns.color_palette("Accent_r")
+sns.color_palette("Blues")
+sns.color_palette("Blues_r")
+sns.color_palette("BuGn")
+sns.color_palette("BrBG")
+sns.color_palette("BuPu")
+sns.color_palette("CMRmap")
+sns.color_palette("Dark2")
+sns.color_palette("GnBu")
+sns.color_palette("Greens")
+sns.color_palette("Greys")
+sns.color_palette("OrRd")
+sns.color_palette("Oranges")
+sns.color_palette("PRGn")
+sns.color_palette("Paired")
+sns.color_palette("Pastel1")
+sns.color_palette("Pastel2")
+sns.color_palette("PiYG")
+sns.color_palette("PuBu")
+sns.color_palette("PuBuGn")
+sns.color_palette("PuOr")
+sns.color_palette("PuRd")
+sns.color_palette("Purples")
+sns.color_palette("RdBu")
+sns.color_palette("RdGy")
+sns.color_palette("RdPu")
+sns.color_palette("RdYlBu")
+sns.color_palette("RdYlGn")
+sns.color_palette("Reds")
+sns.color_palette("Set1")
+sns.color_palette("Set2")
+sns.color_palette("Set3")
+sns.color_palette("Spectral")
+sns.color_palette("Wistia")
+sns.color_palette("YlGn")
+sns.color_palette("YlGnBu")
+sns.color_palette("YlOrBr")
+sns.color_palette("YlOrRd")
+sns.color_palette("afmhot")
+sns.color_palette("autumn")
+sns.color_palette("binary")
+sns.color_palette("bone")
+sns.color_palette("brg")
+sns.color_palette("bwr")
+sns.color_palette("cividis")
+
+```
 
