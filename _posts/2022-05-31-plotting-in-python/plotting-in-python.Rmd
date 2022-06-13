@@ -64,6 +64,17 @@ obj = plt.plot(a, b, linewidth=5.0)
 plt.setp( obj, color='r', linewidth=4.0)
 ```
 
+### plot on dark background
+
+```{python, eval =FALSE}
+plt.style.use('dark_background')
+```
+
+```{r, out.width = "60%",fig.align = "center", echo = FALSE}
+knitr::include_graphics("pics/dark.png")
+```
+
+
 ## Seaborn
 
 *[seaborn documentation](https://seaborn.pydata.org/index.html)*
