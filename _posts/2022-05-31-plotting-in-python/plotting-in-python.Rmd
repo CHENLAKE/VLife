@@ -45,7 +45,13 @@ knitr::include_graphics("pics/1st.png")
 | _Box plot_       | plt/ax.**boxplot**( )  |
 | _Scatter plot_   | plt/ax.**scatter**( )  |
 | _Contour_        | plt/ax.**contour**( )  |
-| _Filled contour_ | plt/ax.**contourf**( ) |
+| _Filled contour_ | plt/ax.**contourf
+| _add a vertical line across the axes_ | plt.**axvline**( ) |
+| _add a horizontal line across the axes_ | plt.**axhline**( ) |
+| _Fill the area between two horizontal curves._ | plt.**fill_between**(x, upper, lower ) |
+
+
+
 ### layouts
 
 |                                                          | **single axis**                                                                           | **subplots**                                                                         |
