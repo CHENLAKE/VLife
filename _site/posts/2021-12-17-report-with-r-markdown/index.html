@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["pics/chuncOpt.png","pics/css.png","pics/dateManu.png","pics/figAlign.png","pics/globalOpt.png","pics/invokeParam1.png","pics/invokeParam2.png","pics/loadPack.png","pics/paramPage.png","pics/params.png","pics/python.png","pics/specificDate.png","pics/table.png","pics/table_ge.png","pics/tableParams.png","pics/timeFormat.png","pics/toc_css.png","pics/today.png","report-with-r-markdown_files/anchor-4.2.2/anchor.min.js","report-with-r-markdown_files/bowser-1.9.3/bowser.min.js","report-with-r-markdown_files/distill-2.2.21/template.v2.js","report-with-r-markdown_files/header-attrs-2.8/header-attrs.js","report-with-r-markdown_files/jquery-1.11.3/jquery.min.js","report-with-r-markdown_files/popper-2.6.0/popper.min.js","report-with-r-markdown_files/tippy-6.2.7/tippy-bundle.umd.min.js","report-with-r-markdown_files/tippy-6.2.7/tippy-light-border.css","report-with-r-markdown_files/tippy-6.2.7/tippy.css","report-with-r-markdown_files/tippy-6.2.7/tippy.umd.min.js","report-with-r-markdown_files/webcomponents-2.0.0/webcomponents.js","style.css"]}
+  {"type":"character","attributes":{},"value":["pics/chuncOpt.png","pics/css.png","pics/cust-toc.png","pics/dateManu.png","pics/figAlign.png","pics/globalOpt.png","pics/invokeParam1.png","pics/invokeParam2.png","pics/loadPack.png","pics/paramPage.png","pics/params.png","pics/python.png","pics/specificDate.png","pics/table.png","pics/table_ge.png","pics/tableParams.png","pics/timeFormat.png","pics/toc_css.png","pics/today.png","report-with-r-markdown_files/anchor-4.2.2/anchor.min.js","report-with-r-markdown_files/bowser-1.9.3/bowser.min.js","report-with-r-markdown_files/distill-2.2.21/template.v2.js","report-with-r-markdown_files/header-attrs-2.14/header-attrs.js","report-with-r-markdown_files/header-attrs-2.8/header-attrs.js","report-with-r-markdown_files/jquery-1.11.3/jquery.min.js","report-with-r-markdown_files/jquery-3.6.0/jquery-3.6.0.js","report-with-r-markdown_files/jquery-3.6.0/jquery-3.6.0.min.js","report-with-r-markdown_files/jquery-3.6.0/jquery-3.6.0.min.map","report-with-r-markdown_files/popper-2.6.0/popper.min.js","report-with-r-markdown_files/tippy-6.2.7/tippy-bundle.umd.min.js","report-with-r-markdown_files/tippy-6.2.7/tippy-light-border.css","report-with-r-markdown_files/tippy-6.2.7/tippy.css","report-with-r-markdown_files/tippy-6.2.7/tippy.umd.min.js","report-with-r-markdown_files/webcomponents-2.0.0/webcomponents.js","style.css"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -463,7 +463,7 @@ d-title {
 
 </style>
 
-<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
 <link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
 <script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -2041,8 +2041,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.8/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2089,7 +2089,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <h1>Report with R Markdown</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Markdown can be used in many situations, such as writing report in jupyter notebook, creating distill blog in R studio or simply generating report in html, word or pdf format. Some tips &amp; resources are commonly used.</p></p>
+<p><p>Markdown can be used in many situations, such as writing report in
+jupyter notebook, creating distill blog in R studio or simply generating
+report in html, word or pdf format. Some tips &amp; resources are
+commonly used.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2107,14 +2110,23 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><a href="#add-date-manually">Add Date Manually</a></li>
 <li><a href="#add-date-automatically">Add Date Automatically</a></li>
-<li><a href="#add-table-of-content-css">Add Table-of-Content &amp; CSS</a></li>
-<li><a href="#customize-fonts-and-colors">Customize fonts and colors</a></li>
+<li><a href="#add-table-of-content-css">Add Table-of-Content &amp;
+CSS</a></li>
+<li><a href="#customize-fonts-and-colors">Customize fonts and
+colors</a></li>
 <li><a href="#add-parameters">Add Parameters</a></li>
+</ul></li>
+<li><a href="#body">Body</a>
+<ul>
+<li><a href="#set-font-color">set font color</a></li>
+<li><a href="#customize-table-of-content">customize
+Table-of-Content</a></li>
 </ul></li>
 <li><a href="#plots-vedios">Plots &amp; Vedios</a>
 <ul>
 <li><a href="#insert-pics">Insert pics</a></li>
-<li><a href="#insert-pic-with-r-code-chunk">Insert pic with R code chunk</a></li>
+<li><a href="#insert-pic-with-r-code-chunk">Insert pic with R code
+chunk</a></li>
 <li><a href="#figure-arguments">Figure arguments</a></li>
 <li><a href="#set-options-globally">Set Options Globally</a></li>
 <li><a href="#insert-vedio">Insert Vedio</a></li>
@@ -2130,17 +2142,21 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#load-packages">Load Packages</a></li>
 <li><a href="#interact-with-python">Interact with Python</a></li>
 </ul></li>
+<li><a href="#table-of-contents">Table of Contents</a></li>
 </ul>
 </nav>
 </div>
-<p>In a R Markdown document, there are mainly 3 elements which are YAML Header, Text Body and Code Chunk.</p>
-<p><a href="https://www.markdownguide.org/cheat-sheet">online cheat sheet</a></p>
+<p>In a R Markdown document, there are mainly 3 elements which are YAML
+Header, Text Body and Code Chunk.</p>
+<p><a href="https://www.markdownguide.org/cheat-sheet">online cheat
+sheet</a></p>
 <h2 id="yaml-header">YAML Header</h2>
 <h3 id="add-date-manually">Add Date Manually</h3>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/specificDate.png" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;V LAKE&quot;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;12/17/2021&quot;</span></span>
@@ -2150,19 +2166,21 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/today.png" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;V LAKE&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2022-01-29&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2022-06-24&quot;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/timeFormat.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;V LAKE&quot;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot; 18:46:40 29 Jan,2022 &quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot; 10:41:57 24 Jun,2022 &quot;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> html_document</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <ul>
@@ -2170,15 +2188,19 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <blockquote>
 <p><strong>Numeric:</strong><br />
-<code>%H</code> : Hour; <code>%M</code> : Minute; <code>%S</code> : Second; <code>%Y</code> or <code>%y</code> : Year; <code>%m</code> : Month; <code>%d</code> : Day<br />
+<code>%H</code> : Hour; <code>%M</code> : Minute; <code>%S</code> :
+Second; <code>%Y</code> or <code>%y</code> : Year; <code>%m</code> :
+Month; <code>%d</code> : Day<br />
 <strong>Text:</strong><br />
-<code>%A</code> or <code>%a</code> : Weekday; <code>%B</code> or <code>%b</code> : Month(e.g., January or Jan)</p>
+<code>%A</code> or <code>%a</code> : Weekday; <code>%B</code> or
+<code>%b</code> : Month(e.g., January or Jan)</p>
 </blockquote>
 <h3 id="add-table-of-content-css">Add Table-of-Content &amp; CSS</h3>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/toc_css.png" width="31%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;V LAKE&quot;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot; 12/17/2021 &quot;</span></span>
@@ -2192,10 +2214,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
 <h3 id="customize-fonts-and-colors">Customize fonts and colors</h3>
 <ul>
-<li>Create a text file and name it as <code>style.css</code> then link it in YAML header.</li>
-<li><code>.css</code> file should be in the same directory as <code>.Rmd</code> file</li>
+<li>Create a text file and name it as <code>style.css</code> then link
+it in YAML header.</li>
+<li><code>.css</code> file should be in the same directory as
+<code>.Rmd</code> file</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#TOC</span> {</span>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#TOC</span> {</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#B8860B</span><span class="op">;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: Agency FB<span class="op">;</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">16</span><span class="dt">px</span><span class="op">;</span></span>
@@ -2221,11 +2246,46 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><img src="pics/params.png" width="50%" style="display: block; margin: auto auto auto 0;" /><img src="pics/paramPage.png" width="50%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
 <blockquote>
-<p>Add &lt;<code>name : value</code> &gt; under <strong>params:</strong> in YAML header<br />
-Invoke the parameters in YAML header’s <strong>title</strong>, <strong>Text</strong> body and <strong>Code</strong> chunk.</p>
+<p>Add &lt;<code>name : value</code> &gt; under <strong>params:</strong>
+in YAML header<br />
+Invoke the parameters in YAML header’s <strong>title</strong>,
+<strong>Text</strong> body and <strong>Code</strong> chunk.</p>
 </blockquote>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/invokeParam1.png" width="70%" style="display: block; margin: auto auto auto 0;" /><img src="pics/invokeParam2.png" width="70%" style="display: block; margin: auto auto auto 0;" /></p>
+</div>
+<h2 id="body">Body</h2>
+<h3 id="set-font-color">set font color</h3>
+<ul>
+<li>Using <strong>html</strong> will change the font color in body from
+now on till end/ next color setting</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>font color<span class="ot">=</span><span class="st">&#39;blue&#39;</span><span class="sc">&gt;</span></span></code></pre></div>
+</div>
+<h3 id="customize-table-of-content">customize Table-of-Content</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Table of Contents</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> [About iPython Notebooks](<span class="co">#0)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> [Exercise <span class="dv">1</span>](<span class="co">#ex-1)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> [<span class="dv">1</span> <span class="sc">-</span> Building basic functions with numpy](<span class="co">#1)</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> [<span class="fl">1.1</span> <span class="sc">-</span> sigmoid <span class="cf">function</span>, <span class="fu">np.exp</span>()](<span class="co">#1-1)</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> [Exercise <span class="dv">2</span> <span class="sc">-</span> basic_sigmoid](<span class="co">#ex-2)</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> [Exercise <span class="dv">3</span> <span class="sc">-</span> sigmoid](<span class="co">#ex-3)</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> [<span class="fl">1.2</span> <span class="sc">-</span> Sigmoid Gradient](<span class="co">#1-2)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> [Exercise <span class="dv">4</span> <span class="sc">-</span> sigmoid_derivative](<span class="co">#ex-4)</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> [<span class="fl">1.3</span> <span class="sc">-</span> Reshaping arrays](<span class="co">#1-3)</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> [Exercise <span class="dv">5</span> <span class="sc">-</span> image2vector](<span class="co">#ex-5)</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> [<span class="fl">1.4</span> <span class="sc">-</span> Normalizing rows](<span class="co">#1-4)</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> [Exercise <span class="dv">6</span> <span class="sc">-</span> normalize_rows](<span class="co">#ex-6)</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> [Exercise <span class="dv">7</span> <span class="sc">-</span> softmax](<span class="co">#ex-7)</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> [<span class="dv">2</span> <span class="sc">-</span> Vectorization](<span class="co">#2)</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> [<span class="fl">2.1</span> Implement the L1 and L2 loss functions](<span class="co">#2-1)</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> [Exercise <span class="dv">8</span> <span class="sc">-</span> L1](<span class="co">#ex-8)</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        <span class="sc">-</span> [Exercise <span class="dv">9</span> <span class="sc">-</span> L2](<span class="co">#ex-9)</span></span></code></pre></div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="pics/cust-toc.png" width="70%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
 <h2 id="plots-vedios">Plots &amp; Vedios</h2>
 <h3 id="insert-pics">Insert pics</h3>
@@ -2239,8 +2299,12 @@ Invoke the parameters in YAML header’s <strong>title</strong>, <strong>Text</s
 </div>
 </div>
 <blockquote>
-<p>If using this piece of command inside R code chunk to insert picture,do <strong>insert a space line</strong> between the text and code chunk, otherwise it will reset the format of later text to normal body, even you tried to format it as header or index.<br />
-Frankly speaking, whenever your format doesn’t work as you expected, try insert a space line between different formats.</p>
+<p>If using this piece of command inside R code chunk to insert
+picture,do <strong>insert a space line</strong> between the text and
+code chunk, otherwise it will reset the format of later text to normal
+body, even you tried to format it as header or index.<br />
+Frankly speaking, whenever your format doesn’t work as you expected, try
+insert a space line between different formats.</p>
 </blockquote>
 <h3 id="figure-arguments">Figure arguments</h3>
 <div class="layout-chunk" data-layout="l-body">
@@ -2248,17 +2312,21 @@ Frankly speaking, whenever your format doesn’t work as you expected, try inser
 </div>
 <blockquote>
 <p><strong>Fig Size</strong><br />
-1. <code>fig.width=</code> 5,<code>fig.height =</code>3 <strong>OR</strong><br />
+1. <code>fig.width=</code> 5,<code>fig.height =</code>3
+<strong>OR</strong><br />
 2. <code>fig.dim =</code> c(5,3) <strong>OR</strong><br />
 3. <code>out.width =</code>’ % ‘,<code>out.height =</code>’ %’<br />
-<strong>Fig Alignment</strong> : <code>fig.align = 'left'/'center'/'right'</code><br />
+<strong>Fig Alignment</strong> :
+<code>fig.align = 'left'/'center'/'right'</code><br />
 <strong>Fig Caption</strong> : <code>fig.cap = 'xxx'</code></p>
 </blockquote>
 <h3 id="set-options-globally">Set Options Globally</h3>
 <ul>
-<li><code>knitr::opts_chunk$set</code>( <strong>setting</strong>, echo= TURE)<br />
+<li><code>knitr::opts_chunk$set</code>( <strong>setting</strong>, echo=
+TURE)<br />
 </li>
-<li><strong>setting</strong> before <code>echo =</code> is the global settings</li>
+<li><strong>setting</strong> before <code>echo =</code> is the global
+settings</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/globalOpt.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
@@ -2278,8 +2346,12 @@ arguments include:<br />
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/table.png" width="70%" style="display: block; margin: auto auto auto 0;" /><img src="pics/tableParams.png" width="70%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<h3 id="table-generator"><a href="https://www.tablesgenerator.com/markdown_tables">Table Generator</a></h3>
-<p>using online table generator to input the data in the table, preview then copy the code to clipboard to avoid tedious insertion of hypens and pipes.</p>
+<h3 id="table-generator"><a
+href="https://www.tablesgenerator.com/markdown_tables">Table
+Generator</a></h3>
+<p>using online table generator to input the data in the table, preview
+then copy the code to clipboard to avoid tedious insertion of hypens and
+pipes.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/table_ge.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
@@ -2290,11 +2362,16 @@ arguments include:<br />
 </div>
 <blockquote>
 <p><strong>Code &amp; Output Result </strong><br />
-1. <strong>include = FALSE</strong> : show nothing, but run in background .<br />
-e.g., import library, dataset / setup global options/ exclude messages<br />
-2. <strong>echo = FALSE</strong> : only show result ( no code ), e.g., plotting<br />
-3. <strong>eval = FALSE</strong> : only show code ( not run, no actual impact by the code )<br />
-4. <strong>collapse = FALSE</strong> : combine code &amp; result together in same area (by default, they are separated )<br />
+1. <strong>include = FALSE</strong> : show nothing, but run in
+background .<br />
+e.g., import library, dataset / setup global options/ exclude
+messages<br />
+2. <strong>echo = FALSE</strong> : only show result ( no code ), e.g.,
+plotting<br />
+3. <strong>eval = FALSE</strong> : only show code ( not run, no actual
+impact by the code )<br />
+4. <strong>collapse = FALSE</strong> : combine code &amp; result
+together in same area (by default, they are separated )<br />
 <strong>Message,error,warning Default Value</strong>:<br />
 1. <code>warning /message = TRUE</code><br />
 2. <code>error = FALSE</code> ( if encounter error, stop knitting )</p>
@@ -2304,15 +2381,65 @@ e.g., import library, dataset / setup global options/ exclude messages<br />
 <p><img src="pics/loadPack.png" width="60%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
 <h3 id="interact-with-python">Interact with Python</h3>
-<p>Let’s make it super clear: R Markdown and knitr do support Python.The Python support in R Markdown and knitr is based on the <code>reticulate</code> package which allows two-way communication between Python and R.</p>
+<p>Let’s make it super clear: R Markdown and knitr do support Python.The
+Python support in R Markdown and knitr is based on the
+<code>reticulate</code> package which allows two-way communication
+between Python and R.</p>
 <blockquote>
-<p>unfortunately, I prefer to use them separately. However, more info can be found <a href="https://rstudio.github.io/reticulate/">here</a>.</p>
+<p>unfortunately, I prefer to use them separately. However, more info
+can be found <a
+href="https://rstudio.github.io/reticulate/">here</a>.</p>
 </blockquote>
-<p>If only for report purpose for which we only want to show the python codes in an R Markdown document, we can add chunk header like this:</p>
+<p>If only for report purpose for which we only want to show the python
+codes in an R Markdown document, we can add chunk header like this:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="pics/python.png" width="80%" style="display: block; margin: auto auto auto 0;" /></p>
 </div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><font color='blue'> <b>What you need to remember </b>:</p>
+<ul>
+<li>Run your cells using SHIFT+ENTER (or “Run cell”)</li>
+<li>Write code in the designated areas using Python 3 only</li>
+<li>Do not modify the code outside of the designated areas</li>
+</ul>
+<p><font color='red'></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#0">About iPython Notebooks</a>
+<ul>
+<li><a href="#ex-1">Exercise 1</a></li>
+</ul></li>
+<li><a href="#1">1 - Building basic functions with numpy</a>
+<ul>
+<li><a href="#1-1">1.1 - sigmoid function, np.exp()</a>
+<ul>
+<li><a href="#ex-2">Exercise 2 - basic_sigmoid</a></li>
+<li><a href="#ex-3">Exercise 3 - sigmoid</a></li>
+</ul></li>
+<li><a href="#1-2">1.2 - Sigmoid Gradient</a>
+<ul>
+<li><a href="#ex-4">Exercise 4 - sigmoid_derivative</a></li>
+</ul></li>
+<li><a href="#1-3">1.3 - Reshaping arrays</a>
+<ul>
+<li><a href="#ex-5">Exercise 5 - image2vector</a></li>
+</ul></li>
+<li><a href="#1-4">1.4 - Normalizing rows</a>
+<ul>
+<li><a href="#ex-6">Exercise 6 - normalize_rows</a></li>
+<li><a href="#ex-7">Exercise 7 - softmax</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#2">2 - Vectorization</a>
+<ul>
+<li><a href="#2-1">2.1 Implement the L1 and L2 loss functions</a>
+<ul>
+<li><a href="#ex-8">Exercise 8 - L1</a></li>
+<li><a href="#ex-9">Exercise 9 - L2</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
